@@ -1,0 +1,13 @@
+{
+	"sntpURL":"change_me: e.g. 0.uk.pool.ntp.org or 0.north-america.pool.ntp.org",
+	"sntpPort": 123,
+	"brokerURL":"change_me: MQTT Host",
+	"brokerPort": MQTT port number - e.g. 1883,
+	"brokerUsername":"change_me, MQTT username",
+	"brokerPassword":"change_me, MQTT password",
+	"brokerSecureConnection": false,
+	"brokerKeepAliveIntervalSecs": 0,
+	"wlanSSID":"change_me: SSID",
+	"wlanPSK":"change_me: password",
+	"baseTopic": "change_me, must be 3 levels, e.g.:region-a/site-b/production-line-c"
+}
