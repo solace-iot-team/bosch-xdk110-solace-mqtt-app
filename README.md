@@ -7,7 +7,7 @@ We have developed a **_reference mqtt client app_** for the Bosch XDK110 to demo
 
 The XDK 110 is a programmable sensor. See details here: http://xdk.bosch-connectivity.com. "I’m a programmable sensor device & a prototyping platform for any IoT use case you can imagine."
 
-The main features are:
+The main features of the **_reference mqtt client app_** are:
 - Configuration API - allows for a device management system to remotely configure the operations of the app
 - Command API - allows to send commands to the app
 - Status API - sends regular and ad-hoc status information
@@ -22,7 +22,7 @@ The software architecture:
 ## What you need before getting started
 
 - Bosch XDK 110 + Micro SD Card + SD Card Adapter
-> - Go to https://xdk.bosch-connectivity.com/buy-xdk to find a retailer.
+> - <a href="https://xdk.bosch-connectivity.com/buy-xdk" target="_blank">Go to the xdk website</a> to find a retailer.
   >   - XDK110
   >   - Micro SD card 32GB (that's the max the XDK can manage, 8GB is fine too)
   >   - SD Card Adapter to write / edit the config file onto the SD card from your computer
