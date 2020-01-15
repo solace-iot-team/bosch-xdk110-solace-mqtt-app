@@ -39,7 +39,7 @@ Now expand the **_MQTT_** section and copy:
 
 ### Create and Copy the Bootstrap Config File
 
-[Follow the instructions here.](../sdcard/README.md)
+[Follow the instructions here.](../sdcard)
 
 ### Flash the App onto the XDK
 
@@ -58,12 +58,12 @@ Sample console output from flashing:
 INFO | Connecting to XDK device 'XDK Device 1' in port '/dev/tty.usbmodem401201'...
 INFO | Connection to port '/dev/tty.usbmodem401201' established
 INFO | Creating Firmware Over the Air (FOTA) Container
-INFO | Binary File: /Users/rjgu/Dropbox/Solace-Contents/Solace-IoT-Team/bosch-xdk110-solace-mqtt-app/debug/SolaceMQTTApp.bin
+INFO | Binary File: <your path>/bosch-xdk110-solace-mqtt-app/debug/SolaceMQTTApp.bin
 INFO | Header Version: 0100
 INFO | Product Class: 0010
 INFO | Product Variant: 0000
 INFO | Firmware Version: 00000000
-INFO | Flashing file '/Users/rjgu/Dropbox/Solace-Contents/Solace-IoT-Team/bosch-xdk110-solace-mqtt-app/debug/SolaceMQTTApp.bin'...
+INFO | Flashing file '<your path>/bosch-xdk110-solace-mqtt-app/debug/SolaceMQTTApp.bin'...
 INFO | XDK DEVICE 1: Ready
 INFO | XDK DEVICE 1: C
 INFO | XDK DEVICE 1: 
@@ -88,18 +88,18 @@ INFO | Connecting to XDK device 'XDK Device 1' in port '/dev/tty.usbmodem401201'
  INFO | XDK DEVICE 1: ROM 0x3333
  INFO | XDK DEVICE 1: HOST 1.0.1.11
  INFO | XDK DEVICE 1: Connected to WPA network successfully
- INFO | XDK DEVICE 1: IP address of device  192.168.1.112
+ INFO | XDK DEVICE 1: IP address of device  <your address>
  INFO | XDK DEVICE 1:               Mask    255.255.255.0
- INFO | XDK DEVICE 1:               Gateway 192.168.1.254
- INFO | XDK DEVICE 1:               DNS     192.168.1.254
+ INFO | XDK DEVICE 1:               Gateway <your gateway>
+ INFO | XDK DEVICE 1:               DNS     <your DNS>
  INFO | XDK DEVICE 1: WLANPersonalWPA2Connect : Connected to WPA network successfully.
  INFO | XDK DEVICE 1: [WARNING] - AppTimestamp_Enable: retrieving time from SNTP server, tries: 1
  INFO | XDK DEVICE 1: SntpSentCallback : Success
  INFO | XDK DEVICE 1: SntpTimeCallback : received
  INFO | XDK DEVICE 1: [INFO] - AppTimestamp_Enable: success.
- INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: broker mqtt://54.154.43.5:1883
- INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: username solace-cloud-client
- INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: password bppg33clnljgqujajvqodor1vs
+ INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: broker mqtt://<ip address of your broker>:<your port>
+ INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: username <your username>
+ INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_ConnectToBroker: password <your password>
  INFO | XDK DEVICE 1: [INFO] - appXDK_MQTT_EventHandler: counter: 1, event: 0:MQTT_CONNECTION_ESTABLISHED (prior: 255:UNKNOWN_EVENT)
  INFO | XDK DEVICE 1: [INFO] - AppXDK_MQTT_SubsribeToTopic : Subscribing to topic: CREATE/iot-control/region/site/sub-site/device/24d11f0358cd5d9a/command, Qos: 0
  INFO | XDK DEVICE 1: [INFO] - appXDK_MQTT_EventHandler: counter: 8, event: 8:MQTT_SUBSCRIPTION_ACKNOWLEDGED (prior: 15:MQTT_PUBLISHED_DATA)
