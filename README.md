@@ -22,6 +22,7 @@ The software architecture:
 ## What you need before getting started
 
 - Bosch XDK 110 + Micro SD Card + SD Card Adapter
+- [newtab](http://google.com "Giiidd"){:target="_blank"}
 > - <a href="https://xdk.bosch-connectivity.com/buy-xdk" target="_blank">Go to the xdk website</a> to find a retailer.
   >   - XDK110
   >   - Micro SD card 32GB (that's the max the XDK can manage, 8GB is fine too)
