@@ -38,9 +38,11 @@ The software architecture:
 
 ## [Bootstrap Configuration]
 
-## [Generate the Source Code Documentation]
+## [Source Code Documentation using Doxygen](./doxygen)
 
 ## [API Documentation]
+
+## [Release Notes](./doc/ReleaseNotes.md)
 
 
 ## The End.
