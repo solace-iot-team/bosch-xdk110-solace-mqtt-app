@@ -57,7 +57,7 @@ AppStatusMessage_Descr_Discarding_StillProcessingPreviousInstruction, /**< 27 */
 
 #### External Interface Page
 
-The external events / messaging interfaces are documented in a separate .md page: (./resources/docs_external_interfaces.md) and included in the generated documentation.
+The external events / messaging interfaces are documented in a [separate .md page](./resources/docs_external_interfaces.md) and included in the generated documentation.
 
 ------------------------------------------------------------------------------
 The End.
