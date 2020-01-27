@@ -1,0 +1,16 @@
+
+###########################################################################
+# Local configuration of doxygen installation
+#
+# Copy to : config.sh.include
+# and adjust entries for your local installation
+#
+###########################################################################
+
+
+# doxygen path
+# for example, on a Mac:
+export DOXYGEN_PATH="/Applications/Doxygen.app/Contents/Resources"
+
+# dot path
+export DOT_PATH="/opt/local/bin/dot"
