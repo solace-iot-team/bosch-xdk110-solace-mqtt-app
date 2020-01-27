@@ -43,7 +43,10 @@ This is included as part of the source code documentation.
 
 ## Tests Scripts
 
-[Device Commands and Configuration](./test-scripts/device-cmd-config)
+### [Device Commands and Configuration](./test-scripts/device-cmd-config)
+
+### [Solace Broker Sample Management](./test-scripts/solace-mgmt)
+
 
 ## [Release Notes](./doc/ReleaseNotes.md)
 
