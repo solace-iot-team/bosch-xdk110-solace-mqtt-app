@@ -41,12 +41,7 @@ The software architecture:
 ## [API Documentation](./doxygen/resources/docs_external_interfaces.md)
 This is included as part of the source code documentation.
 
-## Tests Scripts
-
-### [Device Commands and Configuration](./test-scripts/device-cmd-config)
-
-### [Solace Broker Sample Management](./test-scripts/solace-mgmt)
-
+## [Tests Scripts](./test-scripts)
 
 ## [Release Notes](./doc/ReleaseNotes.md)
 
