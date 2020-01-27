@@ -1,0 +1,31 @@
+###############################################################################
+# Include file for Solace Broker Management
+#
+# - copy to config.sh.include
+# - make your changes
+###############################################################################
+
+###############################################################################
+# The XDK device Id.
+# This is used by the App as the MQTT ClientId and is part of the topic string.
+#
+XDK_DEVICE_ID="<your device id>"
+
+###############################################################################
+# The broker Management Credentials
+#
+# where to find them in the management console:
+# - tab: Manage
+# - SEMP-REST API
+#
+SEMPV2_BASEPATH="https://<broker host>:943/SEMP/v2/config"
+MESSAGE_VPN="<vpn name>"
+SEMPV2_USER="<semp v2 admin user>"
+SEMPV2_PASSWORD="<password>"
+# leave as is for Solace Cloud
+VIRTUALROUTER="primary"
+
+
+
+
+# The End.
