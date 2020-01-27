@@ -49,5 +49,5 @@ This is included as part of the source code documentation.
 
 ## [Release Notes](./doc/ReleaseNotes.md)
 
-
-## The End.
+------------------------------------------------------------------------------
+The End.
