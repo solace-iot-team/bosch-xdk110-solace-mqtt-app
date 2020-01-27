@@ -48,24 +48,16 @@ Examples from ``XdkAppInfo.h``:
 ````
 SOLACE_APP_MODULE_ID_MAIN = XDK_COMMON_ID_OVERFLOW, /**< 62 */
 
-RETCODE_SOLAPP_MQTT_PUBLISH_FAILED_NO_CONNECTION,						/**< 209 */
+RETCODE_SOLAPP_MQTT_PUBLISH_FAILED_NO_CONNECTION, /**< 209 */
 
-AppStatusMessage_Status_Error,			/**< 2 */
+AppStatusMessage_Status_Error,  /**< 2 */
 
-AppStatusMessage_Descr_Discarding_StillProcessingPreviousInstruction, 							/**< 27 */
+AppStatusMessage_Descr_Discarding_StillProcessingPreviousInstruction, /**< 27 */
 ````
+
+#### External Interface Page
+
+The external events / messaging interfaces are documented in a separate .md page: (./resources/docs_external_interfaces.md) and included in the generated documentation.
 
 ------------------------------------------------------------------------------
 The End.
-
-#### External Interface Page
-TODO: this doesn't work
-
-````
- /**
-  * @page page-external-interfaces External Interfaces
-  *
-  * AppStatusMessage_StatusCode_E : #AppStatusMessage_StatusCode_E
-  */
-
-````
