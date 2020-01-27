@@ -1,4 +1,4 @@
-# External Interfaces {#external-interfaces}
+# External Interfaces 
 
 ## Topic Patterns
 
