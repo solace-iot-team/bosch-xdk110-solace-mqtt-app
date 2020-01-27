@@ -36,11 +36,16 @@ The software architecture:
 
 ## [Get started with the App on the XDK](./doc/GetStarted.md)
 
-## [Bootstrap Configuration]
+## [Bootstrap Configuration](./sdcard)
 
 ## [Source Code Documentation using Doxygen](./doxygen)
 
-## [API Documentation]
+## [API Documentation](./doxygen/resources/docs_external_interfaces.md)
+This is included as part of the source code documentation.
+
+## Tests Scripts
+
+[Device Commands and Configuration](./test-scripts/device-cmd-config)
 
 ## [Release Notes](./doc/ReleaseNotes.md)
 
