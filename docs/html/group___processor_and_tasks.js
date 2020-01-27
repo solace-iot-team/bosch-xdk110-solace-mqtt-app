@@ -1,0 +1,27 @@
+var group___processor_and_tasks =
+[
+    [ "APP_BUTTONS_PROCESSOR_PRIORITY", "group___processor_and_tasks.html#gaf3ad8c82535b5bec2ca4a92aec043301", null ],
+    [ "APP_BUTTONS_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#ga45e3acaf1d5c37c71a120553bce4f776", null ],
+    [ "APP_BUTTONS_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#ga8e7b2961f4e0d8b80eb27357e7039a3e", null ],
+    [ "APP_CMD_CTRL_PROCESSOR_PRIORITY", "group___processor_and_tasks.html#ga7fada676823c8d6a01071f5eb92753c8", null ],
+    [ "APP_CMD_CTRL_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#ga70defbd364cf9a4e173a27b4454135c9", null ],
+    [ "APP_CMD_CTRL_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#ga464167e6626dd66b1497724582578ceb", null ],
+    [ "APP_CONTROLLER_PROCESSOR_PRIORITY", "group___processor_and_tasks.html#gac9ccb47ecbe7c6c6cca12b29bf6f63e6", null ],
+    [ "APP_CONTROLLER_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#gaf8cc7748426062d7553bd878e472d67f", null ],
+    [ "APP_CONTROLLER_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#gad518129b702eadb027e0d4bdc8ac368d", null ],
+    [ "APP_STATUS_PROCESSOR_PRIOIRTY", "group___processor_and_tasks.html#ga6a63a9a0ac3ba195370486f5999c0a2c", null ],
+    [ "APP_STATUS_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#ga80bc1c2288d5cbfb48f3b80de9d04bc0", null ],
+    [ "APP_STATUS_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#gaec16955095c4ba472563dfa9d39606b6", null ],
+    [ "APP_STATUS_RECURRING_TASK_PRIOIRTY", "group___processor_and_tasks.html#gade34a574bb9d7c7a4931a0fc9cdb5b29", null ],
+    [ "APP_STATUS_RECURRING_TASK_STACK_SIZE", "group___processor_and_tasks.html#ga22833f85898f6dab3cf3dbc052930ece", null ],
+    [ "APP_TELEMETRY_PUBLISHING_TASK_PRIORITY", "group___processor_and_tasks.html#gaa9d31a4800203ff8d1f6f6ce55eab167", null ],
+    [ "APP_TELEMETRY_PUBLISHING_TASK_STACK_SIZE", "group___processor_and_tasks.html#ga76a5c3799ef4afbb9ad6efdf9c5f835c", null ],
+    [ "APP_TELEMETRY_SAMPLING_TASK_PRIORITY", "group___processor_and_tasks.html#gab86dbed95efe74f69e3aee3df1d6f352", null ],
+    [ "APP_TELEMETRY_SAMPLING_TASK_STACK_SIZE", "group___processor_and_tasks.html#ga324aa51cfd49abae41f66dd4dd7d3d55", null ],
+    [ "SENSOR_PROCESSOR_PRIORITY", "group___processor_and_tasks.html#ga5026785e0ddcd5a684fa2ddc111f31cf", null ],
+    [ "SENSOR_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#ga96ba99e9b63f59825149a6fe9f1f5668", null ],
+    [ "SENSOR_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#ga3ad22f94ce3c36cbed14f1933802cb58", null ],
+    [ "SERVAL_PROCESSOR_PRIORITY", "group___processor_and_tasks.html#ga861da26c0db211eb3c1374484dfb2caa", null ],
+    [ "SERVAL_PROCESSOR_QUEUE_LEN", "group___processor_and_tasks.html#ga4ad453fb16141fd854e3c98dc71ff87b", null ],
+    [ "SERVAL_PROCESSOR_STACK_SIZE", "group___processor_and_tasks.html#ga5a07f857141255e0d0b0b56c14251977", null ]
+];
