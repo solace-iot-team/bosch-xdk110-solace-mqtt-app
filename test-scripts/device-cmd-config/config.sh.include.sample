@@ -1,0 +1,36 @@
+###############################################################################
+# Include file for command and config scripts.
+#
+# - copy to config.sh.include
+# - make your changes
+###############################################################################
+
+###############################################################################
+# The XDK device Id.
+# This is used by the App as the MQTT ClientId and is part of the topic string.
+#
+XDK_DEVICE_ID="<your device id>"
+
+###############################################################################
+# The broker REST connection details & credentials
+#
+REST_USERNAME="<username>"
+REST_PASSWORD="<pwd>"
+REST_HOST="http://<host>:<port>"
+
+
+###############################################################################
+# Topics:
+# Topic structure for old and new topics for topic configuration changes
+#
+RESOURCE_CATEGORY="region/site/sub-site"
+NEW_RESOURCE_CATEGORY="REGION/SITE/SUB-SITE"
+
+###############################################################################
+# Config and command topics.
+# Note that after a topic change, the messages must use the new topics
+#
+UPDATE_CONFIG_TOPIC="UPDATE/iot-control/$RESOURCE_CATEGORY/device/$XDK_DEVICE_ID/configuration"
+CREATE_COMMAND_TOPIC="CREATE/iot-control/$RESOURCE_CATEGORY/device/$XDK_DEVICE_ID/command"
+
+# The End.
