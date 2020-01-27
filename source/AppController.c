@@ -467,6 +467,16 @@ Retcode_T AppController_ExecuteCommand(AppCmdCtrl_CommandType_T commandType, con
 		retcode = AppRuntimeConfig_PersistRuntimeConfig2File();
 	}
 	break;
+	case AppCmdCtrl_CommandType_TriggerSampleError: {
+		Retcode_RaiseError(RETCODE(RETCODE_SEVERITY_ERROR, RETCODE_SOLAPP_TEST_CODE));
+		retcode = RETCODE_OK;
+	}
+	break;
+	case AppCmdCtrl_CommandType_TriggerSampleFatalError: {
+		Retcode_RaiseError(RETCODE(RETCODE_SEVERITY_FATAL, RETCODE_SOLAPP_TEST_CODE));
+		retcode = RETCODE_OK;
+	}
+	break;
 	default: assert(0);
 	}
 

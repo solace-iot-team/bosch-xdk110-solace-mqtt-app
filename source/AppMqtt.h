@@ -4,11 +4,12 @@
  *  Created on: 26 Jul 2019
  *      Author: rjgu
  */
-
 /**
 * @ingroup AppMqtt
 * @{
-*
+* @author $(SOLACE_APP_AUTHOR)
+* @date $(SOLACE_APP_DATE)
+* @file
 **/
 
 

@@ -7,6 +7,9 @@
 /**
 * @ingroup AppTelemetrySampling
 * @{
+* @author $(SOLACE_APP_AUTHOR)
+* @date $(SOLACE_APP_DATE)
+* @file
 */
 
 #ifndef APPTELEMETRYSAMPLING_H_

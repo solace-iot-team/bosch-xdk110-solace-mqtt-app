@@ -53,7 +53,8 @@ typedef enum AppCmdCtrl_ProcessType_E AppCmdCtrl_ProcessType_T; /**< type for #A
 #define COMMAND_SEND_RUNTIME_CONFIG_FILE					"SEND_RUNTIME_CONFIG_FILE"  /**< COMMAND_SEND_RUNTIME_CONFIG_FILE*/
 #define COMMAND_DELETE_RUNTIME_CONFIG_FILE					"DELETE_RUNTIME_CONFIG_FILE"  /**< COMMAND_DELETE_RUNTIME_CONFIG_FILE*/
 #define COMMAND_PERSIST_ACTIVE_CONFIG						"PERSIST_ACTIVE_CONFIG"  /**< COMMAND_PERSIST_ACTIVE_CONFIG*/
-
+#define COMMAND_TRIGGER_SAMPLE_ERROR						"TRIGGER_SAMPLE_ERROR" /**< COMMAND_TRIGGER_SAMPLE_ERROR*/
+#define COMMAND_TRIGGER_SAMPLE_FATAL_ERROR					"TRIGGER_SAMPLE_FATAL_ERROR" /**< COMMAND_TRIGGER_SAMPLE_FATAL_ERROR*/
 
 #define APP_CMD_CTRL_WAIT_BETWEEN_SUBSCRIPTION_REQUESTS_IN_MS			(UINT32_C(1000)) /**< wait time between subscription requests */
 
@@ -318,6 +319,24 @@ Retcode_T AppCmdCtrl_NotifyDisconnectedFromBroker(void) {
  * @param[in] configPtr: the topic configuration
  * @return Retcode_T: RETCODE_OK
  * @return Retcode_T: retcode from @ref AppMqtt_Subscribe()
+ *
+ * @details The following subscription topics are constructed using @ref AppMisc_FormatTopic():
+ *
+ * @details Single device command and configuration topic:
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/%s/command", methodCreate, baseTopic, appCmdCtrl_DeviceId) @endcode
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/%s/configuration", methodUpdate, baseTopic, appCmdCtrl_DeviceId) @endcode
+ *
+ * @details All devices in the same 3 level resource categorization:
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/command", methodCreate, baseTopic, NULL) @endcode
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/configuration", methodUpdate, baseTopic, NULL) @endcode
+ *
+ * @details All devices in the same 2 level resource categorization:
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/%s/device/command", methodCreate, baseTopicLevelsArray[0], baseTopicLevelsArray[1]) @endcode
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/%s/device/configuration", methodUpdate, baseTopicLevelsArray[0], baseTopicLevelsArray[1]) @endcode
+ *
+ * @details All devices in the same 1 level resource categorization:
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/command", methodCreate, baseTopicLevelsArray[0], NULL) @endcode
+ * @code AppMisc_FormatTopic("%s/iot-control/%s/device/configuration", methodUpdate, baseTopicLevelsArray[0], NULL) @endcode
  */
 static Retcode_T appCmdCtrl_PubSubSetup(const AppRuntimeConfig_TopicConfig_T * configPtr) {
 
@@ -702,6 +721,8 @@ static void appCmdCtrl_ProcessInstruction(AppCmdCtrlRequestType_T requestType, c
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_RUNTIME_CONFIG_FILE) ) commandType = AppCmdCtrl_CommandType_SendRuntimeConfigFile;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_DELETE_RUNTIME_CONFIG_FILE) ) commandType = AppCmdCtrl_CommandType_DeleteRuntimeConfigFile;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_PERSIST_ACTIVE_CONFIG) ) commandType = AppCmdCtrl_CommandType_PersistActiveConfig;
+			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_TRIGGER_SAMPLE_ERROR) ) commandType = AppCmdCtrl_CommandType_TriggerSampleError;
+			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_TRIGGER_SAMPLE_FATAL_ERROR) ) commandType = AppCmdCtrl_CommandType_TriggerSampleFatalError;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_REBOOT) ) commandType = AppCmdCtrl_CommandType_Reboot;
 			else {
 				// unknown command

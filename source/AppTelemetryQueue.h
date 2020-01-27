@@ -7,6 +7,9 @@
 /**
 * @ingroup AppTelemetryQueue
 * @{
+* @author $(SOLACE_APP_AUTHOR)
+* @date $(SOLACE_APP_DATE)
+* @file
 */
 
 #ifndef SOURCE_APPTELEMETRYQUEUE_H_

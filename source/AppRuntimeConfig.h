@@ -7,7 +7,9 @@
 /**
  * @ingroup AppRuntimeConfig
  * @{
- *
+ * @author $(SOLACE_APP_AUTHOR)
+ * @date $(SOLACE_APP_DATE)
+ * @file
  **/
 #ifndef SOURCE_APPRUNTIMECONFIG_H_
 #define SOURCE_APPRUNTIMECONFIG_H_

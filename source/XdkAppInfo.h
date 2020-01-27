@@ -44,12 +44,8 @@
  * @brief Defines the taks & command processor parameters and enums for ModuleIds, RETCODEs, Status codes, Status Descriptions, etc.
  *
  * @author $(SOLACE_APP_AUTHOR)
- *
  * @date $(SOLACE_APP_DATE)
- *
  * @file
- *
- *
  **/
 
 
@@ -60,15 +56,10 @@
 #include "BCDS_Retcode.h"
 
 
-/**
- * @defgroup SOLACE_APP_PACKAGE Solace App Package
- * @{
- */
-#define SOLACE_APP_PACKAGE_DESCR	"SOLACE-APP"
-#define SOLACE_APP_PACKAGE_ID		55
+#define SOLACE_APP_PACKAGE_DESCR	"SOLACE-APP" /**< the app package description for Retcodes */
+#define SOLACE_APP_PACKAGE_ID		55			/**< the app package id for Retcodes */
 #undef BCDS_PACKAGE_ID
-#define BCDS_PACKAGE_ID SOLACE_APP_PACKAGE_ID
-/**@} */
+#define BCDS_PACKAGE_ID SOLACE_APP_PACKAGE_ID	/**< set the package id to the solace app package id for retcodes */
 
 /**
  * @defgroup ProcessorAndTasks Processor And Task Priorities & Parameters
@@ -92,7 +83,6 @@
 
 /**
  * @brief Processor & task parameters.
- *
  */
 #define APP_CONTROLLER_PROCESSOR_STACK_SIZE			(UINT32_C(1024)) 	/**< APP_CONTROLLER_PROCESSOR_STACK_SIZE */
 #define APP_CONTROLLER_PROCESSOR_QUEUE_LEN			(UINT32_C(10)) 		/**< APP_CONTROLLER_PROCESSOR_QUEUE_LEN */

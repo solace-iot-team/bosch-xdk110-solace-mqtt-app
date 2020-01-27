@@ -1441,6 +1441,7 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateStatusConf
 	char * exchangeIdStr = NULL;
 	if(!appRuntimeConfig_ReadConfigExchangeIdJson(jsonHandle, &exchangeIdStr, statusPtr)) return statusPtr;
 
+	// mandatory
 	cJSON * sendPeriodicStatus_JsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "sendPeriodicStatus");
 	if(sendPeriodicStatus_JsonHandle == NULL) {
 		statusPtr->success = false;
@@ -1450,6 +1451,7 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateStatusConf
 	}
 	bool isSendPeriodicStatus = sendPeriodicStatus_JsonHandle->valueint;
 
+	// mandatory
 	cJSON * periodicStatusIntervalSecs_JsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "periodicStatusIntervalSecs");
 	if(periodicStatusIntervalSecs_JsonHandle == NULL) {
 		statusPtr->success = false;
@@ -1458,13 +1460,14 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateStatusConf
 		return statusPtr;
 	}
 	uint32_t periodicStatusIntervalSecs = periodicStatusIntervalSecs_JsonHandle->valueint;
+	// min value
 	if(APP_RT_CFG_STATUS_MIN_INTERVAL_SECS > periodicStatusIntervalSecs) {
 		statusPtr->success = false;
 		statusPtr->descrCode = AppStatusMessage_Descr_StatusConfig_IntervalTooSmall;
 		statusPtr->details = copyString("periodicStatusIntervalSecs");
 		return statusPtr;
 	}
-
+	// mandatory
 	cJSON * periodicStatusType_JsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "periodicStatusType");
 	if(periodicStatusType_JsonHandle == NULL) {
 		statusPtr->success = false;

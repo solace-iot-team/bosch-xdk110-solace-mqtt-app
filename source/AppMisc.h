@@ -7,6 +7,9 @@
 /**
 * @ingroup AppMisc
 * @{
+* @author $(SOLACE_APP_AUTHOR)
+* @date $(SOLACE_APP_DATE)
+* @file
 **/
 
 #ifndef SOURCE_APPMISC_H_

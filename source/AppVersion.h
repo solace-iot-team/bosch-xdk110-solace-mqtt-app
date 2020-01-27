@@ -7,6 +7,9 @@
 /**
 * @ingroup AppVersion
 * @{
+* @author $(SOLACE_APP_AUTHOR)
+* @date $(SOLACE_APP_DATE)
+* @file
 */
 
 #ifndef SOURCE_APPVERSION_H_

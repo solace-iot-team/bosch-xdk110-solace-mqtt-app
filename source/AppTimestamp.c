@@ -34,7 +34,7 @@
 static bool appTimestamp_isEnabled = false; /**< flag if module is enable or not */
 
 /**
- * @brief Timestamp string format to milliseconds accuracy.
+ * @brief Timestamp string format to milliseconds accuracy. ISO 8601 Date and Time format.
  */
 #define APP_TIMESTAMP_STRING_FORMAT				"20%02d-%02d-%02dT%02d:%02d:%02d.%03iZ"
 /**

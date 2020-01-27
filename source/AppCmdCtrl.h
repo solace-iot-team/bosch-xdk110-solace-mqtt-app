@@ -7,6 +7,10 @@
 /**
  * @ingroup AppCmdCtrl
  * @{
+ * @author $(SOLACE_APP_AUTHOR)
+ * @date $(SOLACE_APP_DATE)
+ * @file
+ *
  **/
 #ifndef SOURCE_APPCMDCTRL_H_
 #define SOURCE_APPCMDCTRL_H_
@@ -36,6 +40,8 @@ typedef enum {
 	AppCmdCtrl_CommandType_DeleteRuntimeConfigFile,
 	AppCmdCtrl_CommandType_PersistActiveConfig,
 	AppCmdCtrl_CommandType_Reboot,
+	AppCmdCtrl_CommandType_TriggerSampleError,
+	AppCmdCtrl_CommandType_TriggerSampleFatalError,
 } AppCmdCtrl_CommandType_T;
 /**
  * @brief Callback function for new configuration processing.
