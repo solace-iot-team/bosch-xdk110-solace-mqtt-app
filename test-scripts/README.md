@@ -1,8 +1,8 @@
 ## Tests Scripts
 
-### [Device Commands and Configuration](./test-scripts/device-cmd-config)
+### [Device Commands and Configuration](./device-cmd-config)
 
-### [Solace Broker Sample Management](./test-scripts/solace-mgmt)
+### [Solace Broker Sample Management](./solace-mgmt)
 
 ------------------------------------------------------------------------------
 The End.
