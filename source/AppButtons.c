@@ -20,7 +20,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_BUTTONS
 
 #include "AppButtons.h"
@@ -31,18 +31,17 @@
 #include "BSP_BoardType.h"
 #include "BCDS_BSP_Button.h"
 
-typedef enum BSP_Button_E AppButtonNumber_T;
-typedef enum BSP_ButtonPress_E AppButtonEvent_T;
+typedef enum BSP_Button_E AppButtonNumber_T; /**< enum for the button number */
+typedef enum BSP_ButtonPress_E AppButtonEvent_T; /**< enum for the button event */
 
 /**
  * @brief Structure to capture a button event.
  */
-struct AppButtonEventData_S {
-	AppButtonNumber_T buttonNumber;
-	AppButtonEvent_T buttonEvent;
-	AppTimestamp_T timestamp;
-};
-typedef struct AppButtonEventData_S AppButtonEventData_T; /**< type for #AppButtonEventData_S */
+typedef struct {
+	AppButtonNumber_T buttonNumber; /**< the button number */
+	AppButtonEvent_T buttonEvent; /**< the button event*/
+	AppTimestamp_T timestamp; /**< timestamp of the event */
+} AppButtonEventData_T;
 
 /**
  * @brief Publish info for a button event. @note Qos=0 is used.
@@ -239,12 +238,12 @@ static void appButtons_Button2CallbackFromIsr(uint32_t data) {
 
 /**
  * @brief Publish the button event data as JSON.
- * @use Enqueue from button callback function to be executed by the command processor.
+ * Enqueue from button callback function to be executed by the command processor.
  *
  * @param[in] buttonEventData: #AppButtonEventData_T
  * @param[in] param2: unused
  *
- * @exception Retcode_RaiseError: if @ref AppMqtt_Publish() fails.
+ * @exception Retcode_RaiseError: result of @ref AppMqtt_Publish() if not RETCODE_OK
  */
 static void appButtons_PublishEvent(void * buttonEventData, uint32_t param2) {
 

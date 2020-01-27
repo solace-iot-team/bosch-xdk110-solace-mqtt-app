@@ -126,6 +126,9 @@
  * @endcode
  *
  */
+/**
+ * @brief Module Ids for the Solace App.
+ */
 enum Solace_App_ModuleID_E {
 	SOLACE_APP_MODULE_ID_OVERFLOW = XDK_COMMON_ID_OVERFLOW, /**< 62 */
 	SOLACE_APP_MODULE_ID_MAIN, 							/**< 63 */
@@ -153,6 +156,9 @@ enum Solace_App_ModuleID_E {
  *
  * @brief Retcodes for the Solace App. Max: 4095.
  *
+ */
+/**
+ * @brief Retcodes for the Solace App.
  */
 enum Solace_App_Retcode_E {
     RETCODE_NODE_IPV4_IS_CORRUPTED = RETCODE_XDK_APP_FIRST_CUSTOM_CODE, 	/**< 187 */
@@ -261,6 +267,9 @@ enum Solace_App_Retcode_E {
  *
  * @brief Status codes for status messages.
  */
+/**
+ * @brief Enum for the status codes.
+ */
 typedef enum {
 	AppStatusMessage_Status_NULL = -1,
 	AppStatusMessage_Status_Info,			/**< 0 */
@@ -279,6 +288,9 @@ typedef enum {
  *
  * @brief Description codes for status messages.
  *
+ */
+/**
+ * @brief Enums for the status description codes.
  */
 typedef enum {
 	AppStatusMessage_Descr_NULL = 0,																/**< 0 */

@@ -25,10 +25,10 @@
  * @details if isTickCount==false, secondsSinceEpoch & millis are set correctly
  */
 typedef struct {
-	uint64_t secondsSinceEpoch;
-	uint16_t millis;
-	TickType_t tickCount;
-	bool isTickCount;
+	uint64_t secondsSinceEpoch; /**< seconds since the epoch */
+	uint16_t millis; /**< milliseconds to add to seconds since epoch */
+	TickType_t tickCount; /**< the tick count if #isTickCount is true */
+	bool isTickCount; /**< flag to indicate if structure contains tickCount or secondsSinceEpoch & millis */
 } AppTimestamp_T;
 
 Retcode_T AppTimestamp_Init(void);

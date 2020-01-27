@@ -90,8 +90,6 @@ typedef struct {
     uint8_t qos; /**< The MQTT Quality of Service level. If 0, the message is send in a fire and forget way and it will arrive at most once. If 1 Message reception is acknowledged by the other side, retransmission could occur. */
 } AppXDK_MQTT_Subscribe_T;
 
-void AppXDK_MQTT_DuplicateConnectInfo(const AppXDK_MQTT_Connect_T * orgPtr, AppXDK_MQTT_Connect_T * destPtr);
-
 Retcode_T AppXDK_MQTT_Init(const AppXDK_MQTT_Setup_T * setupInfoPtr);
 
 Retcode_T AppXDK_MQTT_Setup(void);

@@ -8,7 +8,7 @@
  * @defgroup AppTelemetryPayload AppTelemetryPayload
  * @{
  *
- * @brief This module abstracts the telemetry payload implementation. It is used by @ref AppTelemetrySampling and @ref AppTelemetryPublishing.
+ * @brief This module abstracts the telemetry payload implementation. It is used by @ref AppTelemetrySampling and @ref AppTelemetryPublish.
  *
  * @author $(SOLACE_APP_AUTHOR)
  *
@@ -19,7 +19,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_TELEMETRY_PAYLOAD
 
 #include "AppTelemetryPayload.h"

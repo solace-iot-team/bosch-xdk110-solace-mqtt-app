@@ -26,7 +26,8 @@
  **/
 
 #include "XdkAppInfo.h"
-#undef BCDS_MODULE_ID
+
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_STATUS
 
 #include "AppStatus.h"
@@ -83,13 +84,13 @@ typedef struct {
 	uint32_t telemetrySendFailedCounter; /**< number of telemetry messages failed to send */
 	uint32_t telemetrySendTooSlowCounter; /**< number of telemetry messages publish too slow */
 	uint32_t telemetrySamplingTooSlowCounter; /**< number of telemetry sampling cycles missed */
-	uint32_t retcodeRaisedErrorCounter; /**< number of errors passed through #Retcode_RaiseError() to #AppStatus_ErrorHandlingFunc() */
+	uint32_t retcodeRaisedErrorCounter; /**< number of errors passed through Retcode_RaiseError() to #AppStatus_ErrorHandlingFunc() */
 	char * bootTimestampStr; /**< the boot timestamp string */
 	uint32_t bootBatteryVoltage; /**< boot battery voltage */
 	uint32_t currentBatteryVoltage; /**< current battery voltage */
 } AppStatus_Stats_T;
 /**
- * @brief Stats.
+ * @brief Static variable to keep track of the internal statistics.
  */
 static AppStatus_Stats_T appStatus_Stats = {
 	.mqttBrokerDisconnectCounter = 0,
@@ -134,14 +135,14 @@ static cJSON * appStatus_GetRetcodeAsJson(const Retcode_T retcode);
 
 /**
  * @brief Initialize the module.
- * Calls @ref BatteryMonitor_Init() and initializes the stat @ref appStatus_Stats.bootBatteryVoltage.
+ * Calls BatteryMonitor_Init() and initializes the stat @ref appStatus_Stats .bootBatteryVoltage.
  *
  * @param[in] deviceId : the device id. keeps a local copy.
  * @param[in] processorHandle : the processor handle for this module. keeps a local copy.
  *
  * @return Retcode_T: RETCODE_OK
  * @return Retcode_T: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_FAILED_TO_CREATE_SEMAPHORE)
- * @return Retcode_T: return code from @ref BatteryMonitor_Init() or @ref BatteryMonitor_MeasureSignal()
+ * @return Retcode_T: return code from BatteryMonitor_Init() or BatteryMonitor_MeasureSignal()
  *
  */
 Retcode_T AppStatus_Init(const char * deviceId, const CmdProcessor_T * processorHandle) {
@@ -204,7 +205,7 @@ Retcode_T AppStatus_Setup(const AppRuntimeConfig_T * configPtr) {
 }
 /**
  * @brief Enable the module.
- * Sets the boot timestamp @ref appStatus_Stats.bootTimestampStr
+ * Sets the boot timestamp @ref appStatus_Stats .bootTimestampStr
  *
  * @return Retcode_T : RETCODE_OK
  */
@@ -789,7 +790,7 @@ void AppStatus_SendStatusMessage(AppStatusMessage_T * msgPtr)  {
  * @param[in] details: details string, can be NULL
  * @param[in] exchangeId: exchange id string, can be NULL
  * @param[in] totalNumParts: the total number of messages in the sequence
- * @param[in] thisNumPart: the number of this message in the sequence
+ * @param[in] thisPartNum: the number of this message in the sequence
  * @return AppStatusMessage_T *: the newly created status message
  */
 static AppStatusMessage_T * appStatus_CreateStatusMessagePart(const AppStatusMessage_DescrCode_T descrCode, const char * details, const char * exchangeId, uint8_t totalNumParts, uint8_t thisPartNum) {
@@ -831,7 +832,7 @@ void AppStatus_SendStatusMessagePart(const AppStatusMessage_DescrCode_T descrCod
  * Will send queued messages first if descrCode is #AppStatusMessage_Descr_BootStatus.
  *
  * @param[in] exchangeIdStr: exchange Id, can be NULL
- * @param[in] descriptionCode: the description code
+ * @param[in] descrCode: the description code
  * @return Retcode_T: RETCODE_OK
  * @return Retcode_T: retcode from @ref appStatus_SendJsonMessage()
  */

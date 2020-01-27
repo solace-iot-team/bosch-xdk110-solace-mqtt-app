@@ -24,7 +24,8 @@
  */
 
 #include "XdkAppInfo.h"
-#undef BCDS_MODULE_ID
+
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_XDK_MQTT
 
 #include "AppXDK_MQTT.h"
@@ -133,7 +134,7 @@ static Retcode_T appXDK_MQTT_GetModuleBusyRetcode(void) {
 }
 /**
  * @brief Event handler for incoming MQTT data.
- * @details Copies the incoming structure to #AppXDK_MQTT_IncomingDataCallbackParam_T and calls the initialized #appXDK_MQTT_IncomingDataCallBackFunc.
+ * @details Copies the incoming structure to #AppXDK_MQTT_IncomingDataCallbackParam_T and calls the initialized #AppXDK_MQTT_IncomingDataCallback_Func_T in @ref appXDK_MQTT_SetupInfo .incomingDataCallBack_Func.
  * @note Make sure to delete the incoming data after processing it using @ref AppXDK_MQTT_FreeSubscribeCallbackParams().
  * @param[in] incomingData: the incoming data structure
  */

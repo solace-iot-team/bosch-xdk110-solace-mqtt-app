@@ -20,6 +20,8 @@ First release based on prototype developed Jan-May 2019.
 - changing the mqtt configuration via the API is not supported / not implemented
 - this should be implemented in conjunction with a new bootstrap concept
 
+#### Release Build
+- does not compile, assert() undefined
 
 
 ----

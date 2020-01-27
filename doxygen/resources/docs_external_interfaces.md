@@ -1,4 +1,4 @@
-# External Interfaces 
+# External Interfaces
 
 ## Topic Patterns
 
@@ -206,7 +206,7 @@ The runtime config file name on the SD Card: @ref RT_CFG_FILE_NAME.
 |---------|---------------------|----------|
 |type|[mandatory][string]["status"]|type=status|
 |sendPeriodicStatus|[mandatory][boolean][true, false]|flag to send periodic status or not|
-|periodicStatusType|[mandatory][string][@ref APP_RT_CFG_STATUS_PERIODIC_STATUS_TYPE_FULL, @ref APP_RT_CFG_STATUS_PERIODIC_STATUS_TYPE_SHORT]|type of status to send|
+|periodicStatusType|[mandatory][string][@ref APP_RT_CFG_STATUS_PERIODIC_TYPE_FULL, @ref APP_RT_CFG_STATUS_PERIODIC_TYPE_SHORT]|type of status to send|
 |qos|[optional][number][0, 1][default=@ref APP_RT_CFG_DEFAULT_STATUS_QOS]|the qos for the status events|
 |periodicStatusIntervalSecs|[mandatory][number][min=@ref APP_RT_CFG_STATUS_MIN_INTERVAL_SECS][seconds]|the interval in seconds to send the period status event(s)|
 
@@ -315,9 +315,8 @@ An exchangeId is used to correlate the command message with the response(s).
 |@ref COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS | see @ref AppStatus_SendActiveTelemetryParams()   |
 |@ref COMMAND_SEND_ACTIVE_RUNTIME_CONFIG| see @ref AppRuntimeConfig_SendActiveConfig()  |
 |@ref COMMAND_SEND_RUNTIME_CONFIG_FILE   | see @ref AppRuntimeConfig_SendFile()  |
-|@ref COMMAND_SEND_SAMPLE_ERROR					| send a sample error message |
-|@ref COMMAND_TRIGGER_FATAL_ERROR     | trigger a fatal error |
-
+|@ref COMMAND_TRIGGER_SAMPLE_ERROR					| trigger a sample error  |
+|@ref COMMAND_TRIGGER_SAMPLE_FATAL_ERROR     | trigger a sample fatal error |
 
 ## Bootstrap Config
 

@@ -19,7 +19,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_CMD_CTRL
 
 #include "AppCmdCtrl.h"
@@ -256,7 +256,7 @@ Retcode_T AppCmdCtrl_Enable(const AppRuntimeConfig_T * configPtr) {
 }
 /**
  * @brief Apply a new runtime configuration.
- * @details For @ref AppRuntimeConfig_Element_topicConfig: sends a delete subscriptions and sends new subscriptions.
+ * @note For @ref AppRuntimeConfig_ConfigElement_T .AppRuntimeConfig_Element_topicConfig: sends a delete subscriptions and sends new subscriptions.
  * @note Does not check if the topic configuration has actually changed.
  *
  * @warning Do not call while instruction processing is allowed.
@@ -777,7 +777,7 @@ static void appCmdCtrl_ProcessInstruction(AppCmdCtrlRequestType_T requestType, c
  * Finally, checks if module is still busy processing a previous instruction and sends a failed reponse.
  * Calls @ref appCmdCtrl_ProcessInstruction() to process the instruction.
  *
- * @exceptions Retcode_RaiseError: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_CMD_CTRL_LISTENING_TO_WRONG_TOPICS)
+ * @exception Retcode_RaiseError: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_CMD_CTRL_LISTENING_TO_WRONG_TOPICS)
  *
  */
 static void appCmdCtrl_PreprocessSubscriptionCallback(void * paramsPtr, uint32_t processTypeParam) {

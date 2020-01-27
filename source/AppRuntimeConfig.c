@@ -19,7 +19,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_RUNTIME_CONFIG
 
 #include "AppRuntimeConfig.h"
@@ -578,7 +578,7 @@ static void appRuntimeConfig_DeleteTelemetryConfig(AppRuntimeConfig_TelemetryCon
 }
 /**
  * @brief Free the status config.
- * @params[in] configPtr: the status config
+ * @param[in] configPtr: the status config
  */
 static void appRuntimeConfig_DeleteStatusConfig(AppRuntimeConfig_StatusConfig_T * configPtr) {
 
@@ -1785,11 +1785,8 @@ Retcode_T AppRuntimeConfig_Init(const char * deviceId) {
  * Reads the runtime configuration from file on SD card, or uses default settings if not found.<br/>
  * Validates and creates the runtime configuration and sets it.
  *
- * @param[in] deviceId: the device Id. module takes a copy.
- *
  * @return Retcode_T: RETCODE_OK
  * @return Retcode_T: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_INVALID_DEFAULT_TELEMETRY_RT_PARAMS)
- *
  */
 Retcode_T AppRuntimeConfig_Setup(void) {
 

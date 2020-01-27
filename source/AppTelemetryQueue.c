@@ -22,7 +22,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_TELEMETRY_QUEUE
 
 #include "AppTelemetryQueue.h"

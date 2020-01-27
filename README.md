@@ -1,7 +1,5 @@
 # bosch-xdk110-solace-mqtt-app
 
-**UNDER CONSTRUCTION**
-
 ## Overview
 We have developed a **_reference mqtt client app_** for the Bosch XDK110 to demonstrate how a device can be programmed to interact with a wider IoT platform.
 

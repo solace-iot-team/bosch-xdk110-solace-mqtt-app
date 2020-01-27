@@ -26,6 +26,10 @@ export SOLACE_CFLAGS_DEBUG_APP_XDK_MQTT = -DDEBUG_APP_XDK_MQTT
 #export SOLACE_CFLAGS_DEBUG_APP_BUTTONS = -DDEBUG_APP_BUTTONS
 #export SOLACE_CFLAGS_DEBUG_APP_STATUS = -DDEBUG_APP_STATUS
 
+#Please refer BCDS_CFLAGS_COMMON variable in application.mk file
+#and if any addition flags required then add that flags only in the below macro
+#export BCDS_CFLAGS_COMMON =
+
 #set the final flags
 export BCDS_CFLAGS_COMMON = \
 	$(SOLACE_CFLAGS_DEBUG_APP_CONTROLLER) \
@@ -39,7 +43,7 @@ export BCDS_CFLAGS_COMMON = \
 	$(SOLACE_CFLAGS_DEBUG_APP_XDK_MQTT_EVERY_PUBLISHED_DATA_CALLBACK) \
 	$(SOLACE_CFLAGS_DEBUG_APP_MQTT) \
 	$(SOLACE_CFLAGS_DEBUG_APP_BUTTONS) \
-	$(SOLACE_CFLAGS_DEBUG_APP_STATUS)
+	$(SOLACE_CFLAGS_DEBUG_APP_STATUS) 
 
 
 
@@ -47,9 +51,6 @@ export BCDS_CFLAGS_COMMON = \
 # User can provide custom server certificate as well.
 # By default the test.mosquito.org MQTT open source broker certificate is configured.
 #export XDK_APP_CERTIFICATE_NAME = Solace // unused
-#Please refer BCDS_CFLAGS_COMMON variable in application.mk file
-#and if any addition flags required then add that flags only in the below macro
-#export BCDS_CFLAGS_COMMON =
 
 #Below settings are done for optimized build.Unused common code is disabled to reduce the build time
 export XDK_FEATURE_SET='SELECT'

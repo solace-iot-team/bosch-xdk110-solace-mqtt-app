@@ -50,7 +50,7 @@
  **/
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_MAIN
 
 /* system header files */
@@ -68,7 +68,7 @@
 #include "AppStatus.h"
 
 /* global variables ********************************************************* */
-static CmdProcessor_T MainCmdProcessor;
+static CmdProcessor_T MainCmdProcessor; /**< command processor passed to @ref AppController module. */
 
 
 /**

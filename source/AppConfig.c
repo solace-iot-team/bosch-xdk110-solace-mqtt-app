@@ -22,7 +22,7 @@
 
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_CONFIG
 
 #include "AppConfig.h"
@@ -41,13 +41,13 @@
  * @brief Structure to hold the bootstrap config values.
  */
 typedef struct {
-    const char* baseTopic;
+    const char* baseTopic; /**< the 3 level base topic string */
     struct  {
-		AppXDK_MQTT_Connect_T mqttConnectInfo;
-        bool isSecureConnection;
-    } mqttBrokerInfo;
-    SNTP_Setup_T sntpSetupInfo;
-    WLAN_Setup_T wlanSetupInfo;
+		AppXDK_MQTT_Connect_T mqttConnectInfo; /**< the connect info */
+        bool isSecureConnection; /**< flag if connection is secure */
+    } mqttBrokerInfo; /**< the broker info */
+    SNTP_Setup_T sntpSetupInfo; /**< the SNTP info */
+    WLAN_Setup_T wlanSetupInfo; /**< the WLAN info */
 } AppConfig_T;
 
 /**
@@ -161,7 +161,7 @@ const char * AppConfig_GetBaseTopicStr(void) {
  *
  * @param[in] deviceId : the device Id. Used as the clientId for the MQTT session.
  * @return Retcode_T: RETCODE_OK
- * @return Retcode_T: return from @ref Storage_Setup(), @ref Storage_Enable(), @ref Storage_IsAvailable(),
+ * @return Retcode_T: return from Storage_Setup(), Storage_Enable(), Storage_IsAvailable(),
  * @return Retcode_T: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_SD_CARD_NOT_AVAILABLE)
  * @return Retcode_T: RETCODE(RETCODE_SEVERITY_FATAL, #RETCODE_SOLAPP_ERROR_PARSING_BOOTSTRAP_CONFIG)
  */

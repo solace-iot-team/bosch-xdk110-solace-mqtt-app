@@ -21,7 +21,8 @@
  **/
 
 #include "XdkAppInfo.h"
-#undef BCDS_MODULE_ID
+
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_TIMESTAMP
 
 #include "AppTimestamp.h"
@@ -166,7 +167,7 @@ AppTimestamp_T AppTimestamp_GetTimestamp(const TickType_t tickCount) {
  *
  * @see #APP_TIMESTAMP_STRING_FORMAT
  *
- * @param[in] timestamp: the timestamp generated with #AppTimestamp_GetCurrentTimestamp()
+ * @param[in] timestamp: the timestamp generated with @ref AppTimestamp_GetTimestamp()
  *
  * @return char *: the timestamp converted to string or NULL if module is not enabled yet.
  *
@@ -176,7 +177,7 @@ AppTimestamp_T AppTimestamp_GetTimestamp(const TickType_t tickCount) {
  * @code
  *
  *  // lock in the timestamp
- * 	AppTimestamp_T savedTimestamp = AppTimestamp_GetCurrentTimestamp(xTaskGetTickCount());
+ * 	AppTimestamp_T savedTimestamp = AppTimestamp_GetTimestamp(xTaskGetTickCount());
  *
  * 	// do something in between
  *

@@ -54,7 +54,7 @@
 
 #include "XdkAppInfo.h"
 
-#undef BCDS_MODULE_ID
+#undef BCDS_MODULE_ID /**< undefine any previous module id */
 #define BCDS_MODULE_ID SOLACE_APP_MODULE_ID_APP_CONTROLLER
 
 #include "AppController.h"
@@ -91,7 +91,7 @@ static SemaphoreHandle_t appController_TelemetryTasksSemaphoreHandle = NULL; /**
 
 /* internal state management */
 static SemaphoreHandle_t appController_InstructionsSemaphoreHandle = NULL; /**< semaphore for internal state management */
-#define APP_CONTROLLER_BLOCK_INSTRUCTIONS_SEMAPHORE_WAIT_IN_MS		UINT32_C(10000)
+#define APP_CONTROLLER_BLOCK_INSTRUCTIONS_SEMAPHORE_WAIT_IN_MS		UINT32_C(10000) /**< wait time to take the instructions semaphore */
 /**
  * @brief internal states
  */
