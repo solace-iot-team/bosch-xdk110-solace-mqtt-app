@@ -75,6 +75,8 @@ cJSON * AppMisc_GetVersionsAsJson(void) {
 	cJSON_AddNumberToObject(jsonHandle, "XDK_Version_Minor", XdkVersion_GetMinor());
 	cJSON_AddNumberToObject(jsonHandle, "XDK_Version_Patch", XdkVersion_GetPatch());
 
+	cJSON_AddNumberToObject(jsonHandle, "XDK_App_Version", XdkVersion_GetAppVersion());
+
 	cJSON_AddNumberToObject(jsonHandle, "Solace_App_Version_Major", SolaceAppVersion_GetMajor());
 	cJSON_AddNumberToObject(jsonHandle, "Solace_App_Version_Minor", SolaceAppVersion_GetMinor());
 	cJSON_AddNumberToObject(jsonHandle, "Solace_App_Version_Patch", SolaceAppVersion_GetPatch());

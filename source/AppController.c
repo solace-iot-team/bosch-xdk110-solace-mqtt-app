@@ -447,6 +447,10 @@ Retcode_T AppController_ExecuteCommand(AppCmdCtrl_CommandType_T commandType, con
 		AppStatus_SendCurrentShortStatus(exchangeIdStr);
 	}
 	break;
+	case AppCmdCtrl_CommandType_SendVersionInfo: {
+		AppStatus_SendVersionInfo(exchangeIdStr);
+	}
+	break;
 	case AppCmdCtrl_CommandType_SendActiveTelemetryParams: {
 		AppStatus_SendActiveTelemetryParams(exchangeIdStr);
 	}

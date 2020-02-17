@@ -100,6 +100,8 @@ void AppStatus_SendCurrentFullStatus(const char * exchangeIdStr);
 
 void AppStatus_SendCurrentShortStatus(const char * exchangeIdStr);
 
+void AppStatus_SendVersionInfo(const char * exchangeIdStr);
+
 void AppStatus_SendActiveTelemetryParams(const char * exchangeIdStr);
 
 void AppStatus_SendMqttBrokerDisconnectedMessage(void);

@@ -861,7 +861,7 @@ static Retcode_T appStatus_SendFullStatus(const char * exchangeIdStr, AppStatusM
 	// part 2
 	if(RETCODE_OK == retcode) {
 		msg = appStatus_CreateStatusMessagePart(descrCode, NULL, exchangeIdStr, totalNumParts, 2);
-		AppStatus_AddStatusItem(msg, "activeRuntimeConfig.topicConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_topicConfig));
+		AppStatus_AddStatusItem(msg, "topicConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_topicConfig));
 
 		cJSON * jsonHandle = appStatus_GetStatusMessageAsJson(msg);
 	    retcode = appStatus_SendJsonMessage(jsonHandle, false, sendQueuedMessagesFirst);
@@ -870,7 +870,7 @@ static Retcode_T appStatus_SendFullStatus(const char * exchangeIdStr, AppStatusM
 	// part 3
 	if(RETCODE_OK == retcode) {
 		msg = appStatus_CreateStatusMessagePart(descrCode, NULL, exchangeIdStr, totalNumParts, 3);
-		AppStatus_AddStatusItem(msg, "activeRuntimeConfig.mqttBrokerConnectionConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_mqttBrokerConnectionConfig));
+		AppStatus_AddStatusItem(msg, "mqttBrokerConnectionConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_mqttBrokerConnectionConfig));
 
 		cJSON * jsonHandle = appStatus_GetStatusMessageAsJson(msg);
 	    retcode = appStatus_SendJsonMessage(jsonHandle, false, sendQueuedMessagesFirst);
@@ -879,7 +879,7 @@ static Retcode_T appStatus_SendFullStatus(const char * exchangeIdStr, AppStatusM
 	// part 4
 	if(RETCODE_OK == retcode) {
 		msg = appStatus_CreateStatusMessagePart(descrCode, NULL, exchangeIdStr, totalNumParts, 4);
-		AppStatus_AddStatusItem(msg, "activeRuntimeConfig.statusConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_statusConfig));
+		AppStatus_AddStatusItem(msg, "statusConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_statusConfig));
 
 		cJSON * jsonHandle = appStatus_GetStatusMessageAsJson(msg);
 	    retcode = appStatus_SendJsonMessage(jsonHandle, false, sendQueuedMessagesFirst);
@@ -888,7 +888,7 @@ static Retcode_T appStatus_SendFullStatus(const char * exchangeIdStr, AppStatusM
 	// part 5
 	if(RETCODE_OK == retcode) {
 		msg = appStatus_CreateStatusMessagePart(descrCode, NULL, exchangeIdStr, totalNumParts, 5);
-		AppStatus_AddStatusItem(msg, "activeRuntimeConfig.activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
+		AppStatus_AddStatusItem(msg, "activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
 
 		cJSON * jsonHandle = appStatus_GetStatusMessageAsJson(msg);
 	    retcode = appStatus_SendJsonMessage(jsonHandle, false, sendQueuedMessagesFirst);
@@ -897,7 +897,7 @@ static Retcode_T appStatus_SendFullStatus(const char * exchangeIdStr, AppStatusM
 	// part 6
 	if(RETCODE_OK == retcode) {
 		msg = appStatus_CreateStatusMessagePart(descrCode, NULL, exchangeIdStr, totalNumParts, 6);
-		AppStatus_AddStatusItem(msg, "activeRuntimeConfig.targetTelemetryConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_targetTelemetryConfig));
+		AppStatus_AddStatusItem(msg, "targetTelemetryConfig", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_targetTelemetryConfig));
 
 		cJSON * jsonHandle = appStatus_GetStatusMessageAsJson(msg);
 	    retcode = appStatus_SendJsonMessage(jsonHandle, false, sendQueuedMessagesFirst);
@@ -933,7 +933,7 @@ static void appStatus_SendShortStatus(void * exchangeIdStr, uint32_t param2) {
 	if(statsJson) AppStatus_AddStatusItem(msg, "stats", statsJson);
 	else AppStatus_AddStatusItem(msg, "stats", cJSON_CreateNull());
 
-	AppStatus_AddStatusItem(msg, "activeRuntimeConfig.activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
+	AppStatus_AddStatusItem(msg, "activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
 
 	appStatus_SendStatusMessage(msg);
 
@@ -987,6 +987,22 @@ void AppStatus_SendCurrentShortStatus(const char * exchangeIdStr) {
 	}
 }
 /**
+ * @brief Send the version info as a response to a command.
+ * Enqueues the sending of the message into the module's command processor, uses @ref AppStatus_SendStatusMessage(). Function returns immediately.
+ *
+ * @param[in] exchangeIdStr: the exchange Id from the request.
+ * @exception Retcode_RaiseError: from @ref AppStatus_SendStatusMessage()
+ */
+void AppStatus_SendVersionInfo(const char * exchangeIdStr) {
+
+	assert(exchangeIdStr);
+
+	AppStatusMessage_T * msg = AppStatus_CreateMessage(AppStatusMessage_Status_Info, AppStatusMessage_Descr_VersionInfo, NULL);
+	appStatus_AddExchangeId(msg, exchangeIdStr);
+	AppStatus_AddStatusItem(msg, "versions", AppMisc_GetVersionsAsJson());
+	AppStatus_SendStatusMessage(msg);
+}
+/**
  * @brief Send the currently active telemetry parameters as a response to a command.
  * Enqueues the sending of the message into the module's command processor, uses @ref AppStatus_SendStatusMessage(). Function returns immediately.
  *
@@ -999,7 +1015,7 @@ void AppStatus_SendActiveTelemetryParams(const char * exchangeIdStr) {
 
 	AppStatusMessage_T * msg = AppStatus_CreateMessage(AppStatusMessage_Status_Info, AppStatusMessage_Descr_ActiveTelemetryRuntimeParams, NULL);
 	appStatus_AddExchangeId(msg, exchangeIdStr);
-	AppStatus_AddStatusItem(msg, "activeRuntimeConfig.activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
+	AppStatus_AddStatusItem(msg, "activeTelemetryRTParams", AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_activeTelemetryRTParams));
 	AppStatus_SendStatusMessage(msg);
 }
 /**

@@ -47,7 +47,7 @@ typedef enum AppCmdCtrl_ProcessType_E AppCmdCtrl_ProcessType_T; /**< type for #A
 #define COMMAND_RESUME_TELEMETRY							"RESUME_TELEMETRY"  /**< COMMAND_RESUME_TELEMETRY*/
 #define COMMAND_SEND_FULL_STATUS							"SEND_FULL_STATUS"  /**< COMMAND_SEND_FULL_STATUS*/
 #define COMMAND_SEND_SHORT_STATUS							"SEND_SHORT_STATUS"  /**< COMMAND_SEND_SHORT_STATUS*/
-#define COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS			"SEND_ACTIVE_TELEMETRY_PARAMS"  /**< COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS*/
+#define COMMAND_SEND_ACTIVE_TELEMETRY_PARAMS				"SEND_ACTIVE_TELEMETRY_PARAMS"  /**< COMMAND_SEND_ACTIVE_TELEMETRY_PARAMS*/
 #define COMMAND_REBOOT										"REBOOT"  /**< COMMAND_REBOOT*/
 #define COMMAND_SEND_ACTIVE_RUNTIME_CONFIG					"SEND_ACTIVE_RUNTIME_CONFIG"  /**< COMMAND_SEND_ACTIVE_RUNTIME_CONFIG*/
 #define COMMAND_SEND_RUNTIME_CONFIG_FILE					"SEND_RUNTIME_CONFIG_FILE"  /**< COMMAND_SEND_RUNTIME_CONFIG_FILE*/
@@ -55,6 +55,7 @@ typedef enum AppCmdCtrl_ProcessType_E AppCmdCtrl_ProcessType_T; /**< type for #A
 #define COMMAND_PERSIST_ACTIVE_CONFIG						"PERSIST_ACTIVE_CONFIG"  /**< COMMAND_PERSIST_ACTIVE_CONFIG*/
 #define COMMAND_TRIGGER_SAMPLE_ERROR						"TRIGGER_SAMPLE_ERROR" /**< COMMAND_TRIGGER_SAMPLE_ERROR*/
 #define COMMAND_TRIGGER_SAMPLE_FATAL_ERROR					"TRIGGER_SAMPLE_FATAL_ERROR" /**< COMMAND_TRIGGER_SAMPLE_FATAL_ERROR*/
+#define COMMAND_SEND_VERSION_INFO							"SEND_VERSION_INFO" /**< COMMAND_SEND_VERSION_INFO */
 
 #define APP_CMD_CTRL_WAIT_BETWEEN_SUBSCRIPTION_REQUESTS_IN_MS			(UINT32_C(1000)) /**< wait time between subscription requests */
 
@@ -716,7 +717,8 @@ static void appCmdCtrl_ProcessInstruction(AppCmdCtrlRequestType_T requestType, c
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_RESUME_TELEMETRY) ) commandType = AppCmdCtrl_CommandType_ResumeTelemetry;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_FULL_STATUS) ) commandType = AppCmdCtrl_CommandType_SendFullStatus;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_SHORT_STATUS) ) commandType = AppCmdCtrl_CommandType_SendShortStatus;
-			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS) ) commandType = AppCmdCtrl_CommandType_SendActiveTelemetryParams;
+			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_VERSION_INFO) ) commandType = AppCmdCtrl_CommandType_SendVersionInfo;
+			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_ACTIVE_TELEMETRY_PARAMS) ) commandType = AppCmdCtrl_CommandType_SendActiveTelemetryParams;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_ACTIVE_RUNTIME_CONFIG) ) commandType = AppCmdCtrl_CommandType_SendActiveRuntimeConfig;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_SEND_RUNTIME_CONFIG_FILE) ) commandType = AppCmdCtrl_CommandType_SendRuntimeConfigFile;
 			else if(NULL != strstr(commandJsonHandle->valuestring, COMMAND_DELETE_RUNTIME_CONFIG_FILE) ) commandType = AppCmdCtrl_CommandType_DeleteRuntimeConfigFile;

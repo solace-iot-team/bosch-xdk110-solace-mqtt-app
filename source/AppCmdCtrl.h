@@ -42,6 +42,7 @@ typedef enum {
 	AppCmdCtrl_CommandType_Reboot,
 	AppCmdCtrl_CommandType_TriggerSampleError,
 	AppCmdCtrl_CommandType_TriggerSampleFatalError,
+	AppCmdCtrl_CommandType_SendVersionInfo
 } AppCmdCtrl_CommandType_T;
 /**
  * @brief Callback function for new configuration processing.
