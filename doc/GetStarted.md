@@ -167,7 +167,7 @@ Example first status message followed by 5 more:
         "XDK_Version_Patch": 0,
         "Solace_App_Version_Major": 2,
         "Solace_App_Version_Minor": 0,
-        "Solace_App_Version_Patch": 0
+        "Solace_App_Version_Patch": 1
       }
     }
   ]
@@ -190,7 +190,7 @@ The last one shows the default telemetry configuration:
   "descrCode": 16,
   "items": [
     {
-      "activeRuntimeConfig.targetTelemetryConfig": {
+      "targetTelemetryConfig": {
         "received": {
           "timestamp": "2020-01-15T15:18:51.213Z",
           "exchangeId": "default-exchange-id",

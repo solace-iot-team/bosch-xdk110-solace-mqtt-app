@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Solace_Logo_Green_200x55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bosch XDK110 Solace MQTT App
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
    <div id="projectbrief">MQTT Reference Application for the Bosch XDK110</div>
   </td>
@@ -438,14 +438,16 @@ Command List</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga86ae339c6071e1e44cd82a18530f1d19">COMMAND_SEND_SHORT_STATUS</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82">appStatus_SendShortStatus()</a>   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#gaa725771bf926381944543c7daac02764">COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2">AppStatus_SendActiveTelemetryParams()</a>   </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#gaa776d99b5f8c4d5bfe5ecabf4ff1dcd4">COMMAND_SEND_VERSION_INFO</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb">AppStatus_SendVersionInfo()</a>   </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga4dd240122adf7bf66bbc1dedc94792de">COMMAND_SEND_ACTIVE_TELEMETRY_PARAMS</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2">AppStatus_SendActiveTelemetryParams()</a>   </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga104334c2cca8eb41b0d6ceaa41ccc4b6">COMMAND_SEND_ACTIVE_RUNTIME_CONFIG</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b">AppRuntimeConfig_SendActiveConfig()</a>   </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga8393cba4c4192c33528a2210a510a9ac">COMMAND_SEND_RUNTIME_CONFIG_FILE</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd">AppRuntimeConfig_SendFile()</a>   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga7d37c12a78a3b8b51480301c0a21a6d7">COMMAND_TRIGGER_SAMPLE_ERROR</a>  </td><td class="markdownTableBodyNone">trigger a sample error   </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga8393cba4c4192c33528a2210a510a9ac">COMMAND_SEND_RUNTIME_CONFIG_FILE</a>  </td><td class="markdownTableBodyNone">see <a class="el" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd">AppRuntimeConfig_SendFile()</a>   </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#ga7d37c12a78a3b8b51480301c0a21a6d7">COMMAND_TRIGGER_SAMPLE_ERROR</a>  </td><td class="markdownTableBodyNone">trigger a sample error   </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="group___app_cmd_ctrl.html#gae9a86162e74e17af2a9a8125349bca2d">COMMAND_TRIGGER_SAMPLE_FATAL_ERROR</a>  </td><td class="markdownTableBodyNone">trigger a sample fatal error   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md22"></a>
@@ -609,7 +611,7 @@ Short Status</h2>
 <div class="line">      }</div>
 <div class="line">    },</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.activeTelemetryRTParams&quot;: {</div>
+<div class="line">      &quot;activeTelemetryRTParams&quot;: {</div>
 <div class="line">        &quot;numberOfSamplesPerEvent&quot;: 2,</div>
 <div class="line">        &quot;publishPeriodcityMillis&quot;: 1000,</div>
 <div class="line">        &quot;samplingPeriodicityMillis&quot;: 500</div>
@@ -668,7 +670,7 @@ Full Status</h2>
 <div class="line">  &quot;descrCode&quot;: 15,</div>
 <div class="line">  &quot;items&quot;: [</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.topicConfig&quot;: {</div>
+<div class="line">      &quot;topicConfig&quot;: {</div>
 <div class="line">        &quot;received&quot;: {</div>
 <div class="line">          &quot;timestamp&quot;: &quot;2020-01-27T11:28:56.606Z&quot;,</div>
 <div class="line">          &quot;exchangeId&quot;: &quot;5078BB46-F1DB-4EA6-8D9C-B08A00711A61&quot;,</div>
@@ -696,7 +698,7 @@ Full Status</h2>
 <div class="line">  &quot;descrCode&quot;: 15,</div>
 <div class="line">  &quot;items&quot;: [</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.mqttBrokerConnectionConfig&quot;: {</div>
+<div class="line">      &quot;mqttBrokerConnectionConfig&quot;: {</div>
 <div class="line">        &quot;received&quot;: {</div>
 <div class="line">          &quot;timestamp&quot;: &quot;2020-01-20T16:07:31.213Z&quot;,</div>
 <div class="line">          &quot;exchangeId&quot;: &quot;default-exchange-id&quot;,</div>
@@ -728,7 +730,7 @@ Full Status</h2>
 <div class="line">  &quot;descrCode&quot;: 15,</div>
 <div class="line">  &quot;items&quot;: [</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.statusConfig&quot;: {</div>
+<div class="line">      &quot;statusConfig&quot;: {</div>
 <div class="line">        &quot;received&quot;: {</div>
 <div class="line">          &quot;timestamp&quot;: &quot;2020-01-27T11:11:39.070Z&quot;,</div>
 <div class="line">          &quot;exchangeId&quot;: &quot;9A25D1B1-E86B-4D57-B523-D5B4526E1F43&quot;,</div>
@@ -757,7 +759,7 @@ Full Status</h2>
 <div class="line">  &quot;descrCode&quot;: 15,</div>
 <div class="line">  &quot;items&quot;: [</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.activeTelemetryRTParams&quot;: {</div>
+<div class="line">      &quot;activeTelemetryRTParams&quot;: {</div>
 <div class="line">        &quot;numberOfSamplesPerEvent&quot;: 2,</div>
 <div class="line">        &quot;publishPeriodcityMillis&quot;: 1000,</div>
 <div class="line">        &quot;samplingPeriodicityMillis&quot;: 500</div>
@@ -776,7 +778,7 @@ Full Status</h2>
 <div class="line">  &quot;descrCode&quot;: 15,</div>
 <div class="line">  &quot;items&quot;: [</div>
 <div class="line">    {</div>
-<div class="line">      &quot;activeRuntimeConfig.targetTelemetryConfig&quot;: {</div>
+<div class="line">      &quot;targetTelemetryConfig&quot;: {</div>
 <div class="line">        &quot;received&quot;: {</div>
 <div class="line">          &quot;timestamp&quot;: &quot;2020-01-27T09:58:55.034Z&quot;,</div>
 <div class="line">          &quot;exchangeId&quot;: &quot;FDB99BE4-95F5-411C-B571-497380CAB10B&quot;,</div>

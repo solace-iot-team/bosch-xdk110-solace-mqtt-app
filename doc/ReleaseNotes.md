@@ -1,5 +1,20 @@
 # Release Notes
 
+## Release 2.0.1
+
+Minor patch release.
+- upgraded to XDK Workbench 3.6.1
+  - Retcode numbers have changed, adapted in documentation in XdkAppInfo.h
+- fixed JSON element names for configuration command responses
+- new command: SEND_VERSION_INFO
+  - returns version info of XDK and app
+
+### New Known Issues
+- XDK version still returns 3.6.0 - patch number is not updated in code (XdkVersion.h)
+
+### Resolved Issues
+none.
+
 ## Release 2.0.0
 
 First release based on prototype developed Jan-May 2019.

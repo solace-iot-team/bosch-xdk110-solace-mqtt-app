@@ -14,7 +14,8 @@ var _app_cmd_ctrl_8h =
       [ "AppCmdCtrl_CommandType_PersistActiveConfig", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1a33e496125e34f079d2bda392b69ea094", null ],
       [ "AppCmdCtrl_CommandType_Reboot", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1af805aca81e4b1a01dbb164b7663e2009", null ],
       [ "AppCmdCtrl_CommandType_TriggerSampleError", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1a602d4724efb99b268533ffa9979465d8", null ],
-      [ "AppCmdCtrl_CommandType_TriggerSampleFatalError", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1a738ba1b65b1dc1d02739f8e8f3c4f0f3", null ]
+      [ "AppCmdCtrl_CommandType_TriggerSampleFatalError", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1a738ba1b65b1dc1d02739f8e8f3c4f0f3", null ],
+      [ "AppCmdCtrl_CommandType_SendVersionInfo", "_app_cmd_ctrl_8h.html#af0e773d323b5cf7a9d924103da6f3eb1a149d10e4e688495789839001b43d9df7", null ]
     ] ],
     [ "AppCmdCtrlRequestType_T", "_app_cmd_ctrl_8h.html#a45fef24ad32654763d29b1f927fb3745", [
       [ "AppCmdCtrl_RequestType_NULL", "_app_cmd_ctrl_8h.html#a45fef24ad32654763d29b1f927fb3745a71f31a37e7c6d74802d970140f61061a", null ],

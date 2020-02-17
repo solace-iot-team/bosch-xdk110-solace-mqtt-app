@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Solace_Logo_Green_200x55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bosch XDK110 Solace MQTT App
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
    <div id="projectbrief">MQTT Reference Application for the Bosch XDK110</div>
   </td>
@@ -151,7 +151,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Manages timestamps and SNTP interactions. </p>
 <dl class="section author"><dt>Author</dt><dd>Solace IoT Team</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>Jan-2019 to Jan-2020 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Jan-2019 to Feb-2020 </dd></dl>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="gabff8f3a204e79671b98fabaa652198c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabff8f3a204e79671b98fabaa652198c3">&#9670;&nbsp;</a></span>BCDS_MODULE_ID</h2>
@@ -221,37 +221,38 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="group___app_buttons.html#ga1b31a4841c3b304a2017e1ca717f80e6" title="Callback for BSP button module for button 1 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1375,5,1569,47"/>
 <area shape="rect" href="group___app_buttons.html#ga54a0b1236f8139832431a59fae03d9c3" title="Callback for BSP button module for button 2 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1375,71,1569,112"/>
 <area shape="rect" href="group___app_buttons.html#ga2f5b072e59a8cbb2b8775f7fd13f9d86" title="Enable the module. Enables the BSP_Button module and registers the callbacks for button 1 &amp; 2." alt="" coords="1124,27,1264,54"/>
-<area shape="rect" href="group___app_controller.html#gae98b7fef4ce537fdb08edeaec71e1dc2" title="Enables the application. Enqueued by AppController_Setup(). Concludes the initialization process." alt="" coords="848,79,1000,106"/>
-<area shape="rect" href="group___app_controller.html#ga73f62412789e428edb216b317f9aa1ab" title="Setup of the application. Calls various modules&#39; setup function. Enqueued by AppController_Init()...." alt="" coords="37,105,183,131"/>
+<area shape="rect" href="group___app_controller.html#gae98b7fef4ce537fdb08edeaec71e1dc2" title="Enables the application. Enqueued by AppController_Setup(). Concludes the initialization process." alt="" coords="848,78,1000,105"/>
+<area shape="rect" href="group___app_controller.html#ga73f62412789e428edb216b317f9aa1ab" title="Setup of the application. Calls various modules&#39; setup function. Enqueued by AppController_Init()...." alt="" coords="37,94,183,121"/>
 <area shape="rect" href="group___app_status.html#ga8e1976eb2785bb8aebe93895e4247e0b" title="Sends the full status message as a series of messages. Used either in the periodic task or as a respo..." alt="" coords="1382,246,1562,273"/>
-<area shape="rect" href="group___app_status.html#gaf7a36d4c6643dd9dfeb6818ddcf39cbd" title="Send the status message and deletes it." alt="" coords="1366,330,1578,357"/>
+<area shape="rect" href="group___app_status.html#gaf7a36d4c6643dd9dfeb6818ddcf39cbd" title="Send the status message and deletes it." alt="" coords="1366,331,1578,358"/>
 <area shape="rect" href="group___app_status.html#ga37eb6f211091ab5235454abbe72c56d4" title="Send the boot status message series. Synchronous call, uses appStatus_SendFullStatus()...." alt="" coords="1101,246,1287,273"/>
 <area shape="rect" href="group___app_status.html#gaec5de6271242f9fd729cf17edcf48e5a" title="Wrapper around appStatus_SendFullStatus() to send full status enqueued in module&#39;s command processor." alt="" coords="1104,297,1284,339"/>
-<area shape="rect" href="group___app_status.html#ga60213a455b3f29258a369291aa6c070e" title="Send the full, current status of the device in multiple parts as a response to a command...." alt="" coords="830,291,1018,332"/>
-<area shape="rect" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82" title="Sends the short status message. Can be called enqueued or directly." alt="" coords="1099,363,1289,390"/>
-<area shape="rect" href="group___app_status.html#ga5292d45e5719ba61d74cf8e5215a52c4" title="Wrapper to send the status message from an enqueued function in command processor...." alt="" coords="1088,415,1300,456"/>
-<area shape="rect" href="group___app_status.html#ga473f9657db4578be81c37a00e7f74ba0" title="Send the short, current status of the device as a response to a command. Enqueues the sending of the ..." alt="" coords="825,356,1023,397"/>
-<area shape="rect" href="group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba" title="Enqueues the sending of the status message in module&#39;s command processor." alt="" coords="817,422,1031,449"/>
-<area shape="rect" href="group___app_cmd_ctrl.html#ga05982a927f4444fe797c47ad94356c54" title="Sends the response to a command or configuration instruction using AppStatus_SendStatusMessage()...." alt="" coords="554,481,746,507"/>
-<area shape="rect" href="group___app_config.html#ga51226bb5635054dc97d9301768c6bd8b" title="Initialize the module." alt="" coords="595,363,705,390"/>
-<area shape="rect" href="group___app_controller.html#gaafbfbf17d1fa81f1d9cb8427c7d05031" title="Applies a new configuration for the MQTT broker." alt="" coords="549,415,751,456"/>
-<area shape="rect" href="group___app_runtime_config.html#gaa05e8a107233c90a862ef9335b99bf6e" title="Reads the runtime config from file on SD card." alt="" coords="539,247,761,288"/>
-<area shape="rect" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd" title="Sends the persisted runtime configuration file using appRuntimeConfig_SendConfig() or a status messag..." alt="" coords="13,311,207,338"/>
-<area shape="rect" href="group___app_runtime_config.html#gae50760bbfefb81ab356ba09c79c5babe" title="Setup the module." alt="" coords="285,130,461,157"/>
-<area shape="rect" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad" title="Sends the runtime configuration as multiple parts (each element as one part) using AppStatus_SendStat..." alt="" coords="268,611,477,638"/>
-<area shape="rect" href="group___app_status.html#gaa4d8322af90ec23cc2942e0340ef6390" title="Custom error handling function. Initialize in main(). Prints a json format of the retcode...." alt="" coords="549,633,751,659"/>
-<area shape="rect" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2" title="Send the currently active telemetry parameters as a response to a command. Enqueues the sending of th..." alt="" coords="541,684,759,725"/>
-<area shape="rect" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2" title="Send a status message that broker has been disconnected. Enqueues the sending of the message into the..." alt="" coords="557,749,743,791"/>
-<area shape="rect" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f" title="Convenience function to create and send a status message as part of a series with optional Json item...." alt="" coords="531,531,769,558"/>
-<area shape="rect" href="group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348" title="Send a status message that the device was disconnected from the WLAN. Enqueues the sending of the mes..." alt="" coords="533,181,767,223"/>
-<area shape="rect" href="group___app_cmd_ctrl.html#ga7611bd15d92dbbfbca1332202d7f9768" title="Process new broker configuration instruction." alt="" coords="266,545,479,587"/>
-<area shape="rect" href="group___app_cmd_ctrl.html#ga6096fe0eace07e9f9204f08d41a4de4e" title="Process new status configuration." alt="" coords="279,363,466,404"/>
-<area shape="rect" href="group___app_cmd_ctrl.html#ga8a6326ef495d2f6897e2bb1157b4e93c" title="Process new telemetry configuration." alt="" coords="269,428,477,469"/>
-<area shape="rect" href="group___app_cmd_ctrl.html#gacfe68e1ee96a85e076d831fb76ea4516" title="Process new topic configuration." alt="" coords="263,494,483,521"/>
-<area shape="rect" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b" title="Sends the active runtime configuration using appRuntimeConfig_SendConfig(). Use as response to a comm..." alt="" coords="5,604,215,645"/>
-<area shape="rect" href="group___main.html#ga840291bc02cba5474a4cb46a9b9566fe" title="The main() function invoked at start&#45;up." alt="" coords="347,662,398,689"/>
-<area shape="rect" href="group___app_controller.html#ga83eab2232edc93578afbdfb68a86769a" title="Setup after a disconnect event from the broker." alt="" coords="287,749,459,791"/>
-<area shape="rect" href="group___app_controller.html#ga1dc58bd91b7d65d28d63f735b7597d39" title="Callback from AppMqtt module when connection closed event received." alt="" coords="23,749,197,791"/>
+<area shape="rect" href="group___app_status.html#ga60213a455b3f29258a369291aa6c070e" title="Send the full, current status of the device in multiple parts as a response to a command...." alt="" coords="830,295,1018,336"/>
+<area shape="rect" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82" title="Sends the short status message. Can be called enqueued or directly." alt="" coords="1099,366,1289,393"/>
+<area shape="rect" href="group___app_status.html#ga5292d45e5719ba61d74cf8e5215a52c4" title="Wrapper to send the status message from an enqueued function in command processor...." alt="" coords="1088,423,1300,464"/>
+<area shape="rect" href="group___app_status.html#ga473f9657db4578be81c37a00e7f74ba0" title="Send the short, current status of the device as a response to a command. Enqueues the sending of the ..." alt="" coords="825,360,1023,401"/>
+<area shape="rect" href="group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba" title="Enqueues the sending of the status message in module&#39;s command processor." alt="" coords="817,438,1031,465"/>
+<area shape="rect" href="group___app_cmd_ctrl.html#ga05982a927f4444fe797c47ad94356c54" title="Sends the response to a command or configuration instruction using AppStatus_SendStatusMessage()...." alt="" coords="554,521,746,547"/>
+<area shape="rect" href="group___app_config.html#ga51226bb5635054dc97d9301768c6bd8b" title="Initialize the module." alt="" coords="595,403,705,430"/>
+<area shape="rect" href="group___app_controller.html#gaafbfbf17d1fa81f1d9cb8427c7d05031" title="Applies a new configuration for the MQTT broker." alt="" coords="549,455,751,496"/>
+<area shape="rect" href="group___app_runtime_config.html#gaa05e8a107233c90a862ef9335b99bf6e" title="Reads the runtime config from file on SD card." alt="" coords="539,287,761,328"/>
+<area shape="rect" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd" title="Sends the persisted runtime configuration file using appRuntimeConfig_SendConfig() or a status messag..." alt="" coords="13,351,207,378"/>
+<area shape="rect" href="group___app_runtime_config.html#gae50760bbfefb81ab356ba09c79c5babe" title="Setup the module." alt="" coords="285,119,461,146"/>
+<area shape="rect" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad" title="Sends the runtime configuration as multiple parts (each element as one part) using AppStatus_SendStat..." alt="" coords="268,651,477,678"/>
+<area shape="rect" href="group___app_status.html#gaa4d8322af90ec23cc2942e0340ef6390" title="Custom error handling function. Initialize in main(). Prints a json format of the retcode...." alt="" coords="549,673,751,699"/>
+<area shape="rect" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2" title="Send the currently active telemetry parameters as a response to a command. Enqueues the sending of th..." alt="" coords="541,724,759,765"/>
+<area shape="rect" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2" title="Send a status message that broker has been disconnected. Enqueues the sending of the message into the..." alt="" coords="557,789,743,831"/>
+<area shape="rect" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f" title="Convenience function to create and send a status message as part of a series with optional Json item...." alt="" coords="531,622,769,649"/>
+<area shape="rect" href="group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb" title="Send the version info as a response to a command. Enqueues the sending of the message into the module..." alt="" coords="555,170,745,197"/>
+<area shape="rect" href="group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348" title="Send a status message that the device was disconnected from the WLAN. Enqueues the sending of the mes..." alt="" coords="533,221,767,263"/>
+<area shape="rect" href="group___app_cmd_ctrl.html#ga7611bd15d92dbbfbca1332202d7f9768" title="Process new broker configuration instruction." alt="" coords="266,520,479,561"/>
+<area shape="rect" href="group___app_cmd_ctrl.html#ga6096fe0eace07e9f9204f08d41a4de4e" title="Process new status configuration." alt="" coords="279,585,466,627"/>
+<area shape="rect" href="group___app_cmd_ctrl.html#ga8a6326ef495d2f6897e2bb1157b4e93c" title="Process new telemetry configuration." alt="" coords="269,403,477,444"/>
+<area shape="rect" href="group___app_cmd_ctrl.html#gacfe68e1ee96a85e076d831fb76ea4516" title="Process new topic configuration." alt="" coords="263,469,483,495"/>
+<area shape="rect" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b" title="Sends the active runtime configuration using appRuntimeConfig_SendConfig(). Use as response to a comm..." alt="" coords="5,644,215,685"/>
+<area shape="rect" href="group___main.html#ga840291bc02cba5474a4cb46a9b9566fe" title="The main() function invoked at start&#45;up." alt="" coords="347,702,398,729"/>
+<area shape="rect" href="group___app_controller.html#ga83eab2232edc93578afbdfb68a86769a" title="Setup after a disconnect event from the broker." alt="" coords="287,789,459,831"/>
+<area shape="rect" href="group___app_controller.html#ga1dc58bd91b7d65d28d63f735b7597d39" title="Callback from AppMqtt module when connection closed event received." alt="" coords="23,789,197,831"/>
 <area shape="rect" href="group___app_status.html#gaff2d3cac4405a8f12ba79d5a7ad2778c" title="Send all queued messages if module is enabled and connected to broker and resets the queue." alt="" coords="1357,187,1587,214"/>
 <area shape="rect" href="group___app_status.html#gae620e469cac94ab60e7694e5207e62a7" title="Call to notify module that broker is reconnected." alt="" coords="1089,180,1299,221"/>
 <area shape="rect" href="group___app_status.html#gaea8f9acf292a97d0549a2b68134bc87d" title="Send all queued messages if the module is enabled and the broker connected. This is a synchronous cal..." alt="" coords="1079,129,1309,155"/>
@@ -337,41 +338,42 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group___app_timestamp_ga9217e966fecd8b55eb7944b692be94e7_icgraph.png" border="0" usemap="#group___app_timestamp_ga9217e966fecd8b55eb7944b692be94e7_icgraph" alt=""/></div>
 <map name="group___app_timestamp_ga9217e966fecd8b55eb7944b692be94e7_icgraph" id="group___app_timestamp_ga9217e966fecd8b55eb7944b692be94e7_icgraph">
-<area shape="rect" title="Returns the timestamp of tickCount." alt="" coords="1792,477,1999,504"/>
-<area shape="rect" href="group___app_buttons.html#ga1b31a4841c3b304a2017e1ca717f80e6" title="Callback for BSP button module for button 1 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1539,320,1733,362"/>
-<area shape="rect" href="group___app_buttons.html#ga54a0b1236f8139832431a59fae03d9c3" title="Callback for BSP button module for button 2 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1539,386,1733,427"/>
-<area shape="rect" href="group___app_controller.html#ga22919ee3de6947c4b6616a9231e71f67" title="Initialize the application." alt="" coords="1322,649,1451,676"/>
-<area shape="rect" href="group___app_status.html#ga8ceb9dbb79cfb5938aa6c33adb91e605" title="Creates a new, empty status message apart from setting the timestamp from current tick count." alt="" coords="1544,452,1728,478"/>
-<area shape="rect" href="group___app_telemetry_payload.html#ga4d0f6e80d8d6446723bfb66778282403" title="Create a &#39;V1 JSON Compact&#39; payload." alt="" coords="1528,554,1744,595"/>
-<area shape="rect" href="group___app_telemetry_payload.html#ga5447c1be6031bb0e0b27800388173dae" title="Create a &#39;V1 JSON Verbose&#39; payload." alt="" coords="1530,619,1742,660"/>
-<area shape="rect" href="group___app_buttons.html#ga2f5b072e59a8cbb2b8775f7fd13f9d86" title="Enable the module. Enables the BSP_Button module and registers the callbacks for button 1 &amp; 2." alt="" coords="1317,328,1457,354"/>
-<area shape="rect" href="group___app_controller.html#gae98b7fef4ce537fdb08edeaec71e1dc2" title="Enables the application. Enqueued by AppController_Setup(). Concludes the initialization process." alt="" coords="227,200,379,226"/>
-<area shape="rect" href="group___app_controller.html#ga73f62412789e428edb216b317f9aa1ab" title="Setup of the application. Calls various modules&#39; setup function. Enqueued by AppController_Init()...." alt="" coords="5,225,151,252"/>
-<area shape="rect" href="group___main.html#ga840291bc02cba5474a4cb46a9b9566fe" title="The main() function invoked at start&#45;up." alt="" coords="807,700,858,726"/>
-<area shape="rect" href="group___app_status.html#gaf5d5340fc50a7d0e442795804b88bce4" title="Create a new Command/Control status message pre&#45;set with the requestType." alt="" coords="1293,474,1480,515"/>
-<area shape="rect" href="group___app_status.html#gab653d3c1e9bc4b42fc96cdcf39303922" title="Create a new message with statusCode, descrCode and details pre&#45;set. Takes a copy of details." alt="" coords="1294,422,1479,449"/>
-<area shape="rect" href="group___app_config.html#ga51226bb5635054dc97d9301768c6bd8b" title="Initialize the module." alt="" coords="1068,524,1177,550"/>
-<area shape="rect" href="group___app_controller.html#gaafbfbf17d1fa81f1d9cb8427c7d05031" title="Applies a new configuration for the MQTT broker." alt="" coords="1021,575,1224,616"/>
-<area shape="rect" href="group___app_runtime_config.html#gaa05e8a107233c90a862ef9335b99bf6e" title="Reads the runtime config from file on SD card." alt="" coords="1012,291,1233,332"/>
-<area shape="rect" href="group___app_runtime_config.html#gae50760bbfefb81ab356ba09c79c5babe" title="Setup the module." alt="" coords="745,254,921,281"/>
-<area shape="rect" href="group___app_status.html#gaa0e268cd2bc8e157af7775268529fe98" title="Create a new message pre&#45;set with the parameters passed." alt="" coords="727,470,939,511"/>
-<area shape="rect" href="group___app_status.html#gaa388d02c0ab981a3af6c3297ce089220" title="Create a new status message that is part of a sequence." alt="" coords="1000,422,1245,449"/>
-<area shape="rect" href="group___app_status.html#gaa4d8322af90ec23cc2942e0340ef6390" title="Custom error handling function. Initialize in main(). Prints a json format of the retcode...." alt="" coords="1021,641,1224,668"/>
-<area shape="rect" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2" title="Send the currently active telemetry parameters as a response to a command. Enqueues the sending of th..." alt="" coords="1014,692,1231,734"/>
-<area shape="rect" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2" title="Send a status message that broker has been disconnected. Enqueues the sending of the message into the..." alt="" coords="1029,123,1216,164"/>
-<area shape="rect" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82" title="Sends the short status message. Can be called enqueued or directly." alt="" coords="1027,189,1218,216"/>
-<area shape="rect" href="group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348" title="Send a status message that the device was disconnected from the WLAN. Enqueues the sending of the mes..." alt="" coords="1006,356,1239,398"/>
-<area shape="rect" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd" title="Sends the persisted runtime configuration file using appRuntimeConfig_SendConfig() or a status messag..." alt="" coords="207,397,400,424"/>
-<area shape="rect" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad" title="Sends the runtime configuration as multiple parts (each element as one part) using AppStatus_SendStat..." alt="" coords="456,421,665,448"/>
-<area shape="rect" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b" title="Sends the active runtime configuration using appRuntimeConfig_SendConfig(). Use as response to a comm..." alt="" coords="199,448,408,490"/>
-<area shape="rect" href="group___app_status.html#ga8e1976eb2785bb8aebe93895e4247e0b" title="Sends the full status message as a series of messages. Used either in the periodic task or as a respo..." alt="" coords="743,309,923,336"/>
-<area shape="rect" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f" title="Convenience function to create and send a status message as part of a series with optional Json item...." alt="" coords="713,418,952,445"/>
-<area shape="rect" href="group___app_status.html#ga37eb6f211091ab5235454abbe72c56d4" title="Send the boot status message series. Synchronous call, uses appStatus_SendFullStatus()...." alt="" coords="467,200,654,226"/>
-<area shape="rect" href="group___app_status.html#gaec5de6271242f9fd729cf17edcf48e5a" title="Wrapper around appStatus_SendFullStatus() to send full status enqueued in module&#39;s command processor." alt="" coords="471,302,651,343"/>
-<area shape="rect" href="group___app_status.html#ga60213a455b3f29258a369291aa6c070e" title="Send the full, current status of the device in multiple parts as a response to a command...." alt="" coords="209,302,397,343"/>
-<area shape="rect" href="group___app_controller.html#ga83eab2232edc93578afbdfb68a86769a" title="Setup after a disconnect event from the broker." alt="" coords="747,123,919,164"/>
-<area shape="rect" href="group___app_controller.html#ga1dc58bd91b7d65d28d63f735b7597d39" title="Callback from AppMqtt module when connection closed event received." alt="" coords="473,123,648,164"/>
-<area shape="rect" href="group___app_status.html#ga473f9657db4578be81c37a00e7f74ba0" title="Send the short, current status of the device as a response to a command. Enqueues the sending of the ..." alt="" coords="733,188,932,230"/>
+<area shape="rect" title="Returns the timestamp of tickCount." alt="" coords="1792,434,1999,461"/>
+<area shape="rect" href="group___app_buttons.html#ga1b31a4841c3b304a2017e1ca717f80e6" title="Callback for BSP button module for button 1 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1539,277,1733,319"/>
+<area shape="rect" href="group___app_buttons.html#ga54a0b1236f8139832431a59fae03d9c3" title="Callback for BSP button module for button 2 event. Enqueues appButtons_PublishEvent() for processing." alt="" coords="1539,343,1733,384"/>
+<area shape="rect" href="group___app_controller.html#ga22919ee3de6947c4b6616a9231e71f67" title="Initialize the application." alt="" coords="1322,602,1451,629"/>
+<area shape="rect" href="group___app_status.html#ga8ceb9dbb79cfb5938aa6c33adb91e605" title="Creates a new, empty status message apart from setting the timestamp from current tick count." alt="" coords="1544,409,1728,435"/>
+<area shape="rect" href="group___app_telemetry_payload.html#ga4d0f6e80d8d6446723bfb66778282403" title="Create a &#39;V1 JSON Compact&#39; payload." alt="" coords="1528,511,1744,552"/>
+<area shape="rect" href="group___app_telemetry_payload.html#ga5447c1be6031bb0e0b27800388173dae" title="Create a &#39;V1 JSON Verbose&#39; payload." alt="" coords="1530,576,1742,617"/>
+<area shape="rect" href="group___app_buttons.html#ga2f5b072e59a8cbb2b8775f7fd13f9d86" title="Enable the module. Enables the BSP_Button module and registers the callbacks for button 1 &amp; 2." alt="" coords="1317,285,1457,311"/>
+<area shape="rect" href="group___app_controller.html#gae98b7fef4ce537fdb08edeaec71e1dc2" title="Enables the application. Enqueued by AppController_Setup(). Concludes the initialization process." alt="" coords="227,215,379,242"/>
+<area shape="rect" href="group___app_controller.html#ga73f62412789e428edb216b317f9aa1ab" title="Setup of the application. Calls various modules&#39; setup function. Enqueued by AppController_Init()...." alt="" coords="5,241,151,267"/>
+<area shape="rect" href="group___main.html#ga840291bc02cba5474a4cb46a9b9566fe" title="The main() function invoked at start&#45;up." alt="" coords="807,711,858,738"/>
+<area shape="rect" href="group___app_status.html#gaf5d5340fc50a7d0e442795804b88bce4" title="Create a new Command/Control status message pre&#45;set with the requestType." alt="" coords="1293,431,1480,472"/>
+<area shape="rect" href="group___app_status.html#gab653d3c1e9bc4b42fc96cdcf39303922" title="Create a new message with statusCode, descrCode and details pre&#45;set. Takes a copy of details." alt="" coords="1294,379,1479,406"/>
+<area shape="rect" href="group___app_config.html#ga51226bb5635054dc97d9301768c6bd8b" title="Initialize the module." alt="" coords="1068,569,1177,595"/>
+<area shape="rect" href="group___app_controller.html#gaafbfbf17d1fa81f1d9cb8427c7d05031" title="Applies a new configuration for the MQTT broker." alt="" coords="1021,620,1224,661"/>
+<area shape="rect" href="group___app_runtime_config.html#gaa05e8a107233c90a862ef9335b99bf6e" title="Reads the runtime config from file on SD card." alt="" coords="1012,284,1233,325"/>
+<area shape="rect" href="group___app_runtime_config.html#gae50760bbfefb81ab356ba09c79c5babe" title="Setup the module." alt="" coords="745,266,921,293"/>
+<area shape="rect" href="group___app_status.html#gaa0e268cd2bc8e157af7775268529fe98" title="Create a new message pre&#45;set with the parameters passed." alt="" coords="727,511,939,552"/>
+<area shape="rect" href="group___app_status.html#gaa388d02c0ab981a3af6c3297ce089220" title="Create a new status message that is part of a sequence." alt="" coords="1000,467,1245,494"/>
+<area shape="rect" href="group___app_status.html#gaa4d8322af90ec23cc2942e0340ef6390" title="Custom error handling function. Initialize in main(). Prints a json format of the retcode...." alt="" coords="1021,686,1224,713"/>
+<area shape="rect" href="group___app_status.html#ga0e41e0e389c673fc35986afcca6aafa2" title="Send the currently active telemetry parameters as a response to a command. Enqueues the sending of th..." alt="" coords="1014,51,1231,92"/>
+<area shape="rect" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2" title="Send a status message that broker has been disconnected. Enqueues the sending of the message into the..." alt="" coords="1029,116,1216,157"/>
+<area shape="rect" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82" title="Sends the short status message. Can be called enqueued or directly." alt="" coords="1027,182,1218,209"/>
+<area shape="rect" href="group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb" title="Send the version info as a response to a command. Enqueues the sending of the message into the module..." alt="" coords="1028,350,1217,377"/>
+<area shape="rect" href="group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348" title="Send a status message that the device was disconnected from the WLAN. Enqueues the sending of the mes..." alt="" coords="1006,401,1239,443"/>
+<area shape="rect" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd" title="Sends the persisted runtime configuration file using appRuntimeConfig_SendConfig() or a status messag..." alt="" coords="207,434,400,461"/>
+<area shape="rect" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad" title="Sends the runtime configuration as multiple parts (each element as one part) using AppStatus_SendStat..." alt="" coords="456,463,665,490"/>
+<area shape="rect" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b" title="Sends the active runtime configuration using appRuntimeConfig_SendConfig(). Use as response to a comm..." alt="" coords="199,485,408,527"/>
+<area shape="rect" href="group___app_status.html#ga8e1976eb2785bb8aebe93895e4247e0b" title="Sends the full status message as a series of messages. Used either in the periodic task or as a respo..." alt="" coords="743,330,923,357"/>
+<area shape="rect" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f" title="Convenience function to create and send a status message as part of a series with optional Json item...." alt="" coords="713,459,952,486"/>
+<area shape="rect" href="group___app_status.html#ga37eb6f211091ab5235454abbe72c56d4" title="Send the boot status message series. Synchronous call, uses appStatus_SendFullStatus()...." alt="" coords="467,215,654,242"/>
+<area shape="rect" href="group___app_status.html#gaec5de6271242f9fd729cf17edcf48e5a" title="Wrapper around appStatus_SendFullStatus() to send full status enqueued in module&#39;s command processor." alt="" coords="471,323,651,364"/>
+<area shape="rect" href="group___app_status.html#ga60213a455b3f29258a369291aa6c070e" title="Send the full, current status of the device in multiple parts as a response to a command...." alt="" coords="209,323,397,364"/>
+<area shape="rect" href="group___app_controller.html#ga83eab2232edc93578afbdfb68a86769a" title="Setup after a disconnect event from the broker." alt="" coords="747,113,919,155"/>
+<area shape="rect" href="group___app_controller.html#ga1dc58bd91b7d65d28d63f735b7597d39" title="Callback from AppMqtt module when connection closed event received." alt="" coords="473,113,648,155"/>
+<area shape="rect" href="group___app_status.html#ga473f9657db4578be81c37a00e7f74ba0" title="Send the short, current status of the device as a response to a command. Enqueues the sending of the ..." alt="" coords="733,179,932,220"/>
 </map>
 </div>
 

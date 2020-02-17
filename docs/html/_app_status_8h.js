@@ -32,6 +32,7 @@ var _app_status_8h =
     [ "AppStatus_SendQueuedMessages", "group___app_status.html#gaea8f9acf292a97d0549a2b68134bc87d", null ],
     [ "AppStatus_SendStatusMessage", "group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba", null ],
     [ "AppStatus_SendStatusMessagePart", "group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f", null ],
+    [ "AppStatus_SendVersionInfo", "group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb", null ],
     [ "AppStatus_SendWlanDisconnectedMessage", "group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348", null ],
     [ "AppStatus_Setup", "group___app_status.html#gafe91c56da463ef72559eacbc41339905", null ],
     [ "AppStatus_Stats_IncrementMqttBrokerDisconnectCounter", "group___app_status.html#ga958d0bd90bb73367c2897a5859bfd267", null ],

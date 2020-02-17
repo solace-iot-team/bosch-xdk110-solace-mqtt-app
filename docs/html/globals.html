@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Solace_Logo_Green_200x55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bosch XDK110 Solace MQTT App
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
    <div id="projectbrief">MQTT Reference Application for the Bosch XDK110</div>
   </td>
@@ -875,12 +875,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>appRuntimeConfig_DeleteTelemetryConfig()
 : <a class="el" href="group___app_runtime_config.html#ga93ed052c1331935d790e6fabc95fb61f">AppRuntimeConfig.c</a>
 </li>
+<li>appRuntimeConfig_DeleteTelemetryRTParams()
+: <a class="el" href="group___app_runtime_config.html#gae1c97b6fe50feb26023ab7b6c83546f9">AppRuntimeConfig.c</a>
+</li>
 <li>AppRuntimeConfig_DeleteTelemetryRTParams()
 : <a class="el" href="group___app_runtime_config.html#gacaab7f957d9965ed93e89d6714fe743f">AppRuntimeConfig.c</a>
 , <a class="el" href="group___app_runtime_config.html#gacaab7f957d9965ed93e89d6714fe743f">AppRuntimeConfig.h</a>
-</li>
-<li>appRuntimeConfig_DeleteTelemetryRTParams()
-: <a class="el" href="group___app_runtime_config.html#gae1c97b6fe50feb26023ab7b6c83546f9">AppRuntimeConfig.c</a>
 </li>
 <li>appRuntimeConfig_DeleteTopicConfig()
 : <a class="el" href="group___app_runtime_config.html#gaa5f66b9736bffd631504c780c50b9bd2">AppRuntimeConfig.c</a>
@@ -1012,12 +1012,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_runtime_config.html#ga901ac18bb8aeab9608c4e9327a197a4e">AppRuntimeConfig.c</a>
 , <a class="el" href="group___app_runtime_config.html#ga901ac18bb8aeab9608c4e9327a197a4e">AppRuntimeConfig.h</a>
 </li>
-<li>appRuntimeConfig_PopulateAndValidateTopicConfigFromJSON()
-: <a class="el" href="group___app_runtime_config.html#ga0dad9952e554579684b5ed5612f4a2d5">AppRuntimeConfig.c</a>
-</li>
 <li>AppRuntimeConfig_PopulateAndValidateTopicConfigFromJSON()
 : <a class="el" href="group___app_runtime_config.html#gac80a0c4684c851d48abbda43128342fd">AppRuntimeConfig.c</a>
 , <a class="el" href="group___app_runtime_config.html#gac80a0c4684c851d48abbda43128342fd">AppRuntimeConfig.h</a>
+</li>
+<li>appRuntimeConfig_PopulateAndValidateTopicConfigFromJSON()
+: <a class="el" href="group___app_runtime_config.html#ga0dad9952e554579684b5ed5612f4a2d5">AppRuntimeConfig.c</a>
 </li>
 <li>appRuntimeConfig_ReadConfigApply()
 : <a class="el" href="group___app_runtime_config.html#ga0b2fba27da08709d6989d89f94503774">AppRuntimeConfig.c</a>
@@ -1258,12 +1258,14 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2">AppStatus.c</a>
 , <a class="el" href="group___app_status.html#gad04dad914631b83bb98f1917dd84f8d2">AppStatus.h</a>
 </li>
+<li>AppStatus_SendQueuedMessages()
+: <a class="el" href="group___app_status.html#gaea8f9acf292a97d0549a2b68134bc87d">AppStatus.c</a>
+</li>
 <li>appStatus_SendQueuedMessages()
 : <a class="el" href="group___app_status.html#gaff2d3cac4405a8f12ba79d5a7ad2778c">AppStatus.c</a>
 </li>
 <li>AppStatus_SendQueuedMessages()
 : <a class="el" href="group___app_status.html#gaea8f9acf292a97d0549a2b68134bc87d">AppStatus.h</a>
-, <a class="el" href="group___app_status.html#gaea8f9acf292a97d0549a2b68134bc87d">AppStatus.c</a>
 </li>
 <li>appStatus_SendShortStatus()
 : <a class="el" href="group___app_status.html#gacc58cda67466d5433e8bc70f3b0fed82">AppStatus.c</a>
@@ -1281,6 +1283,10 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>AppStatus_SendStatusMessagePart()
 : <a class="el" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f">AppStatus.c</a>
 , <a class="el" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f">AppStatus.h</a>
+</li>
+<li>AppStatus_SendVersionInfo()
+: <a class="el" href="group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb">AppStatus.c</a>
+, <a class="el" href="group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb">AppStatus.h</a>
 </li>
 <li>AppStatus_SendWlanDisconnectedMessage()
 : <a class="el" href="group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348">AppStatus.c</a>
@@ -1302,12 +1308,14 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>appStatus_Stats_GetAsJson()
 : <a class="el" href="group___app_status.html#ga3639531f67682076c9d07fbaa5eef082">AppStatus.c</a>
 </li>
+<li>AppStatus_Stats_IncrementMqttBrokerDisconnectCounter()
+: <a class="el" href="group___app_status.html#ga958d0bd90bb73367c2897a5859bfd267">AppStatus.c</a>
+</li>
 <li>appStatus_Stats_IncrementMqttBrokerDisconnectCounter()
 : <a class="el" href="group___app_status.html#ga047148a9826404588da62499eda3a674">AppStatus.c</a>
 </li>
 <li>AppStatus_Stats_IncrementMqttBrokerDisconnectCounter()
-: <a class="el" href="group___app_status.html#ga958d0bd90bb73367c2897a5859bfd267">AppStatus.c</a>
-, <a class="el" href="group___app_status.html#ga958d0bd90bb73367c2897a5859bfd267">AppStatus.h</a>
+: <a class="el" href="group___app_status.html#ga958d0bd90bb73367c2897a5859bfd267">AppStatus.h</a>
 </li>
 <li>appStatus_Stats_IncrementRetcodeRaisedErrorCounter()
 : <a class="el" href="group___app_status.html#gafd011f90999058888474afabd34fb29c">AppStatus.c</a>
@@ -1315,19 +1323,23 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>appStatus_Stats_IncrementStatusSendFailedCounter()
 : <a class="el" href="group___app_status.html#gacd25c52380648837d8124c9a0dbf95f7">AppStatus.c</a>
 </li>
+<li>AppStatus_Stats_IncrementTelemetrySamplingTooSlowCounter()
+: <a class="el" href="group___app_status.html#gaeb8927226b2d3b07801e2eed8a8fe0b0">AppStatus.c</a>
+</li>
 <li>appStatus_Stats_IncrementTelemetrySamplingTooSlowCounter()
 : <a class="el" href="group___app_status.html#ga9823fb854392c93276e2b7eb762d05a8">AppStatus.c</a>
 </li>
 <li>AppStatus_Stats_IncrementTelemetrySamplingTooSlowCounter()
 : <a class="el" href="group___app_status.html#gaeb8927226b2d3b07801e2eed8a8fe0b0">AppStatus.h</a>
-, <a class="el" href="group___app_status.html#gaeb8927226b2d3b07801e2eed8a8fe0b0">AppStatus.c</a>
+</li>
+<li>AppStatus_Stats_IncrementTelemetrySendFailedCounter()
+: <a class="el" href="group___app_status.html#ga3bd367840d1b431358e87e0a42100306">AppStatus.c</a>
 </li>
 <li>appStatus_Stats_IncrementTelemetrySendFailedCounter()
 : <a class="el" href="group___app_status.html#gab5300351e4a76b0170efcbeb59037542">AppStatus.c</a>
 </li>
 <li>AppStatus_Stats_IncrementTelemetrySendFailedCounter()
-: <a class="el" href="group___app_status.html#ga3bd367840d1b431358e87e0a42100306">AppStatus.c</a>
-, <a class="el" href="group___app_status.html#ga3bd367840d1b431358e87e0a42100306">AppStatus.h</a>
+: <a class="el" href="group___app_status.html#ga3bd367840d1b431358e87e0a42100306">AppStatus.h</a>
 </li>
 <li>AppStatus_Stats_IncrementTelemetrySendTooSlowCounter()
 : <a class="el" href="group___app_status.html#gab1ce589d06267e0ed493a4dd76d22aab">AppStatus.h</a>
@@ -1338,12 +1350,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>AppStatus_Stats_IncrementTelemetrySendTooSlowCounter()
 : <a class="el" href="group___app_status.html#gab1ce589d06267e0ed493a4dd76d22aab">AppStatus.c</a>
 </li>
-<li>AppStatus_Stats_IncrementWlanDisconnectCounter()
-: <a class="el" href="group___app_status.html#ga91adb0ba0575a1e8ba5baafdf8358eee">AppStatus.h</a>
-, <a class="el" href="group___app_status.html#ga91adb0ba0575a1e8ba5baafdf8358eee">AppStatus.c</a>
-</li>
 <li>appStatus_Stats_IncrementWlanDisconnectCounter()
 : <a class="el" href="group___app_status.html#ga769847571c77c0f967e9a6ad090640b3">AppStatus.c</a>
+</li>
+<li>AppStatus_Stats_IncrementWlanDisconnectCounter()
+: <a class="el" href="group___app_status.html#ga91adb0ba0575a1e8ba5baafdf8358eee">AppStatus.c</a>
+, <a class="el" href="group___app_status.html#ga91adb0ba0575a1e8ba5baafdf8358eee">AppStatus.h</a>
 </li>
 <li>appStatus_Stats_SemaphoreHandle
 : <a class="el" href="group___app_status.html#gadc17956f9c009cd54758fc9a7845826a">AppStatus.c</a>
@@ -1511,6 +1523,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>AppStatusMessage_Descr_UnknownValue_Apply
 : <a class="el" href="group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a309a94aa51e0ce6d7e362c1dc9dcc2a9">XdkAppInfo.h</a>
 </li>
+<li>AppStatusMessage_Descr_VersionInfo
+: <a class="el" href="group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86ac4514ae3ca223a966fbbd9756d995a13">XdkAppInfo.h</a>
+</li>
 <li>AppStatusMessage_Descr_WlanWasDisconnected
 : <a class="el" href="group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a15f8f78455865739cae7e74b16c765f7">XdkAppInfo.h</a>
 </li>
@@ -1539,12 +1554,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="_app_status_8h.html#afd262c6828778c3b88062c93c19295f4">AppStatus.h</a>
 </li>
 <li>AppTelemetryPayload_ApplyNewRuntimeConfig()
-: <a class="el" href="group___app_telemetry_payload.html#gadd632b39af065b8abe95842b0e4ebc54">AppTelemetryPayload.h</a>
-, <a class="el" href="group___app_telemetry_payload.html#gadd632b39af065b8abe95842b0e4ebc54">AppTelemetryPayload.c</a>
+: <a class="el" href="group___app_telemetry_payload.html#gadd632b39af065b8abe95842b0e4ebc54">AppTelemetryPayload.c</a>
+, <a class="el" href="group___app_telemetry_payload.html#gadd632b39af065b8abe95842b0e4ebc54">AppTelemetryPayload.h</a>
 </li>
 <li>AppTelemetryPayload_CreateNew()
-: <a class="el" href="group___app_telemetry_payload.html#gab3e9b4413eecbade2ef49ae1941ed4be">AppTelemetryPayload.c</a>
-, <a class="el" href="group___app_telemetry_payload.html#gab3e9b4413eecbade2ef49ae1941ed4be">AppTelemetryPayload.h</a>
+: <a class="el" href="group___app_telemetry_payload.html#gab3e9b4413eecbade2ef49ae1941ed4be">AppTelemetryPayload.h</a>
+, <a class="el" href="group___app_telemetry_payload.html#gab3e9b4413eecbade2ef49ae1941ed4be">AppTelemetryPayload.c</a>
 </li>
 <li>AppTelemetryPayload_CreateNew_Test()
 : <a class="el" href="group___app_telemetry_payload.html#ga1577de4c5e689b3ae7bd99f3a1c5f10e">AppTelemetryPayload.h</a>
@@ -1557,8 +1572,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_payload.html#ga5447c1be6031bb0e0b27800388173dae">AppTelemetryPayload.c</a>
 </li>
 <li>AppTelemetryPayload_Delete()
-: <a class="el" href="group___app_telemetry_payload.html#ga32d59266f2f8d3345e8152f449dee077">AppTelemetryPayload.c</a>
-, <a class="el" href="group___app_telemetry_payload.html#ga32d59266f2f8d3345e8152f449dee077">AppTelemetryPayload.h</a>
+: <a class="el" href="group___app_telemetry_payload.html#ga32d59266f2f8d3345e8152f449dee077">AppTelemetryPayload.h</a>
+, <a class="el" href="group___app_telemetry_payload.html#ga32d59266f2f8d3345e8152f449dee077">AppTelemetryPayload.c</a>
 </li>
 <li>appTelemetryPayload_DeviceId
 : <a class="el" href="group___app_telemetry_payload.html#ga28f444b88f5ae45a0be8363f49ec0989">AppTelemetryPayload.c</a>
@@ -1571,8 +1586,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_payload.html#gaa45a9c0c365c101fcc0663fb4df05f60">AppTelemetryPayload.c</a>
 </li>
 <li>AppTelemetryPayload_Setup()
-: <a class="el" href="group___app_telemetry_payload.html#gae26ab3268fa2d357a3255430e04fbc73">AppTelemetryPayload.c</a>
-, <a class="el" href="group___app_telemetry_payload.html#gae26ab3268fa2d357a3255430e04fbc73">AppTelemetryPayload.h</a>
+: <a class="el" href="group___app_telemetry_payload.html#gae26ab3268fa2d357a3255430e04fbc73">AppTelemetryPayload.h</a>
+, <a class="el" href="group___app_telemetry_payload.html#gae26ab3268fa2d357a3255430e04fbc73">AppTelemetryPayload.c</a>
 </li>
 <li>AppTelemetryPayload_T
 : <a class="el" href="_app_telemetry_payload_8h.html#a4f810989033dbbdf3edb964e7e412370">AppTelemetryPayload.h</a>
@@ -1581,16 +1596,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_payload.html#gaaf00614acdbff6c43f17ca18ffbed3bb">AppTelemetryPayload.c</a>
 </li>
 <li>AppTelemetryPublish_ApplyNewRuntimeConfig()
-: <a class="el" href="group___app_telemetry_publish.html#ga55f20a068a92e7c86344f6893031f78c">AppTelemetryPublish.c</a>
-, <a class="el" href="group___app_telemetry_publish.html#ga55f20a068a92e7c86344f6893031f78c">AppTelemetryPublish.h</a>
+: <a class="el" href="group___app_telemetry_publish.html#ga55f20a068a92e7c86344f6893031f78c">AppTelemetryPublish.h</a>
+, <a class="el" href="group___app_telemetry_publish.html#ga55f20a068a92e7c86344f6893031f78c">AppTelemetryPublish.c</a>
 </li>
 <li>AppTelemetryPublish_CreatePublishingTask()
 : <a class="el" href="group___app_telemetry_publish.html#ga2875d782d20b8a85e800493a1ab6a0ee">AppTelemetryPublish.c</a>
 , <a class="el" href="group___app_telemetry_publish.html#ga2875d782d20b8a85e800493a1ab6a0ee">AppTelemetryPublish.h</a>
 </li>
 <li>AppTelemetryPublish_DeletePublishingTask()
-: <a class="el" href="group___app_telemetry_publish.html#gad1ec61a377b102fa22935ed4235497cf">AppTelemetryPublish.h</a>
-, <a class="el" href="group___app_telemetry_publish.html#gad1ec61a377b102fa22935ed4235497cf">AppTelemetryPublish.c</a>
+: <a class="el" href="group___app_telemetry_publish.html#gad1ec61a377b102fa22935ed4235497cf">AppTelemetryPublish.c</a>
+, <a class="el" href="group___app_telemetry_publish.html#gad1ec61a377b102fa22935ed4235497cf">AppTelemetryPublish.h</a>
 </li>
 <li>appTelemetryPublish_DeviceId
 : <a class="el" href="group___app_telemetry_publish.html#gae2d8d44159abe591d45f0c1f4da6f776">AppTelemetryPublish.c</a>
@@ -1600,8 +1615,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="group___app_telemetry_publish.html#ga412cfc653585211d299ba640988baad1">AppTelemetryPublish.c</a>
 </li>
 <li>AppTelemetryPublish_isTaskRunning()
-: <a class="el" href="group___app_telemetry_publish.html#ga57add15d4bb9656e7d6d4b6660180f9b">AppTelemetryPublish.h</a>
-, <a class="el" href="group___app_telemetry_publish.html#ga57add15d4bb9656e7d6d4b6660180f9b">AppTelemetryPublish.c</a>
+: <a class="el" href="group___app_telemetry_publish.html#ga57add15d4bb9656e7d6d4b6660180f9b">AppTelemetryPublish.c</a>
+, <a class="el" href="group___app_telemetry_publish.html#ga57add15d4bb9656e7d6d4b6660180f9b">AppTelemetryPublish.h</a>
 </li>
 <li>appTelemetryPublish_MqttPublishInfo
 : <a class="el" href="group___app_telemetry_publish.html#ga52dc825ee088d8d406f09b157065ddf8">AppTelemetryPublish.c</a>
@@ -1629,8 +1644,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_publish.html#ga0246db00dd26a7ad293fcdbcfcdf4954">AppTelemetryPublish.c</a>
 </li>
 <li>AppTelemetryQueue_AddSample()
-: <a class="el" href="group___app_telemetry_queue.html#ga5a793b749f87fed4c523a75d8d5a9710">AppTelemetryQueue.c</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga5a793b749f87fed4c523a75d8d5a9710">AppTelemetryQueue.h</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga5a793b749f87fed4c523a75d8d5a9710">AppTelemetryQueue.h</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga5a793b749f87fed4c523a75d8d5a9710">AppTelemetryQueue.c</a>
 </li>
 <li>appTelemetryQueue_AllowAccess()
 : <a class="el" href="group___app_telemetry_queue.html#ga09797922aeac7ec7440be903192a2e00">AppTelemetryQueue.c</a>
@@ -1649,8 +1664,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_queue.html#gaba071e24ef59e12aea05da058d6eca6d">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueue_Init()
-: <a class="el" href="group___app_telemetry_queue.html#ga11acd0b2c7ea5cc321d80696114c8720">AppTelemetryQueue.c</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga11acd0b2c7ea5cc321d80696114c8720">AppTelemetryQueue.h</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga11acd0b2c7ea5cc321d80696114c8720">AppTelemetryQueue.h</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga11acd0b2c7ea5cc321d80696114c8720">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueue_Prepare()
 : <a class="el" href="group___app_telemetry_queue.html#ga9f7d715e54a8c8ffb222da77b89b4f5b">AppTelemetryQueue.h</a>
@@ -1669,16 +1684,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_queue.html#gaab3d506fbb30e6e7064a4826aa85fc61">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueue_RetrieveData()
-: <a class="el" href="group___app_telemetry_queue.html#ga21a6cb293897497b5b36b5487d72e921">AppTelemetryQueue.c</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga21a6cb293897497b5b36b5487d72e921">AppTelemetryQueue.h</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga21a6cb293897497b5b36b5487d72e921">AppTelemetryQueue.h</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga21a6cb293897497b5b36b5487d72e921">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueue_Setup()
 : <a class="el" href="group___app_telemetry_queue.html#ga68eda054b0701c98e30e167205497703">AppTelemetryQueue.h</a>
 , <a class="el" href="group___app_telemetry_queue.html#ga68eda054b0701c98e30e167205497703">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueue_Wait4FullQueue()
-: <a class="el" href="group___app_telemetry_queue.html#ga0ea3daa5cbc4f7059d2917f0bd9551be">AppTelemetryQueue.c</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga0ea3daa5cbc4f7059d2917f0bd9551be">AppTelemetryQueue.h</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga0ea3daa5cbc4f7059d2917f0bd9551be">AppTelemetryQueue.h</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga0ea3daa5cbc4f7059d2917f0bd9551be">AppTelemetryQueue.c</a>
 </li>
 <li>appTelemetryQueue_WriteJsonArrayCurrentSize
 : <a class="el" href="group___app_telemetry_queue.html#ga224a3419a4e462f5ce77e6a4e8649b15">AppTelemetryQueue.c</a>
@@ -1690,28 +1705,28 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_queue.html#ga38292974db179fba96388b0e40421f0c">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueueCreateNewTestQueue()
-: <a class="el" href="group___app_telemetry_queue.html#ga7f26b9f485914b5e67e4212627a772eb">AppTelemetryQueue.c</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga7f26b9f485914b5e67e4212627a772eb">AppTelemetryQueue.h</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga7f26b9f485914b5e67e4212627a772eb">AppTelemetryQueue.h</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga7f26b9f485914b5e67e4212627a772eb">AppTelemetryQueue.c</a>
 </li>
 <li>AppTelemetryQueueTestQueueAddSample()
 : <a class="el" href="group___app_telemetry_queue.html#ga863297a5ff47d7f023f996040192d672">AppTelemetryQueue.c</a>
 , <a class="el" href="group___app_telemetry_queue.html#ga863297a5ff47d7f023f996040192d672">AppTelemetryQueue.h</a>
 </li>
 <li>AppTelemetryQueueTestQueueDelete()
-: <a class="el" href="group___app_telemetry_queue.html#ga8344a738b6195baaa480fd96a40e04a0">AppTelemetryQueue.h</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga8344a738b6195baaa480fd96a40e04a0">AppTelemetryQueue.c</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga8344a738b6195baaa480fd96a40e04a0">AppTelemetryQueue.c</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga8344a738b6195baaa480fd96a40e04a0">AppTelemetryQueue.h</a>
 </li>
 <li>AppTelemetryQueueTestQueueGetDataSize()
-: <a class="el" href="group___app_telemetry_queue.html#ga318b696fa6961aeb89dfb688c7a7902d">AppTelemetryQueue.h</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga318b696fa6961aeb89dfb688c7a7902d">AppTelemetryQueue.c</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga318b696fa6961aeb89dfb688c7a7902d">AppTelemetryQueue.c</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga318b696fa6961aeb89dfb688c7a7902d">AppTelemetryQueue.h</a>
 </li>
 <li>AppTelemetryQueueTestQueuePrint()
-: <a class="el" href="group___app_telemetry_queue.html#ga63c5512faf74ce58841c808790e8bb31">AppTelemetryQueue.h</a>
-, <a class="el" href="group___app_telemetry_queue.html#ga63c5512faf74ce58841c808790e8bb31">AppTelemetryQueue.c</a>
+: <a class="el" href="group___app_telemetry_queue.html#ga63c5512faf74ce58841c808790e8bb31">AppTelemetryQueue.c</a>
+, <a class="el" href="group___app_telemetry_queue.html#ga63c5512faf74ce58841c808790e8bb31">AppTelemetryQueue.h</a>
 </li>
 <li>AppTelemetrySampling_ApplyNewRuntimeConfig()
-: <a class="el" href="group___app_telemetry_sampling.html#ga57abc2c18f02aca688b3792e01a49017">AppTelemetrySampling.h</a>
-, <a class="el" href="group___app_telemetry_sampling.html#ga57abc2c18f02aca688b3792e01a49017">AppTelemetrySampling.c</a>
+: <a class="el" href="group___app_telemetry_sampling.html#ga57abc2c18f02aca688b3792e01a49017">AppTelemetrySampling.c</a>
+, <a class="el" href="group___app_telemetry_sampling.html#ga57abc2c18f02aca688b3792e01a49017">AppTelemetrySampling.h</a>
 </li>
 <li>AppTelemetrySampling_CreateSamplingTask()
 : <a class="el" href="group___app_telemetry_sampling.html#ga9105a92cefe6ff87175242c7eb359d5b">AppTelemetrySampling.c</a>
@@ -1725,16 +1740,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_sampling.html#gaa77f2cc9cb639a223fdf69fa8da18e93">AppTelemetrySampling.c</a>
 </li>
 <li>AppTelemetrySampling_Enable()
-: <a class="el" href="group___app_telemetry_sampling.html#ga18d3f6462492534bf746185bb0d9916e">AppTelemetrySampling.c</a>
-, <a class="el" href="group___app_telemetry_sampling.html#ga18d3f6462492534bf746185bb0d9916e">AppTelemetrySampling.h</a>
+: <a class="el" href="group___app_telemetry_sampling.html#ga18d3f6462492534bf746185bb0d9916e">AppTelemetrySampling.h</a>
+, <a class="el" href="group___app_telemetry_sampling.html#ga18d3f6462492534bf746185bb0d9916e">AppTelemetrySampling.c</a>
 </li>
 <li>AppTelemetrySampling_Init()
 : <a class="el" href="group___app_telemetry_sampling.html#ga2d53705d3be44dcae2f3fa6ad57a37f1">AppTelemetrySampling.h</a>
 , <a class="el" href="group___app_telemetry_sampling.html#ga2d53705d3be44dcae2f3fa6ad57a37f1">AppTelemetrySampling.c</a>
 </li>
 <li>AppTelemetrySampling_isTaskRunning()
-: <a class="el" href="group___app_telemetry_sampling.html#ga159e51630c05366bf8e8900d132187a7">AppTelemetrySampling.h</a>
-, <a class="el" href="group___app_telemetry_sampling.html#ga159e51630c05366bf8e8900d132187a7">AppTelemetrySampling.c</a>
+: <a class="el" href="group___app_telemetry_sampling.html#ga159e51630c05366bf8e8900d132187a7">AppTelemetrySampling.c</a>
+, <a class="el" href="group___app_telemetry_sampling.html#ga159e51630c05366bf8e8900d132187a7">AppTelemetrySampling.h</a>
 </li>
 <li>appTelemetrySampling_SamplingPeriodicityMillis
 : <a class="el" href="group___app_telemetry_sampling.html#ga0c941678ea368ed1ba15e7c265451108">AppTelemetrySampling.c</a>
@@ -1749,8 +1764,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_sampling.html#ga589477e09c24e36d58c9a0869e7d4aa1">AppTelemetrySampling.c</a>
 </li>
 <li>AppTelemetrySampling_Setup()
-: <a class="el" href="group___app_telemetry_sampling.html#ga5e3b8c58a5f7bfa6d96c4c71c6e0f366">AppTelemetrySampling.c</a>
-, <a class="el" href="group___app_telemetry_sampling.html#ga5e3b8c58a5f7bfa6d96c4c71c6e0f366">AppTelemetrySampling.h</a>
+: <a class="el" href="group___app_telemetry_sampling.html#ga5e3b8c58a5f7bfa6d96c4c71c6e0f366">AppTelemetrySampling.h</a>
+, <a class="el" href="group___app_telemetry_sampling.html#ga5e3b8c58a5f7bfa6d96c4c71c6e0f366">AppTelemetrySampling.c</a>
 </li>
 <li>appTelemetrySampling_TaskHandle
 : <a class="el" href="group___app_telemetry_sampling.html#gabd8887305123b3ef7bfc3ec24456a784">AppTelemetrySampling.c</a>
@@ -1762,20 +1777,20 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_telemetry_sampling.html#gaca674504ba62a132da4537ab8f6c70af">AppTelemetrySampling.c</a>
 </li>
 <li>AppTimestamp_CreateTimestampStr()
-: <a class="el" href="group___app_timestamp.html#ga2f47261a602e182b5e901c3939f9c8a3">AppTimestamp.h</a>
-, <a class="el" href="group___app_timestamp.html#ga2f47261a602e182b5e901c3939f9c8a3">AppTimestamp.c</a>
+: <a class="el" href="group___app_timestamp.html#ga2f47261a602e182b5e901c3939f9c8a3">AppTimestamp.c</a>
+, <a class="el" href="group___app_timestamp.html#ga2f47261a602e182b5e901c3939f9c8a3">AppTimestamp.h</a>
 </li>
 <li>AppTimestamp_Enable()
-: <a class="el" href="group___app_timestamp.html#gaa9b1eccb05095a9295f085487fbe85c0">AppTimestamp.h</a>
-, <a class="el" href="group___app_timestamp.html#gaa9b1eccb05095a9295f085487fbe85c0">AppTimestamp.c</a>
+: <a class="el" href="group___app_timestamp.html#gaa9b1eccb05095a9295f085487fbe85c0">AppTimestamp.c</a>
+, <a class="el" href="group___app_timestamp.html#gaa9b1eccb05095a9295f085487fbe85c0">AppTimestamp.h</a>
 </li>
 <li>AppTimestamp_GetTimestamp()
 : <a class="el" href="group___app_timestamp.html#ga9217e966fecd8b55eb7944b692be94e7">AppTimestamp.c</a>
 , <a class="el" href="group___app_timestamp.html#ga9217e966fecd8b55eb7944b692be94e7">AppTimestamp.h</a>
 </li>
 <li>AppTimestamp_Init()
-: <a class="el" href="group___app_timestamp.html#ga15d9f48b3db428bbf76751253d7ce2fd">AppTimestamp.h</a>
-, <a class="el" href="group___app_timestamp.html#ga15d9f48b3db428bbf76751253d7ce2fd">AppTimestamp.c</a>
+: <a class="el" href="group___app_timestamp.html#ga15d9f48b3db428bbf76751253d7ce2fd">AppTimestamp.c</a>
+, <a class="el" href="group___app_timestamp.html#ga15d9f48b3db428bbf76751253d7ce2fd">AppTimestamp.h</a>
 </li>
 <li>appTimestamp_isEnabled
 : <a class="el" href="group___app_timestamp.html#gab6d3bf9f7ccfc5e96cf5469cd3eff0a5">AppTimestamp.c</a>
@@ -1787,8 +1802,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_timestamp.html#ga90ab36ae4d0468b6cc7f40a67e492387">AppTimestamp.c</a>
 </li>
 <li>AppTimestamp_Setup()
-: <a class="el" href="group___app_timestamp.html#ga26cfd10c58787b015cbd9355522dc2bd">AppTimestamp.h</a>
-, <a class="el" href="group___app_timestamp.html#ga26cfd10c58787b015cbd9355522dc2bd">AppTimestamp.c</a>
+: <a class="el" href="group___app_timestamp.html#ga26cfd10c58787b015cbd9355522dc2bd">AppTimestamp.c</a>
+, <a class="el" href="group___app_timestamp.html#ga26cfd10c58787b015cbd9355522dc2bd">AppTimestamp.h</a>
 </li>
 <li>appXDK_MQTT_AppInitiatedInteraction
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#gab0c5d920c1d4330bafa3ab19d6b05904">AppXDK_MQTT.c</a>
@@ -1822,8 +1837,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#gadb160cea2bfeca1ab3f313c84499b410">AppXDK_MQTT.c</a>
 </li>
 <li>AppXDK_MQTT_FreeSubscribeCallbackParams()
-: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga1966bde434566cdb4e626335a34a61d6">AppXDK_MQTT.c</a>
-, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga1966bde434566cdb4e626335a34a61d6">AppXDK_MQTT.h</a>
+: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga1966bde434566cdb4e626335a34a61d6">AppXDK_MQTT.h</a>
+, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga1966bde434566cdb4e626335a34a61d6">AppXDK_MQTT.c</a>
 </li>
 <li>appXDK_MQTT_GetModuleBusyRetcode()
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga8e6ef61b150999250469024273d4cb8b">AppXDK_MQTT.c</a>
@@ -1835,8 +1850,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="_app_x_d_k___m_q_t_t_8h.html#a1277a5e47fbaba3e02aa449d76e787ee">AppXDK_MQTT.h</a>
 </li>
 <li>AppXDK_MQTT_Init()
-: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga736f2d2bb2ef13b8154e16374bdf2b11">AppXDK_MQTT.h</a>
-, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga736f2d2bb2ef13b8154e16374bdf2b11">AppXDK_MQTT.c</a>
+: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga736f2d2bb2ef13b8154e16374bdf2b11">AppXDK_MQTT.c</a>
+, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga736f2d2bb2ef13b8154e16374bdf2b11">AppXDK_MQTT.h</a>
 </li>
 <li>appXDK_MQTT_PublishSemaphoreHandle
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga1a03cf23b784a32d4ad45bdb8bd46f8c">AppXDK_MQTT.c</a>
@@ -1852,8 +1867,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga7fa20a074009bcbca006f2632c5ff682">AppXDK_MQTT.c</a>
 </li>
 <li>AppXDK_MQTT_Setup()
-: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga6759728ae1ddf658441266f97ad5723a">AppXDK_MQTT.c</a>
-, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga6759728ae1ddf658441266f97ad5723a">AppXDK_MQTT.h</a>
+: <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga6759728ae1ddf658441266f97ad5723a">AppXDK_MQTT.h</a>
+, <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga6759728ae1ddf658441266f97ad5723a">AppXDK_MQTT.c</a>
 </li>
 <li>appXDK_MQTT_SetupInfo
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga232d035ed9ae90e40825b27c2ab0feda">AppXDK_MQTT.c</a>
@@ -1886,8 +1901,8 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="group___app_x_d_k___m_q_t_t.html#ga7d085a9730a7d68fe1548142ba587b43">AppXDK_MQTT.c</a>
 </li>
 <li>AppXDK_MQTT_SubsribeToTopic()
-: <a class="el" href="group___app_x_d_k___m_q_t_t.html#gabfdbf29028b7f60421f51fc5e99dd7c3">AppXDK_MQTT.h</a>
-, <a class="el" href="group___app_x_d_k___m_q_t_t.html#gabfdbf29028b7f60421f51fc5e99dd7c3">AppXDK_MQTT.c</a>
+: <a class="el" href="group___app_x_d_k___m_q_t_t.html#gabfdbf29028b7f60421f51fc5e99dd7c3">AppXDK_MQTT.c</a>
+, <a class="el" href="group___app_x_d_k___m_q_t_t.html#gabfdbf29028b7f60421f51fc5e99dd7c3">AppXDK_MQTT.h</a>
 </li>
 <li>AppXDK_MQTT_Type_T
 : <a class="el" href="_app_x_d_k___m_q_t_t_8h.html#a89ace7645aeabcb8bc5533c40b22af04">AppXDK_MQTT.h</a>

@@ -24,7 +24,7 @@ The software architecture:
   >   - XDK110
   >   - Micro SD card 32GB (that's the max the XDK can manage, 8GB is fine too)
   >   - SD Card Adapter to write / edit the config file onto the SD card from your computer
-- XDK Workbench, version 3.6.x
+- XDK Workbench, version 3.6.1
 > - download and install the XDK Workbench
 - MQTT test client
 > - For example, MQTT Box from http://workswithweb.com/mqttbox.html
@@ -38,8 +38,8 @@ The software architecture:
 
 ## [Source Code Documentation using Doxygen](./doxygen)
 
-## [API Documentation](./doxygen/resources/docs_external_interfaces.md)
-This is included as part of the source code documentation.
+## API Documentation
+This is included as part of the source code documentation in section **External Interfaces**.
 
 ## [Tests Scripts](./test-scripts)
 

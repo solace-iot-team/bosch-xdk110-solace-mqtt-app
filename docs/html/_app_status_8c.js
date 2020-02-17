@@ -53,6 +53,7 @@ var _app_status_8c =
     [ "AppStatus_SendStatusMessage", "group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba", null ],
     [ "appStatus_SendStatusMessageEnqueue", "group___app_status.html#ga5292d45e5719ba61d74cf8e5215a52c4", null ],
     [ "AppStatus_SendStatusMessagePart", "group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f", null ],
+    [ "AppStatus_SendVersionInfo", "group___app_status.html#ga0ad82d3a859f3d57ff5849efe0b869cb", null ],
     [ "AppStatus_SendWlanDisconnectedMessage", "group___app_status.html#ga5924e4e80c67014fe2139bf1eb0e0348", null ],
     [ "appStatus_SetPubTopic", "group___app_status.html#gac9686d86bcc745e65c990a7254eff0f1", null ],
     [ "appStatus_SetStatusConfig", "group___app_status.html#ga6f7514eb57827ad17591411481d65629", null ],

@@ -312,7 +312,8 @@ An exchangeId is used to correlate the command message with the response(s).
 |@ref COMMAND_PERSIST_ACTIVE_CONFIG | single response: success or failure    |
 |@ref COMMAND_SEND_FULL_STATUS| multi-part response, see @ref appStatus_SendFullStatus()|
 |@ref COMMAND_SEND_SHORT_STATUS| see @ref appStatus_SendShortStatus()|
-|@ref COMMAND_SEND_STATUS_ACTIVE_TELEMETRY_PARAMS | see @ref AppStatus_SendActiveTelemetryParams()   |
+|@ref COMMAND_SEND_VERSION_INFO| see @ref AppStatus_SendVersionInfo()  |
+|@ref COMMAND_SEND_ACTIVE_TELEMETRY_PARAMS | see @ref AppStatus_SendActiveTelemetryParams()   |
 |@ref COMMAND_SEND_ACTIVE_RUNTIME_CONFIG| see @ref AppRuntimeConfig_SendActiveConfig()  |
 |@ref COMMAND_SEND_RUNTIME_CONFIG_FILE   | see @ref AppRuntimeConfig_SendFile()  |
 |@ref COMMAND_TRIGGER_SAMPLE_ERROR					| trigger a sample error  |
@@ -501,7 +502,7 @@ Sent either as a response to a command or as regular status events.
       }
     },
     {
-      "activeRuntimeConfig.activeTelemetryRTParams": {
+      "activeTelemetryRTParams": {
         "numberOfSamplesPerEvent": 2,
         "publishPeriodcityMillis": 1000,
         "samplingPeriodicityMillis": 500
@@ -570,7 +571,7 @@ Sent either as a response to a command or as regular status events.
   "descrCode": 15,
   "items": [
     {
-      "activeRuntimeConfig.topicConfig": {
+      "topicConfig": {
         "received": {
           "timestamp": "2020-01-27T11:28:56.606Z",
           "exchangeId": "5078BB46-F1DB-4EA6-8D9C-B08A00711A61",
@@ -602,7 +603,7 @@ Sent either as a response to a command or as regular status events.
   "descrCode": 15,
   "items": [
     {
-      "activeRuntimeConfig.mqttBrokerConnectionConfig": {
+      "mqttBrokerConnectionConfig": {
         "received": {
           "timestamp": "2020-01-20T16:07:31.213Z",
           "exchangeId": "default-exchange-id",
@@ -638,7 +639,7 @@ Sent either as a response to a command or as regular status events.
   "descrCode": 15,
   "items": [
     {
-      "activeRuntimeConfig.statusConfig": {
+      "statusConfig": {
         "received": {
           "timestamp": "2020-01-27T11:11:39.070Z",
           "exchangeId": "9A25D1B1-E86B-4D57-B523-D5B4526E1F43",
@@ -671,7 +672,7 @@ Sent either as a response to a command or as regular status events.
   "descrCode": 15,
   "items": [
     {
-      "activeRuntimeConfig.activeTelemetryRTParams": {
+      "activeTelemetryRTParams": {
         "numberOfSamplesPerEvent": 2,
         "publishPeriodcityMillis": 1000,
         "samplingPeriodicityMillis": 500
@@ -694,7 +695,7 @@ Sent either as a response to a command or as regular status events.
   "descrCode": 15,
   "items": [
     {
-      "activeRuntimeConfig.targetTelemetryConfig": {
+      "targetTelemetryConfig": {
         "received": {
           "timestamp": "2020-01-27T09:58:55.034Z",
           "exchangeId": "FDB99BE4-95F5-411C-B571-497380CAB10B",
