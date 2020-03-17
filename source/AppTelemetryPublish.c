@@ -147,7 +147,7 @@ Retcode_T AppTelemetryPublish_ApplyNewRuntimeConfig(AppRuntimeConfig_ConfigEleme
 
 		switch(configElement) {
 		case AppRuntimeConfig_Element_targetTelemetryConfig: {
-			appTelemetryPublish_MqttPublishInfo.qos = ((AppRuntimeConfig_TelemetryConfig_T *) newConfigPtr)->received.qos;
+			appTelemetryPublish_MqttPublishInfo.qos = ((AppRuntimeConfig_TelemetryConfig_T *) newConfigPtr)->qos;
 		}
 		break;
 		case AppRuntimeConfig_Element_topicConfig: {
@@ -155,8 +155,8 @@ Retcode_T AppTelemetryPublish_ApplyNewRuntimeConfig(AppRuntimeConfig_ConfigEleme
 			if(appTelemetryPublish_MqttPublishInfo.topic != NULL) free(appTelemetryPublish_MqttPublishInfo.topic);
 
 			appTelemetryPublish_MqttPublishInfo.topic = AppMisc_FormatTopic("%s/iot-event/%s/%s/metrics",
-														((AppRuntimeConfig_TopicConfig_T * ) newConfigPtr)->received.methodCreate,
-														((AppRuntimeConfig_TopicConfig_T * ) newConfigPtr)->received.baseTopic,
+														((AppRuntimeConfig_TopicConfig_T * ) newConfigPtr)->methodCreate,
+														((AppRuntimeConfig_TopicConfig_T * ) newConfigPtr)->baseTopic,
 														appTelemetryPublish_DeviceId);
 		}
 		break;

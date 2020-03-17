@@ -94,10 +94,10 @@ Retcode_T AppMqtt_Setup(const AppRuntimeConfig_T * configPtr) {
 	assert(configPtr->mqttBrokerConnectionConfigPtr);
 
 	AppRuntimeConfig_MqttBrokerConnectionConfig_T * mqttConfigPtr = configPtr->mqttBrokerConnectionConfigPtr;
-	assert(mqttConfigPtr->received.brokerUrl);
-	assert(mqttConfigPtr->received.brokerUsername);
-	assert(mqttConfigPtr->received.brokerPassword);
-	assert(mqttConfigPtr->received.brokerPort > 0);
+	assert(mqttConfigPtr->brokerUrl);
+	assert(mqttConfigPtr->brokerUsername);
+	assert(mqttConfigPtr->brokerPassword);
+	assert(mqttConfigPtr->brokerPort > 0);
 
 	Retcode_T retcode = RETCODE_OK;
 
@@ -105,17 +105,17 @@ Retcode_T AppMqtt_Setup(const AppRuntimeConfig_T * configPtr) {
 	AppXDK_MQTT_Setup_T appXDK_MqttSetupInfo;
 	appXDK_MqttSetupInfo.brokerDisconnectCallback_Func = appMqtt_BrokerDisconnectCallback;
 	appXDK_MqttSetupInfo.incomingDataCallBack_Func = appMqtt_IncomingDataCallBack_Func;
-	appXDK_MqttSetupInfo.isSecure = configPtr->mqttBrokerConnectionConfigPtr->received.isSecureConnection;
+	appXDK_MqttSetupInfo.isSecure = configPtr->mqttBrokerConnectionConfigPtr->isSecureConnection;
 	appXDK_MqttSetupInfo.mqttType = AppXDK_MQTT_TypeServalStack;
 
 	// capture the mqtt connect info
-	appMqtt_MqttConnectInfo.brokerUrl = mqttConfigPtr->received.brokerUrl;
-	appMqtt_MqttConnectInfo.brokerPort = mqttConfigPtr->received.brokerPort;
+	appMqtt_MqttConnectInfo.brokerUrl = mqttConfigPtr->brokerUrl;
+	appMqtt_MqttConnectInfo.brokerPort = mqttConfigPtr->brokerPort;
 	appMqtt_MqttConnectInfo.clientId = appMqtt_DeviceId;
-	appMqtt_MqttConnectInfo.isCleanSession = mqttConfigPtr->received.isCleanSession;
-	appMqtt_MqttConnectInfo.keepAliveIntervalSecs = mqttConfigPtr->received.keepAliveIntervalSecs;
-	appMqtt_MqttConnectInfo.username = mqttConfigPtr->received.brokerUsername;
-	appMqtt_MqttConnectInfo.password = mqttConfigPtr->received.brokerPassword;
+	appMqtt_MqttConnectInfo.isCleanSession = mqttConfigPtr->isCleanSession;
+	appMqtt_MqttConnectInfo.keepAliveIntervalSecs = mqttConfigPtr->keepAliveIntervalSecs;
+	appMqtt_MqttConnectInfo.username = mqttConfigPtr->brokerUsername;
+	appMqtt_MqttConnectInfo.password = mqttConfigPtr->brokerPassword;
 
 	if (RETCODE_OK == retcode) retcode = AppXDK_MQTT_Init(&appXDK_MqttSetupInfo);
 

@@ -1,0 +1,36 @@
+{
+  "solaceBroker": {
+    "sempV2": {
+      "basePath": "https://mr1dns3dpz5u9l.messaging.solace.cloud:943/SEMP/v2/config",
+      "vpn": "xdk-dev",
+      "virtualRouter": "primary",
+      "user": "xdk-dev-admin",
+      "password": "9tm83dpntm0oa624ut6jq2nnlo"
+    }
+  },
+  "settings":{
+    "codeMaps" :{
+      "directory": "./code-maps",
+      "statusDescrFilename": "AppStatusMessage_Descr.json",
+      "statusStatusFilename": "AppStatusMessage_Status.json",
+      "retcodeFilename": "Retcode_SolApp.json",
+      "appModuleFilename": "SolaceAppModuleId.json"
+    },
+    "deviceId": "24d11f0358cd5d9a",
+    "categorization": {
+      "region": "region",
+      "site": "site",
+      "subSite": "sub-site"
+    }
+  },
+  "about":{
+    "version": "0.0.1",
+    "date": "Nov-2019 to Mar-2020",
+    "author": "Solace IoT Team",
+    "solaceXDKAppVersion": {
+      "major": 2,
+      "minor": 1,
+      "patch": 0
+    }
+  }
+}

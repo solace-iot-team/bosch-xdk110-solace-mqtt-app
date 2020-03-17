@@ -53,6 +53,11 @@ var group___app_status_message___descr_code___t =
       [ "AppStatusMessage_Descr_StatusConfig_QoS_1_Unsupported_Using_QoS_0", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86af2f0e41d37381de637c2672c5aa5209f", null ],
       [ "AppStatusMessage_Descr_TelemetryConfig_QoS_1_Unsupported_Using_QoS_0", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86afb243c35b52b27aa450a8800c7ef6086", null ],
       [ "AppStatusMessage_Descr_WlanWasDisconnected", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a15f8f78455865739cae7e74b16c765f7", null ],
-      [ "AppStatusMessage_Descr_VersionInfo", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86ac4514ae3ca223a966fbbd9756d995a13", null ]
+      [ "AppStatusMessage_Descr_VersionInfo", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86ac4514ae3ca223a966fbbd9756d995a13", null ],
+      [ "AppStatusMessage_Descr_ActiveRuntimeConfig_Header", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a72d5a86c7dd3da9ab2d8404508179787", null ],
+      [ "AppStatusMessage_Descr_ActiveRuntimeConfig_TopicConfig", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a17ee6f53e935a7255d9c257d835ab860", null ],
+      [ "AppStatusMessage_Descr_ActiveRuntimeConfig_MqttBrokerConnectionConfig", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a055ce1e62a8a0e0985a0f10d1bd3f0d8", null ],
+      [ "AppStatusMessage_Descr_ActiveRuntimeConfig_StatusConfig", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86af441fa4f86845442610062c3f5e67246", null ],
+      [ "AppStatusMessage_Descr_ActiveRuntimeConfig_TargetTelemetryConfig", "group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a1e3cecea2943b7dadd64247d016e6f32", null ]
     ] ]
 ];

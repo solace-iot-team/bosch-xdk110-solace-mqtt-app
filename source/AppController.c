@@ -283,8 +283,8 @@ static Retcode_T applyNewRuntime_TopicConfig(AppRuntimeConfig_TopicConfig_T * ne
 	// otherwise, we probably can't recover, hence: reboot
 
 	if (RETCODE_OK != retcode) {
-		if(newConfigPtr->received.applyFlag == AppRuntimeConfig_Apply_Persistent) AppRuntimeConfig_DeleteFile();
-		oldConfigPtr->received.applyFlag = AppRuntimeConfig_Apply_Transient;
+		if(newConfigPtr->applyFlag == AppRuntimeConfig_Apply_Persistent) AppRuntimeConfig_DeleteFile();
+		oldConfigPtr->applyFlag = AppRuntimeConfig_Apply_Transient;
 		AppRuntimeConfig_ApplyNewRuntimeConfig(AppRuntimeConfig_Element_topicConfig, oldConfigPtr);
 		AppStatus_ApplyNewRuntimeConfig(AppRuntimeConfig_Element_topicConfig, oldConfigPtr);
 
@@ -614,7 +614,7 @@ static void appController_SetupAfterDisconnect(void * param1, uint32_t param2) {
 			printf("[FATAL] - appController_SetupAfterDisconnect: AppMqtt_Connect2Broker() failed %u times.\r\n", connectTriesCounter);
 			Retcode_RaiseError(retcode);
 		} else {
-			printf("[INFO] - appController_SetupAfterDisconnect: connected successfully, attempt %u.\r\n", connectTriesCounter);
+			printf("[INFO] - appController_SetupAfterDisconnect: MQTT RE-CONNECTED successfully, attempt %u.\r\n", connectTriesCounter);
 		}
 	}
 
@@ -644,6 +644,8 @@ static void appController_SetupAfterDisconnect(void * param1, uint32_t param2) {
  */
 static void appController_MqttBrokerDisconnectCallback(void) {
 	Retcode_T retcode = RETCODE_OK;
+
+	printf("[WARNING] - appController_MqttBrokerDisconnectCallback: MQTT DISCONNECTED\r\n");
 
 	retcode = CmdProcessor_Enqueue(AppControllerProcessorHandle, appController_SetupAfterDisconnect, NULL, UINT32_C(0));
 	if (RETCODE_OK != retcode) {
@@ -702,7 +704,7 @@ static void AppController_Enable(void * param1, uint32_t param2) {
 	if (RETCODE_OK == retcode) retcode = AppCmdCtrl_Enable(getAppRuntimeConfigPtr());
 
 	if (RETCODE_OK == retcode) {
-		if(getAppRuntimeConfigPtr()->targetTelemetryConfigPtr->received.activateAtBootTime) {
+		if(getAppRuntimeConfigPtr()->targetTelemetryConfigPtr->activateAtBootTime) {
 			retcode = appController_CreateTelemetryTasks();
 			if(RETCODE_OK == retcode) appController_targetTelemetryState_isRunning = true;
 		} else appController_targetTelemetryState_isRunning = false;

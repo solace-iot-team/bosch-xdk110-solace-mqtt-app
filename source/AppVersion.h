@@ -19,9 +19,9 @@
 
 #define SOLACE_APP_VERSION_MAJOR		2 /**< the major version */
 
-#define SOLACE_APP_VERSION_MINOR		0 /**< the minor version */
+#define SOLACE_APP_VERSION_MINOR		1 /**< the minor version */
 
-#define SOLACE_APP_VERSION_PATCH		1 /**< the patch version */
+#define SOLACE_APP_VERSION_PATCH		0 /**< the patch version */
 
 
 uint8_t SolaceAppVersion_GetMajor(void);

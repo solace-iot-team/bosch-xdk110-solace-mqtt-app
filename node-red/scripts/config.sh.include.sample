@@ -1,0 +1,10 @@
+###############################################################################
+#
+# include file with project specific settings
+#
+###############################################################################
+
+# absolute path of the project directory
+PROJECT_DIR="<absolute directory>/bosch-xdk110-solace-mqtt-app"
+
+# The End.

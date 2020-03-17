@@ -314,10 +314,10 @@ static void appStatus_SetStatusConfig(AppRuntimeConfig_StatusConfig_T * statusCo
 	// make sure we are not publishing
 	if(pdTRUE == xSemaphoreTake(appStatus_MqttPublishInfo_SemaphoreHandle,  MILLISECONDS(APP_XDK_MQTT_PUBLISH_TIMEOUT_IN_MS))) {
 
-		appStatus_MqttPublishInfo.qos = statusConfigPtr->received.qos;
-		appStatus_isPeriodicStatus = statusConfigPtr->received.isSendPeriodicStatus;
-		appStatus_PeriodicStatusType = statusConfigPtr->received.periodicStatusType;
-		appStatus_PeriodicStatusIntervalMillis = SECONDS(statusConfigPtr->received.periodicStatusIntervalSecs);
+		appStatus_MqttPublishInfo.qos = statusConfigPtr->qos;
+		appStatus_isPeriodicStatus = statusConfigPtr->isSendPeriodicStatus;
+		appStatus_PeriodicStatusType = statusConfigPtr->periodicStatusType;
+		appStatus_PeriodicStatusIntervalMillis = SECONDS(statusConfigPtr->periodicStatusIntervalSecs);
 
 		xSemaphoreGive(appStatus_MqttPublishInfo_SemaphoreHandle);
 
@@ -337,8 +337,8 @@ static void appStatus_SetPubTopic(AppRuntimeConfig_TopicConfig_T const * const t
 
 		if(appStatus_MqttPublishInfo.topic) free(appStatus_MqttPublishInfo.topic);
 		appStatus_MqttPublishInfo.topic = AppMisc_FormatTopic("%s/iot-control/%s/device/%s/status",
-													topicConfigPtr->received.methodUpdate,
-													topicConfigPtr->received.baseTopic,
+													topicConfigPtr->methodUpdate,
+													topicConfigPtr->baseTopic,
 													appStatus_DeviceId);
 
 		xSemaphoreGive(appStatus_MqttPublishInfo_SemaphoreHandle);

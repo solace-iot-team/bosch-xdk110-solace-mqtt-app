@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('_app_runtime_config_8c.html','');});
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -155,6 +156,14 @@ Macros</h2></td></tr>
 <tr class="separator:gaf933fbd3476f1d9b621d844cabfff825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c417c7ff2b669638f81350a03f591d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga4c417c7ff2b669638f81350a03f591d7">RT_CFG_FILE_BUFFER_SIZE</a>&#160;&#160;&#160;UINT32_C(2048)</td></tr>
 <tr class="separator:ga4c417c7ff2b669638f81350a03f591d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaedf758263bb5cd7ea04bc78782724c6a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#gaedf758263bb5cd7ea04bc78782724c6a">appStatusMessage_ConfigType_T</a> { <a class="el" href="group___app_runtime_config.html#ggaedf758263bb5cd7ea04bc78782724c6aad24c78c5b4cffc6682d7dc141fe1b8d7">ConfigType_Active</a>, 
+<a class="el" href="group___app_runtime_config.html#ggaedf758263bb5cd7ea04bc78782724c6aa6e9ac444e2e79b8a67b2c4ab37165ecd">ConfigType_Persisted</a>
+ }</td></tr>
+<tr class="memdesc:gaedf758263bb5cd7ea04bc78782724c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef (enum) for type of config.  <a href="group___app_runtime_config.html#gaedf758263bb5cd7ea04bc78782724c6a">More...</a><br /></td></tr>
+<tr class="separator:gaedf758263bb5cd7ea04bc78782724c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -328,14 +337,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ga419df1796f74f152c0d668cafc5aa91d"><td class="memItemLeft" align="right" valign="top">Retcode_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga419df1796f74f152c0d668cafc5aa91d">AppRuntimeConfig_Enable</a> (void)</td></tr>
 <tr class="memdesc:ga419df1796f74f152c0d668cafc5aa91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the module.  <a href="group___app_runtime_config.html#ga419df1796f74f152c0d668cafc5aa91d">More...</a><br /></td></tr>
 <tr class="separator:ga419df1796f74f152c0d668cafc5aa91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0f5d0107d6be04f7e3b0fb18411d16ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad">appRuntimeConfig_SendConfig</a> (cJSON *jsonHandle, const char *exchangeId)</td></tr>
-<tr class="memdesc:ga0f5d0107d6be04f7e3b0fb18411d16ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the runtime configuration as multiple parts (each element as one part) using <a class="el" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f">AppStatus_SendStatusMessagePart()</a> adding the exchangeId. Use to send the configuration as response to a command.  <a href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad">More...</a><br /></td></tr>
-<tr class="separator:ga0f5d0107d6be04f7e3b0fb18411d16ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga658278b46c4f2d6201970f8c00fe3788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga658278b46c4f2d6201970f8c00fe3788">appRuntimeConfig_SendConfig</a> (<a class="el" href="group___app_runtime_config.html#gaedf758263bb5cd7ea04bc78782724c6a">appStatusMessage_ConfigType_T</a> configType, cJSON *jsonHandle, const char *exchangeId)</td></tr>
+<tr class="memdesc:ga658278b46c4f2d6201970f8c00fe3788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the runtime configuration as multiple parts (each element as one part) using <a class="el" href="group___app_status.html#ga2e39f6f6ecb889ebbe61878403ff4b8f">AppStatus_SendStatusMessagePart()</a> adding the exchangeId. Use to send the configuration as response to a command.  <a href="group___app_runtime_config.html#ga658278b46c4f2d6201970f8c00fe3788">More...</a><br /></td></tr>
+<tr class="separator:ga658278b46c4f2d6201970f8c00fe3788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3503c0734e84d824942ef1267afcea9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b">AppRuntimeConfig_SendActiveConfig</a> (const char *exchangeId)</td></tr>
-<tr class="memdesc:ga3503c0734e84d824942ef1267afcea9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the active runtime configuration using <a class="el" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad">appRuntimeConfig_SendConfig()</a>. Use as response to a command.  <a href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b">More...</a><br /></td></tr>
+<tr class="memdesc:ga3503c0734e84d824942ef1267afcea9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the active runtime configuration using <a class="el" href="group___app_runtime_config.html#ga658278b46c4f2d6201970f8c00fe3788">appRuntimeConfig_SendConfig()</a>. Use as response to a command.  <a href="group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b">More...</a><br /></td></tr>
 <tr class="separator:ga3503c0734e84d824942ef1267afcea9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4dfe01a5b8de43e3313d0b08cd9da2fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd">AppRuntimeConfig_SendFile</a> (const char *exchangeId)</td></tr>
-<tr class="memdesc:ga4dfe01a5b8de43e3313d0b08cd9da2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the persisted runtime configuration file using <a class="el" href="group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad">appRuntimeConfig_SendConfig()</a> or a status message if not found using <a class="el" href="group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba">AppStatus_SendStatusMessage()</a>. Use as response to a command.  <a href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd">More...</a><br /></td></tr>
+<tr class="memdesc:ga4dfe01a5b8de43e3313d0b08cd9da2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the persisted runtime configuration file using <a class="el" href="group___app_runtime_config.html#ga658278b46c4f2d6201970f8c00fe3788">appRuntimeConfig_SendConfig()</a> or a status message if not found using <a class="el" href="group___app_status.html#ga3ad65edff536069b2abce7bd878b17ba">AppStatus_SendStatusMessage()</a>. Use as response to a command.  <a href="group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd">More...</a><br /></td></tr>
 <tr class="separator:ga4dfe01a5b8de43e3313d0b08cd9da2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa2aa530c4af2ad05c367319ac46c1aa6"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___app_runtime_config.html#gaa2aa530c4af2ad05c367319ac46c1aa6">AppRuntimeConfig_DeleteFile</a> (void)</td></tr>

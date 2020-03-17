@@ -342,15 +342,15 @@ Retcode_T AppCmdCtrl_NotifyDisconnectedFromBroker(void) {
 static Retcode_T appCmdCtrl_PubSubSetup(const AppRuntimeConfig_TopicConfig_T * configPtr) {
 
 	assert(configPtr);
-	assert(configPtr->received.methodCreate);
-	assert(configPtr->received.methodUpdate);
-	assert(configPtr->received.baseTopic);
+	assert(configPtr->methodCreate);
+	assert(configPtr->methodUpdate);
+	assert(configPtr->baseTopic);
 	assert(appCmdCtrl_DeviceId);
 
 	// set up all the topics
-	char * methodUpdate = configPtr->received.methodUpdate;
-	char * methodCreate = configPtr->received.methodCreate;
-	char * baseTopic = configPtr->received.baseTopic;
+	char * methodUpdate = configPtr->methodUpdate;
+	char * methodCreate = configPtr->methodCreate;
+	char * baseTopic = configPtr->baseTopic;
 	char * baseTopicLevelsArray[APP_CMD_CTRL_NUM_BASE_TOPIC_LEVELS];
 
 	static char copyOfBaseTopic[255];
@@ -747,6 +747,17 @@ static void appCmdCtrl_ProcessInstruction(AppCmdCtrlRequestType_T requestType, c
 				vTaskDelay(delay2ApplyInstructionTicks);
 				BSP_Board_SoftReset();
 			}
+
+			// special treatment for fatal error command, system reboots
+
+			if(commandType == AppCmdCtrl_CommandType_TriggerSampleFatalError) {
+				// for FATAL Error command, send the status response first
+				AppStatus_CmdCtrl_AddStatusCode(responseMsgPtr, AppStatusMessage_Status_Success);
+				appCmdCtrl_SendResponse(responseMsgPtr);
+
+				vTaskDelay(delay2ApplyInstructionTicks);
+			}
+
 
 			Retcode_T retcode = appCmdCtrl_executeCommand(commandType, delay2ApplyInstructionTicks, responseMsgPtr->exchangeId);
 			if(RETCODE_OK == retcode) {

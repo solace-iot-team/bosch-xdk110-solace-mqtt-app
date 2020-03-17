@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xdkappinfo_1636',['XdkAppInfo',['../group___xdk_app_info.html',1,'']]]
+  ['xdkappinfo_1652',['XdkAppInfo',['../group___xdk_app_info.html',1,'']]]
 ];

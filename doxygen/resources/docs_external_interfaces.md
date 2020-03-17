@@ -239,7 +239,6 @@ The runtime config file name on the SD Card: @ref RT_CFG_FILE_NAME.
 
 **Example Topic Configuration Payload:**
 ````
-payload:
 {
   "type": "topic",
   "timestamp": "2020-01-27T11:28:56.606Z",

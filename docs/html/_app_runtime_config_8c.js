@@ -5,6 +5,10 @@ var _app_runtime_config_8c =
     [ "RT_CFG_FILE_BUFFER_SIZE", "group___app_runtime_config.html#ga4c417c7ff2b669638f81350a03f591d7", null ],
     [ "RT_CFG_FILE_NAME", "group___app_runtime_config.html#gaea79f016e410185f4ffdc56e3630402b", null ],
     [ "RT_NEW_CFG_FILE_NAME", "group___app_runtime_config.html#gaf933fbd3476f1d9b621d844cabfff825", null ],
+    [ "appStatusMessage_ConfigType_T", "group___app_runtime_config.html#gaedf758263bb5cd7ea04bc78782724c6a", [
+      [ "ConfigType_Active", "group___app_runtime_config.html#ggaedf758263bb5cd7ea04bc78782724c6aad24c78c5b4cffc6682d7dc141fe1b8d7", null ],
+      [ "ConfigType_Persisted", "group___app_runtime_config.html#ggaedf758263bb5cd7ea04bc78782724c6aa6e9ac444e2e79b8a67b2c4ab37165ecd", null ]
+    ] ],
     [ "AppRuntimeConfig_AdaptTelemetryRateDown", "group___app_runtime_config.html#ga2b9becb7ff5616516bacc8ed7a983082", null ],
     [ "appRuntimeConfig_AllowAccess2AppRuntimeConfigPtr", "group___app_runtime_config.html#ga8511885a00a10a37f13a144c9ae0f20b", null ],
     [ "AppRuntimeConfig_ApplyNewRuntimeConfig", "group___app_runtime_config.html#gac24b8ec7408fc547ee630bbfbb8dd617", null ],
@@ -67,7 +71,7 @@ var _app_runtime_config_8c =
     [ "appRuntimeConfig_ReadConfigTimestampStr", "group___app_runtime_config.html#ga89ea562bca6703d1a18b159a9c541d5d", null ],
     [ "appRuntimeConfig_ReadRuntimeConfigFromFile", "group___app_runtime_config.html#gaa05e8a107233c90a862ef9335b99bf6e", null ],
     [ "AppRuntimeConfig_SendActiveConfig", "group___app_runtime_config.html#ga3503c0734e84d824942ef1267afcea9b", null ],
-    [ "appRuntimeConfig_SendConfig", "group___app_runtime_config.html#ga0f5d0107d6be04f7e3b0fb18411d16ad", null ],
+    [ "appRuntimeConfig_SendConfig", "group___app_runtime_config.html#ga658278b46c4f2d6201970f8c00fe3788", null ],
     [ "AppRuntimeConfig_SendFile", "group___app_runtime_config.html#ga4dfe01a5b8de43e3313d0b08cd9da2fd", null ],
     [ "appRuntimeConfig_SerializeAppRuntimeConfig2Buffer", "group___app_runtime_config.html#ga52eddbe36ed8af9499679a9aafb84414", null ],
     [ "AppRuntimeConfig_Setup", "group___app_runtime_config.html#gae50760bbfefb81ab356ba09c79c5babe", null ],

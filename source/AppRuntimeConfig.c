@@ -45,78 +45,70 @@ static SemaphoreHandle_t appRuntimeConfigPtr_SemaphoreHandle = NULL; /**< semaph
  * @brief Default values if no runtime config exists yet.
  */
 static const AppRuntimeConfig_TelemetryConfig_T appRuntimeConfig_DefaultTargetTelemetryConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-		.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-        .activateAtBootTime = APP_RT_CFG_DEFAULT_ACTIVATE_AT_BOOT_TIME,
-		.sensorEnableFlag = APP_RT_CFG_DEFAULT_SENSOR_ENABLE,
-		.numberOfEventsPerSecond = APP_RT_CFG_DEFAULT_NUM_EVENTS_PER_SEC,
-		.numberOfSamplesPerEvent = APP_RT_CFG_DEFAULT_NUM_SAMPLES_PER_EVENT,
-	    .qos = APP_RT_CFG_DEFAULT_QOS,
-	    .payloadFormat = APP_RT_CFG_DEFAULT_PAYLOAD_FORMAT,
-		.sensors = {
-			.isLight = true,
-			.isAccelerator = true,
-			.isGyro = true,
-			.isMagneto = true,
-			.isHumidity = true,
-			.isTemperature = true,
-			.isPressure = true,
-		},
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.activateAtBootTime = APP_RT_CFG_DEFAULT_ACTIVATE_AT_BOOT_TIME,
+	.sensorEnableFlag = APP_RT_CFG_DEFAULT_SENSOR_ENABLE,
+	.numberOfEventsPerSecond = APP_RT_CFG_DEFAULT_NUM_EVENTS_PER_SEC,
+	.numberOfSamplesPerEvent = APP_RT_CFG_DEFAULT_NUM_SAMPLES_PER_EVENT,
+	.qos = APP_RT_CFG_DEFAULT_QOS,
+	.payloadFormat = APP_RT_CFG_DEFAULT_PAYLOAD_FORMAT,
+	.sensors = {
+		.isLight = true,
+		.isAccelerator = true,
+		.isGyro = true,
+		.isMagneto = true,
+		.isHumidity = true,
+		.isTemperature = true,
+		.isPressure = true,
 	},
 };
 /**
  * @brief Default values if no runtime config exists yet.
  */
 static const AppRuntimeConfig_StatusConfig_T appRuntimeConfig_DefaultStatusConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-		.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.isSendPeriodicStatus = APP_RT_CFG_DEFAULT_STATUS_SEND_PERIODIC_FLAG,
-		.periodicStatusType = APP_RT_CFG_DEFAULT_STATUS_PERIODIC_TYPE,
-		.periodicStatusIntervalSecs = APP_RT_CFG_DEFAULT_STATUS_INTERVAL_SECS,
-		.qos=APP_RT_CFG_DEFAULT_STATUS_QOS
-	},
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.isSendPeriodicStatus = APP_RT_CFG_DEFAULT_STATUS_SEND_PERIODIC_FLAG,
+	.periodicStatusType = APP_RT_CFG_DEFAULT_STATUS_PERIODIC_TYPE,
+	.periodicStatusIntervalSecs = APP_RT_CFG_DEFAULT_STATUS_INTERVAL_SECS,
+	.qos=APP_RT_CFG_DEFAULT_STATUS_QOS
 };
 /**
  * @brief Default values if no runtime config exists yet.
  */
 static const AppRuntimeConfig_MqttBrokerConnectionConfig_T appRuntimeConfig_DefaultMqttBrokerConnectionConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-		.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.brokerUrl = NULL,
-		.brokerPort = UINT16_C(0),
-		.brokerUsername = NULL,
-		.brokerPassword = NULL,
-		.isCleanSession = false,
-		.keepAliveIntervalSecs = 60,
-		.isSecureConnection = false,
-	}
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.brokerUrl = NULL,
+	.brokerPort = UINT16_C(0),
+	.brokerUsername = NULL,
+	.brokerPassword = NULL,
+	.isCleanSession = false,
+	.keepAliveIntervalSecs = 60,
+	.isSecureConnection = false,
 };
 /**
  * @brief Default values if no runtime config exists yet.
  */
 static const AppRuntimeConfig_TopicConfig_T appRuntimeConfig_DefaultTopicConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-		.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.baseTopic = NULL,
-		.methodCreate = NULL,
-		.methodUpdate = NULL,
-	}
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.baseTopic = NULL,
+	.methodCreate = NULL,
+	.methodUpdate = NULL,
 };
 /**
  * @brief Default values if no runtime config exists yet.
@@ -135,27 +127,25 @@ static const AppRuntimeConfig_T appRuntimeConfig_DefaultAppRuntimeConfig = {
  * @brief Empty values.
  */
 static const AppRuntimeConfig_TelemetryConfig_T appRuntimeConfig_EmptyTargetTelemetryConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-        .delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-        .activateAtBootTime = APP_RT_CFG_DEFAULT_ACTIVATE_AT_BOOT_TIME,
-		.sensorEnableFlag = APP_RT_CFG_DEFAULT_SENSOR_ENABLE,
-		.numberOfEventsPerSecond = 0,
-		.numberOfSamplesPerEvent = 0,
-	    .qos = 0,
-	    .payloadFormat = AppRuntimeConfig_Telemetry_PayloadFormat_NULL,
-		.sensors = {
-			.isLight = false,
-			.isAccelerator = false,
-			.isGyro = false,
-			.isMagneto = false,
-			.isHumidity = false,
-			.isTemperature = false,
-			.isPressure = false,
-		},
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.activateAtBootTime = APP_RT_CFG_DEFAULT_ACTIVATE_AT_BOOT_TIME,
+	.sensorEnableFlag = APP_RT_CFG_DEFAULT_SENSOR_ENABLE,
+	.numberOfEventsPerSecond = 0,
+	.numberOfSamplesPerEvent = 0,
+	.qos = 0,
+	.payloadFormat = AppRuntimeConfig_Telemetry_PayloadFormat_NULL,
+	.sensors = {
+		.isLight = false,
+		.isAccelerator = false,
+		.isGyro = false,
+		.isMagneto = false,
+		.isHumidity = false,
+		.isTemperature = false,
+		.isPressure = false,
 	},
 };
 /**
@@ -170,51 +160,45 @@ static const AppRuntimeConfig_TelemetryRTParams_T appRuntimeConfig_EmptyActiveTe
  * @brief Empty values.
  */
 static const AppRuntimeConfig_StatusConfig_T appRuntimeConfig_EmptyStatusConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-        .delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.isSendPeriodicStatus = APP_RT_CFG_DEFAULT_STATUS_SEND_PERIODIC_FLAG,
-		.periodicStatusType = APP_RT_CFG_DEFAULT_STATUS_PERIODIC_TYPE,
-		.periodicStatusIntervalSecs = APP_RT_CFG_DEFAULT_STATUS_INTERVAL_SECS,
-		.qos=APP_RT_CFG_DEFAULT_STATUS_QOS
-	}
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.isSendPeriodicStatus = APP_RT_CFG_DEFAULT_STATUS_SEND_PERIODIC_FLAG,
+	.periodicStatusType = APP_RT_CFG_DEFAULT_STATUS_PERIODIC_TYPE,
+	.periodicStatusIntervalSecs = APP_RT_CFG_DEFAULT_STATUS_INTERVAL_SECS,
+	.qos=APP_RT_CFG_DEFAULT_STATUS_QOS
 };
 /**
  * @brief Empty values.
  */
 static const AppRuntimeConfig_MqttBrokerConnectionConfig_T appRuntimeConfig_EmptyMqttBrokerConnectionConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-        .delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.brokerUrl = NULL,
-		.brokerPort = UINT16_C(0),
-		.brokerUsername = NULL,
-		.brokerPassword = NULL,
-		.isCleanSession = false,
-		.keepAliveIntervalSecs = 60,
-		.isSecureConnection = false,
-	}
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.brokerUrl = NULL,
+	.brokerPort = UINT16_C(0),
+	.brokerUsername = NULL,
+	.brokerPassword = NULL,
+	.isCleanSession = false,
+	.keepAliveIntervalSecs = 60,
+	.isSecureConnection = false,
 };
 /**
  * @brief Empty values.
  */
 static const AppRuntimeConfig_TopicConfig_T appRuntimeConfig_EmptyTopicConfig = {
-	.received = {
-		.timestampStr = NULL,
-		.exchangeIdStr = NULL,
-		.tagsJsonHandle = NULL,
-        .delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
-		.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
-		.baseTopic = NULL,
-		.methodCreate = NULL,
-		.methodUpdate = NULL,
-	}
+	.timestampStr = NULL,
+	.exchangeIdStr = NULL,
+	.tagsJsonHandle = NULL,
+	.delay2ApplyConfigSeconds = APP_RT_CFG_DEFAULT_DELAY_SECS,
+	.applyFlag = APP_RT_CFG_DEFAULT_APPLY,
+	.baseTopic = NULL,
+	.methodCreate = NULL,
+	.methodUpdate = NULL,
 };
 /**
  * @brief Empty values.
@@ -254,6 +238,14 @@ static Storage_Rename_T appRuntimeConfig_StorageRenameInfo = {
 };
 
 static char * appRuntimeConfig_DeviceId = NULL; /**< the internal device id */
+
+/**
+ * @brief typedef (enum) for type of config.
+ */
+typedef enum {
+	ConfigType_Active,			/**< active config */
+	ConfigType_Persisted		/**< persisted config */
+} appStatusMessage_ConfigType_T;
 
 /* forwards */
 static AppRuntimeConfigStatus_T * appRuntimeConfig_CalculateAndValidateTelemetryRTParams(uint8_t numberOfSamplesPerEvent, uint8_t numberOfEventsPerSecond, AppRuntimeConfig_TelemetryRTParams_T * rtParamsPtr);
@@ -320,48 +312,44 @@ static cJSON * appRuntimeConfig_GetTargetTelemetryConfigAsJsonObject(const AppRu
 
 	cJSON * jsonHandle = cJSON_CreateObject();
 
-	cJSON * receivedJsonHandle = cJSON_CreateObject();
+	cJSON_AddItemToObject(jsonHandle, "timestamp", cJSON_CreateString(configPtr->timestampStr));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "timestamp", cJSON_CreateString(configPtr->received.timestampStr));
+	cJSON_AddItemToObject(jsonHandle, "exchangeId", cJSON_CreateString(configPtr->exchangeIdStr));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "exchangeId", cJSON_CreateString(configPtr->received.exchangeIdStr));
+	cJSON_AddItemToObject(jsonHandle, "tags", cJSON_Duplicate(configPtr->tagsJsonHandle,true));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "tags", cJSON_Duplicate(configPtr->received.tagsJsonHandle,true));
+	cJSON_AddNumberToObject(jsonHandle, "delay", configPtr->delay2ApplyConfigSeconds);
 
-	cJSON_AddNumberToObject(receivedJsonHandle, "delay", configPtr->received.delay2ApplyConfigSeconds);
+	cJSON_AddItemToObject(jsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->applyFlag));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->received.applyFlag));
+	cJSON_AddBoolToObject(jsonHandle, "activateAtBootTime", configPtr->activateAtBootTime);
 
-	cJSON_AddBoolToObject(receivedJsonHandle, "activateAtBootTime", configPtr->received.activateAtBootTime);
-
-	if(AppRuntimeConfig_SensorEnable_All == configPtr->received.sensorEnableFlag)
-		cJSON_AddItemToObject(receivedJsonHandle, "sensorsEnable", cJSON_CreateString(APP_RT_CFG_SENSORS_ENABLE_ALL));
-	else if(AppRuntimeConfig_SensorEnable_SelectedOnly == configPtr->received.sensorEnableFlag)
-		cJSON_AddItemToObject(receivedJsonHandle, "sensorsEnable", cJSON_CreateString(APP_RT_CFG_SENSORS_ENABLE_SELECTED));
+	if(AppRuntimeConfig_SensorEnable_All == configPtr->sensorEnableFlag)
+		cJSON_AddItemToObject(jsonHandle, "sensorsEnable", cJSON_CreateString(APP_RT_CFG_SENSORS_ENABLE_ALL));
+	else if(AppRuntimeConfig_SensorEnable_SelectedOnly == configPtr->sensorEnableFlag)
+		cJSON_AddItemToObject(jsonHandle, "sensorsEnable", cJSON_CreateString(APP_RT_CFG_SENSORS_ENABLE_SELECTED));
 	else assert(0);
 
-	cJSON_AddNumberToObject(receivedJsonHandle, "eventFrequencyPerSec", configPtr->received.numberOfEventsPerSecond);
+	cJSON_AddNumberToObject(jsonHandle, "eventFrequencyPerSec", configPtr->numberOfEventsPerSecond);
 
-	cJSON_AddNumberToObject(receivedJsonHandle, "samplesPerEvent", configPtr->received.numberOfSamplesPerEvent);
+	cJSON_AddNumberToObject(jsonHandle, "samplesPerEvent", configPtr->numberOfSamplesPerEvent);
 
-	cJSON_AddNumberToObject(receivedJsonHandle, "qos", configPtr->received.qos);
+	cJSON_AddNumberToObject(jsonHandle, "qos", configPtr->qos);
 
-	if(AppRuntimeConfig_Telemetry_PayloadFormat_V1_Json_Verbose == configPtr->received.payloadFormat) {
-		cJSON_AddItemToObject(receivedJsonHandle, "payloadFormat", cJSON_CreateString(APP_RT_CFG_TELEMETRY_PAYLOAD_FORMAT_V1_JSON_VERBOSE_STR));
-	} else if(AppRuntimeConfig_Telemetry_PayloadFormat_V1_Json_Compact == configPtr->received.payloadFormat) {
-		cJSON_AddItemToObject(receivedJsonHandle, "payloadFormat", cJSON_CreateString(APP_RT_CFG_TELEMETRY_PAYLOAD_FORMAT_V1_JSON_COMPACT_STR));
+	if(AppRuntimeConfig_Telemetry_PayloadFormat_V1_Json_Verbose == configPtr->payloadFormat) {
+		cJSON_AddItemToObject(jsonHandle, "payloadFormat", cJSON_CreateString(APP_RT_CFG_TELEMETRY_PAYLOAD_FORMAT_V1_JSON_VERBOSE_STR));
+	} else if(AppRuntimeConfig_Telemetry_PayloadFormat_V1_Json_Compact == configPtr->payloadFormat) {
+		cJSON_AddItemToObject(jsonHandle, "payloadFormat", cJSON_CreateString(APP_RT_CFG_TELEMETRY_PAYLOAD_FORMAT_V1_JSON_COMPACT_STR));
 	} else assert(0);
 
 	cJSON * sensorsJsonArrayHandle = cJSON_CreateArray();
-	if(configPtr->received.sensors.isLight) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("light"));
-	if(configPtr->received.sensors.isAccelerator) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("accelerator"));
-	if(configPtr->received.sensors.isGyro) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("gyroscope"));
-	if(configPtr->received.sensors.isMagneto) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("magnetometer"));
-	if(configPtr->received.sensors.isHumidity) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("humidity"));
-	if(configPtr->received.sensors.isTemperature) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("temperature"));
-	cJSON_AddItemToObject(receivedJsonHandle, "sensors", sensorsJsonArrayHandle);
-
-	cJSON_AddItemToObject(jsonHandle, "received",receivedJsonHandle);
+	if(configPtr->sensors.isLight) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("light"));
+	if(configPtr->sensors.isAccelerator) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("accelerator"));
+	if(configPtr->sensors.isGyro) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("gyroscope"));
+	if(configPtr->sensors.isMagneto) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("magnetometer"));
+	if(configPtr->sensors.isHumidity) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("humidity"));
+	if(configPtr->sensors.isTemperature) cJSON_AddItemToArray(sensorsJsonArrayHandle, cJSON_CreateString("temperature"));
+	cJSON_AddItemToObject(jsonHandle, "sensors", sensorsJsonArrayHandle);
 
 	return jsonHandle;
 
@@ -394,24 +382,21 @@ static cJSON * appRuntimeConfig_GetStatusConfigAsJsonObject(const AppRuntimeConf
 
 	cJSON * jsonHandle = cJSON_CreateObject();
 
-	cJSON * receivedJsonHandle = cJSON_CreateObject();
-	cJSON_AddItemToObject(receivedJsonHandle, "timestamp", cJSON_CreateString(configPtr->received.timestampStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "exchangeId", cJSON_CreateString(configPtr->received.exchangeIdStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "tags", cJSON_Duplicate(configPtr->received.tagsJsonHandle,true));
-	cJSON_AddNumberToObject(receivedJsonHandle, "delay", configPtr->received.delay2ApplyConfigSeconds);
-	cJSON_AddItemToObject(receivedJsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->received.applyFlag));
+	cJSON_AddItemToObject(jsonHandle, "timestamp", cJSON_CreateString(configPtr->timestampStr));
+	cJSON_AddItemToObject(jsonHandle, "exchangeId", cJSON_CreateString(configPtr->exchangeIdStr));
+	cJSON_AddItemToObject(jsonHandle, "tags", cJSON_Duplicate(configPtr->tagsJsonHandle,true));
+	cJSON_AddNumberToObject(jsonHandle, "delay", configPtr->delay2ApplyConfigSeconds);
+	cJSON_AddItemToObject(jsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->applyFlag));
 
-	cJSON_AddBoolToObject(receivedJsonHandle, "sendPeriodicStatus", configPtr->received.isSendPeriodicStatus);
-	cJSON_AddNumberToObject(receivedJsonHandle, "periodicStatusIntervalSecs", configPtr->received.periodicStatusIntervalSecs);
-	if(AppRuntimeConfig_PeriodicStatusType_Full == configPtr->received.periodicStatusType) {
-		cJSON_AddItemToObject(receivedJsonHandle, "periodicStatusType", cJSON_CreateString(APP_RT_CFG_STATUS_PERIODIC_TYPE_FULL));
-	} else if(AppRuntimeConfig_PeriodicStatusType_Short == configPtr->received.periodicStatusType) {
-		cJSON_AddItemToObject(receivedJsonHandle, "periodicStatusType", cJSON_CreateString(APP_RT_CFG_STATUS_PERIODIC_TYPE_SHORT));
+	cJSON_AddBoolToObject(jsonHandle, "sendPeriodicStatus", configPtr->isSendPeriodicStatus);
+	cJSON_AddNumberToObject(jsonHandle, "periodicStatusIntervalSecs", configPtr->periodicStatusIntervalSecs);
+	if(AppRuntimeConfig_PeriodicStatusType_Full == configPtr->periodicStatusType) {
+		cJSON_AddItemToObject(jsonHandle, "periodicStatusType", cJSON_CreateString(APP_RT_CFG_STATUS_PERIODIC_TYPE_FULL));
+	} else if(AppRuntimeConfig_PeriodicStatusType_Short == configPtr->periodicStatusType) {
+		cJSON_AddItemToObject(jsonHandle, "periodicStatusType", cJSON_CreateString(APP_RT_CFG_STATUS_PERIODIC_TYPE_SHORT));
 	} else assert(0);
 
-	cJSON_AddNumberToObject(receivedJsonHandle, "qos", configPtr->received.qos);
-
-	cJSON_AddItemToObject(jsonHandle, "received", receivedJsonHandle);
+	cJSON_AddNumberToObject(jsonHandle, "qos", configPtr->qos);
 
 	return jsonHandle;
 
@@ -427,22 +412,19 @@ static cJSON * appRuntimeConfig_GetMqttBrokerConnectionConfigAsJsonObject(const 
 
 	cJSON * jsonHandle = cJSON_CreateObject();
 
-	cJSON * receivedJsonHandle = cJSON_CreateObject();
-	cJSON_AddItemToObject(receivedJsonHandle, "timestamp", cJSON_CreateString(configPtr->received.timestampStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "exchangeId", cJSON_CreateString(configPtr->received.exchangeIdStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "tags", cJSON_Duplicate(configPtr->received.tagsJsonHandle,true));
-	cJSON_AddNumberToObject(receivedJsonHandle, "delay", configPtr->received.delay2ApplyConfigSeconds);
-	cJSON_AddItemToObject(receivedJsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->received.applyFlag));
+	cJSON_AddItemToObject(jsonHandle, "timestamp", cJSON_CreateString(configPtr->timestampStr));
+	cJSON_AddItemToObject(jsonHandle, "exchangeId", cJSON_CreateString(configPtr->exchangeIdStr));
+	cJSON_AddItemToObject(jsonHandle, "tags", cJSON_Duplicate(configPtr->tagsJsonHandle,true));
+	cJSON_AddNumberToObject(jsonHandle, "delay", configPtr->delay2ApplyConfigSeconds);
+	cJSON_AddItemToObject(jsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->applyFlag));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "brokerURL", cJSON_CreateString(configPtr->received.brokerUrl));
-	cJSON_AddNumberToObject(receivedJsonHandle, "brokerPort", configPtr->received.brokerPort);
-	cJSON_AddItemToObject(receivedJsonHandle, "brokerUsername", cJSON_CreateString(configPtr->received.brokerUsername));
-	cJSON_AddItemToObject(receivedJsonHandle, "brokerPassword", cJSON_CreateString(configPtr->received.brokerPassword));
-	cJSON_AddBoolToObject(receivedJsonHandle, "cleanSession", configPtr->received.isCleanSession);
-	cJSON_AddBoolToObject(receivedJsonHandle, "secureConnection", configPtr->received.isSecureConnection);
-	cJSON_AddNumberToObject(receivedJsonHandle, "keepAliveIntervalSecs", configPtr->received.keepAliveIntervalSecs);
-
-	cJSON_AddItemToObject(jsonHandle, "received", receivedJsonHandle);
+	cJSON_AddItemToObject(jsonHandle, "brokerURL", cJSON_CreateString(configPtr->brokerUrl));
+	cJSON_AddNumberToObject(jsonHandle, "brokerPort", configPtr->brokerPort);
+	cJSON_AddItemToObject(jsonHandle, "brokerUsername", cJSON_CreateString(configPtr->brokerUsername));
+	cJSON_AddItemToObject(jsonHandle, "brokerPassword", cJSON_CreateString(configPtr->brokerPassword));
+	cJSON_AddBoolToObject(jsonHandle, "cleanSession", configPtr->isCleanSession);
+	cJSON_AddBoolToObject(jsonHandle, "secureConnection", configPtr->isSecureConnection);
+	cJSON_AddNumberToObject(jsonHandle, "keepAliveIntervalSecs", configPtr->keepAliveIntervalSecs);
 
 	return jsonHandle;
 
@@ -458,18 +440,15 @@ static cJSON * appRuntimeConfig_GetTopicConfigAsJsonObject(const AppRuntimeConfi
 
 	cJSON * jsonHandle = cJSON_CreateObject();
 
-	cJSON * receivedJsonHandle = cJSON_CreateObject();
-	cJSON_AddItemToObject(receivedJsonHandle, "timestamp", cJSON_CreateString(configPtr->received.timestampStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "exchangeId", cJSON_CreateString(configPtr->received.exchangeIdStr));
-	cJSON_AddItemToObject(receivedJsonHandle, "tags", cJSON_Duplicate(configPtr->received.tagsJsonHandle,true));
-	cJSON_AddNumberToObject(receivedJsonHandle, "delay", configPtr->received.delay2ApplyConfigSeconds);
-	cJSON_AddItemToObject(receivedJsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->received.applyFlag));
+	cJSON_AddItemToObject(jsonHandle, "timestamp", cJSON_CreateString(configPtr->timestampStr));
+	cJSON_AddItemToObject(jsonHandle, "exchangeId", cJSON_CreateString(configPtr->exchangeIdStr));
+	cJSON_AddItemToObject(jsonHandle, "tags", cJSON_Duplicate(configPtr->tagsJsonHandle,true));
+	cJSON_AddNumberToObject(jsonHandle, "delay", configPtr->delay2ApplyConfigSeconds);
+	cJSON_AddItemToObject(jsonHandle, "apply", appRuntimeConfig_GetApplyFlagAsJsonString(configPtr->applyFlag));
 
-	cJSON_AddItemToObject(receivedJsonHandle, "baseTopic", cJSON_CreateString(configPtr->received.baseTopic));
-	cJSON_AddItemToObject(receivedJsonHandle, "methodCreate", cJSON_CreateString(configPtr->received.methodCreate));
-	cJSON_AddItemToObject(receivedJsonHandle, "methodUpdate", cJSON_CreateString(configPtr->received.methodUpdate));
-
-	cJSON_AddItemToObject(jsonHandle, "received", receivedJsonHandle);
+	cJSON_AddItemToObject(jsonHandle, "baseTopic", cJSON_CreateString(configPtr->baseTopic));
+	cJSON_AddItemToObject(jsonHandle, "methodCreate", cJSON_CreateString(configPtr->methodCreate));
+	cJSON_AddItemToObject(jsonHandle, "methodUpdate", cJSON_CreateString(configPtr->methodUpdate));
 
 	return jsonHandle;
 }
@@ -571,9 +550,9 @@ void AppRuntimeConfig_DeleteTelemetryRTParams(AppRuntimeConfig_TelemetryRTParams
 static void appRuntimeConfig_DeleteTelemetryConfig(AppRuntimeConfig_TelemetryConfig_T * configPtr) {
 	assert(configPtr);
 	// delete all the pointers
-	if(configPtr->received.timestampStr) free(configPtr->received.timestampStr);
-	if(configPtr->received.exchangeIdStr) free(configPtr->received.exchangeIdStr);
-	if(configPtr->received.tagsJsonHandle) cJSON_Delete(configPtr->received.tagsJsonHandle);
+	if(configPtr->timestampStr) free(configPtr->timestampStr);
+	if(configPtr->exchangeIdStr) free(configPtr->exchangeIdStr);
+	if(configPtr->tagsJsonHandle) cJSON_Delete(configPtr->tagsJsonHandle);
 	free(configPtr);
 }
 /**
@@ -584,9 +563,9 @@ static void appRuntimeConfig_DeleteStatusConfig(AppRuntimeConfig_StatusConfig_T 
 
 	assert(configPtr);
 
-	if(configPtr->received.timestampStr) free(configPtr->received.timestampStr);
-	if(configPtr->received.exchangeIdStr) free(configPtr->received.exchangeIdStr);
-	if(configPtr->received.tagsJsonHandle) cJSON_Delete(configPtr->received.tagsJsonHandle);
+	if(configPtr->timestampStr) free(configPtr->timestampStr);
+	if(configPtr->exchangeIdStr) free(configPtr->exchangeIdStr);
+	if(configPtr->tagsJsonHandle) cJSON_Delete(configPtr->tagsJsonHandle);
 
 	free(configPtr);
 }
@@ -616,10 +595,10 @@ static AppRuntimeConfig_TopicConfig_T * appRuntimeConfig_CreateTopicConfig(bool 
 	if(isFromDefault) {
 		newPtr = malloc(sizeof(appRuntimeConfig_DefaultTopicConfig));
 		*newPtr = appRuntimeConfig_DefaultTopicConfig;
-		newPtr->received.tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
-		newPtr->received.exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
-		newPtr->received.methodCreate = copyString(APP_RT_CFG_DEFAULT_TOPIC_METHOD_CREATE);
-		newPtr->received.methodUpdate = copyString(APP_RT_CFG_DEFAULT_TOPIC_METHOD_UPDATE);
+		newPtr->tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
+		newPtr->exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
+		newPtr->methodCreate = copyString(APP_RT_CFG_DEFAULT_TOPIC_METHOD_CREATE);
+		newPtr->methodUpdate = copyString(APP_RT_CFG_DEFAULT_TOPIC_METHOD_UPDATE);
 	}
 	else {
 		newPtr = malloc(sizeof(appRuntimeConfig_EmptyTopicConfig));
@@ -648,13 +627,13 @@ AppRuntimeConfig_TopicConfig_T * AppRuntimeConfig_DuplicateTopicConfig(const App
 	AppRuntimeConfig_TopicConfig_T * newConfigPtr = malloc(sizeof(AppRuntimeConfig_TopicConfig_T));
 	*newConfigPtr = *orgConfigPtr;
 	// copy the pointers' data
-	newConfigPtr->received.timestampStr = copyString(orgConfigPtr->received.timestampStr);
-	newConfigPtr->received.exchangeIdStr = copyString(orgConfigPtr->received.exchangeIdStr);
-	newConfigPtr->received.tagsJsonHandle = cJSON_Duplicate(orgConfigPtr->received.tagsJsonHandle, true);
+	newConfigPtr->timestampStr = copyString(orgConfigPtr->timestampStr);
+	newConfigPtr->exchangeIdStr = copyString(orgConfigPtr->exchangeIdStr);
+	newConfigPtr->tagsJsonHandle = cJSON_Duplicate(orgConfigPtr->tagsJsonHandle, true);
 
-	newConfigPtr->received.baseTopic = copyString(orgConfigPtr->received.baseTopic);
-	newConfigPtr->received.methodCreate = copyString(orgConfigPtr->received.methodCreate);
-	newConfigPtr->received.methodUpdate = copyString(orgConfigPtr->received.methodUpdate);
+	newConfigPtr->baseTopic = copyString(orgConfigPtr->baseTopic);
+	newConfigPtr->methodCreate = copyString(orgConfigPtr->methodCreate);
+	newConfigPtr->methodUpdate = copyString(orgConfigPtr->methodUpdate);
 
 	appRuntimeConfig_AllowAccess2AppRuntimeConfigPtr();
 
@@ -668,13 +647,13 @@ static void appRuntimeConfig_DeleteTopicConfig(AppRuntimeConfig_TopicConfig_T * 
 
 	assert(configPtr);
 
-	if(configPtr->received.timestampStr) free(configPtr->received.timestampStr);
-	if(configPtr->received.exchangeIdStr) free(configPtr->received.exchangeIdStr);
-	if(configPtr->received.tagsJsonHandle) cJSON_Delete(configPtr->received.tagsJsonHandle);
+	if(configPtr->timestampStr) free(configPtr->timestampStr);
+	if(configPtr->exchangeIdStr) free(configPtr->exchangeIdStr);
+	if(configPtr->tagsJsonHandle) cJSON_Delete(configPtr->tagsJsonHandle);
 
-	if(configPtr->received.baseTopic) free(configPtr->received.baseTopic);
-	if(configPtr->received.methodCreate) free(configPtr->received.methodCreate);
-	if(configPtr->received.methodUpdate) free(configPtr->received.methodUpdate);
+	if(configPtr->baseTopic) free(configPtr->baseTopic);
+	if(configPtr->methodCreate) free(configPtr->methodCreate);
+	if(configPtr->methodUpdate) free(configPtr->methodUpdate);
 
 	free(configPtr);
 }
@@ -702,8 +681,8 @@ static AppRuntimeConfig_MqttBrokerConnectionConfig_T * appRuntimeConfig_CreateMq
 	if(isFromDefault) {
 		newPtr = malloc(sizeof(appRuntimeConfig_DefaultMqttBrokerConnectionConfig));
 		*newPtr = appRuntimeConfig_DefaultMqttBrokerConnectionConfig;
-		newPtr->received.tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
-		newPtr->received.exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
+		newPtr->tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
+		newPtr->exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
 	}
 	else {
 		newPtr = malloc(sizeof(appRuntimeConfig_EmptyMqttBrokerConnectionConfig));
@@ -725,13 +704,13 @@ AppRuntimeConfig_MqttBrokerConnectionConfig_T * AppRuntimeConfig_CreateMqttBroke
 static void appRuntimeConfig_DeleteMqttBrokerConnectionConfig(AppRuntimeConfig_MqttBrokerConnectionConfig_T * configPtr) {
 	assert(configPtr);
 
-	if(configPtr->received.timestampStr) free(configPtr->received.timestampStr);
-	if(configPtr->received.exchangeIdStr) free(configPtr->received.exchangeIdStr);
-	if(configPtr->received.tagsJsonHandle) cJSON_Delete(configPtr->received.tagsJsonHandle);
+	if(configPtr->timestampStr) free(configPtr->timestampStr);
+	if(configPtr->exchangeIdStr) free(configPtr->exchangeIdStr);
+	if(configPtr->tagsJsonHandle) cJSON_Delete(configPtr->tagsJsonHandle);
 
-	if(configPtr->received.brokerUrl) free(configPtr->received.brokerUrl);
-	if(configPtr->received.brokerUsername) free(configPtr->received.brokerUsername);
-	if(configPtr->received.brokerPassword) free(configPtr->received.brokerPassword);
+	if(configPtr->brokerUrl) free(configPtr->brokerUrl);
+	if(configPtr->brokerUsername) free(configPtr->brokerUsername);
+	if(configPtr->brokerPassword) free(configPtr->brokerPassword);
 
 	free(configPtr);
 }
@@ -778,8 +757,8 @@ static AppRuntimeConfig_StatusConfig_T * appRuntimeConfig_CreateStatusConfig(boo
 	if(isFromDefault) {
 		newPtr = malloc(sizeof(appRuntimeConfig_DefaultStatusConfig));
 		*newPtr = appRuntimeConfig_DefaultStatusConfig;
-		newPtr->received.tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
-		newPtr->received.exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
+		newPtr->tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
+		newPtr->exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
 	}
 	else {
 		newPtr = malloc(sizeof(appRuntimeConfig_EmptyStatusConfig));
@@ -833,8 +812,8 @@ static AppRuntimeConfig_TelemetryConfig_T * appRuntimeConfig_CreateTelemetryConf
 	if(isFromDefault) {
 		newPtr = malloc(sizeof(appRuntimeConfig_DefaultTargetTelemetryConfig));
 		*newPtr = appRuntimeConfig_DefaultTargetTelemetryConfig;
-		newPtr->received.tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
-		newPtr->received.exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
+		newPtr->tagsJsonHandle = cJSON_Parse(APP_RT_CFG_DEFAULT_TAGS_JSON);
+		newPtr->exchangeIdStr = copyString(APP_RT_CFG_DEFAULT_EXCHANGE_ID);
 	}
 	else {
 		newPtr = malloc(sizeof(appRuntimeConfig_EmptyTargetTelemetryConfig));
@@ -1286,15 +1265,15 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateTopicConfi
 	}
 
 	// populate
-	configPtr->received.timestampStr = timestampStr;
-	configPtr->received.delay2ApplyConfigSeconds = delaySeconds;
-	configPtr->received.applyFlag = applyFlag;
-	configPtr->received.tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
-	configPtr->received.exchangeIdStr = exchangeIdStr;
+	configPtr->timestampStr = timestampStr;
+	configPtr->delay2ApplyConfigSeconds = delaySeconds;
+	configPtr->applyFlag = applyFlag;
+	configPtr->tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
+	configPtr->exchangeIdStr = exchangeIdStr;
 
-	configPtr->received.baseTopic = copyString(baseTopic_JsonHandle->valuestring);
-	configPtr->received.methodCreate = copyString(methodCreate_JsonHandle->valuestring);
-	configPtr->received.methodUpdate = copyString(methodUpdate_JsonHandle->valuestring);
+	configPtr->baseTopic = copyString(baseTopic_JsonHandle->valuestring);
+	configPtr->methodCreate = copyString(methodCreate_JsonHandle->valuestring);
+	configPtr->methodUpdate = copyString(methodUpdate_JsonHandle->valuestring);
 
 	#ifdef DEBUG_APP_RUNTIME_CONFIG
 	printf("[INFO] - AppRuntimeConfig.populateAndValidateTopicConfigFromJSON: new & validated runtime config: \r\n");
@@ -1390,19 +1369,19 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateMqttBroker
 	}
 
 	// populate
-	configPtr->received.timestampStr = timestampStr;
-	configPtr->received.delay2ApplyConfigSeconds = delaySeconds;
-	configPtr->received.applyFlag = applyFlag;
-	configPtr->received.tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
-	configPtr->received.exchangeIdStr = exchangeIdStr;
+	configPtr->timestampStr = timestampStr;
+	configPtr->delay2ApplyConfigSeconds = delaySeconds;
+	configPtr->applyFlag = applyFlag;
+	configPtr->tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
+	configPtr->exchangeIdStr = exchangeIdStr;
 
-	configPtr->received.brokerUrl= copyString(brokerURL_JsonHandle->valuestring);
-	configPtr->received.brokerPort = brokerPort_JsonHandle->valueint;
-	configPtr->received.brokerUsername = copyString(brokerUsername_JsonHandle->valuestring);
-	configPtr->received.brokerPassword = copyString(brokerPassword_JsonHandle->valuestring);
-	configPtr->received.isCleanSession = isCleanSession_JsonHandle->valueint;
-	configPtr->received.isSecureConnection = isSecureConnection_JsonHandle->valueint;
-	configPtr->received.keepAliveIntervalSecs = keepAliveIntervalSecs_JsonHandle->valueint;
+	configPtr->brokerUrl= copyString(brokerURL_JsonHandle->valuestring);
+	configPtr->brokerPort = brokerPort_JsonHandle->valueint;
+	configPtr->brokerUsername = copyString(brokerUsername_JsonHandle->valuestring);
+	configPtr->brokerPassword = copyString(brokerPassword_JsonHandle->valuestring);
+	configPtr->isCleanSession = isCleanSession_JsonHandle->valueint;
+	configPtr->isSecureConnection = isSecureConnection_JsonHandle->valueint;
+	configPtr->keepAliveIntervalSecs = keepAliveIntervalSecs_JsonHandle->valueint;
 
 	#ifdef DEBUG_APP_RUNTIME_CONFIG
 	printf("[INFO] - appRuntimeConfig_PopulateAndValidateMqttBrokerConnectionConfigFromJSON: new & validated runtime config: \r\n");
@@ -1498,16 +1477,16 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateStatusConf
 	}
 
 	// populate
-	configPtr->received.timestampStr = timestampStr;
-	configPtr->received.delay2ApplyConfigSeconds = delaySeconds;
-	configPtr->received.applyFlag = applyFlag;
-	configPtr->received.tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
-	configPtr->received.exchangeIdStr = exchangeIdStr;
+	configPtr->timestampStr = timestampStr;
+	configPtr->delay2ApplyConfigSeconds = delaySeconds;
+	configPtr->applyFlag = applyFlag;
+	configPtr->tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
+	configPtr->exchangeIdStr = exchangeIdStr;
 
-	configPtr->received.isSendPeriodicStatus = isSendPeriodicStatus;
-	configPtr->received.periodicStatusIntervalSecs = periodicStatusIntervalSecs;
-	configPtr->received.periodicStatusType = periodicStatusType;
-	configPtr->received.qos = qos;
+	configPtr->isSendPeriodicStatus = isSendPeriodicStatus;
+	configPtr->periodicStatusIntervalSecs = periodicStatusIntervalSecs;
+	configPtr->periodicStatusType = periodicStatusType;
+	configPtr->qos = qos;
 
 	#ifdef DEBUG_APP_RUNTIME_CONFIG
 	printf("[INFO] - appRuntimeConfig_PopulateAndValidateStatusConfigFromJSON: new & validated runtime config: \r\n");
@@ -1628,38 +1607,38 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_PopulateAndValidateTelemetryC
 	}
 
 	// populate
-	configPtr->received.timestampStr = timestampStr;
-	configPtr->received.delay2ApplyConfigSeconds = delaySeconds;
-	configPtr->received.applyFlag = applyFlag;
-	configPtr->received.activateAtBootTime = activateAtBootTime;
-	configPtr->received.sensorEnableFlag = sensorsEnableFlag;
-	configPtr->received.tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
-	configPtr->received.exchangeIdStr = exchangeIdStr;
+	configPtr->timestampStr = timestampStr;
+	configPtr->delay2ApplyConfigSeconds = delaySeconds;
+	configPtr->applyFlag = applyFlag;
+	configPtr->activateAtBootTime = activateAtBootTime;
+	configPtr->sensorEnableFlag = sensorsEnableFlag;
+	configPtr->tagsJsonHandle = cJSON_Duplicate(tagsJsonHandle, true);
+	configPtr->exchangeIdStr = exchangeIdStr;
 
 	// enable/disable sensor capture
 	int sensorCount = cJSON_GetArraySize(sensorsJsonHandle);
 	for (int i = 0; i < sensorCount; i++) {
 		cJSON* sensor = cJSON_GetArrayItem(sensorsJsonHandle, i);
 		const char *actSensor = sensor->valuestring;
-		if (strcmp(actSensor, "light") == 0) configPtr->received.sensors.isLight = true;
-		else if (strcmp(actSensor, "accelerator") == 0) configPtr->received.sensors.isAccelerator = true;
-		else if (strcmp(actSensor, "gyroscope") == 0) configPtr->received.sensors.isGyro = true;
-		else if (strcmp(actSensor, "magnetometer") == 0) configPtr->received.sensors.isMagneto = true;
-		else if (strcmp(actSensor, "humidity") == 0) configPtr->received.sensors.isHumidity = true;
-		else if (strcmp(actSensor, "temperature") == 0) configPtr->received.sensors.isTemperature = true;
+		if (strcmp(actSensor, "light") == 0) configPtr->sensors.isLight = true;
+		else if (strcmp(actSensor, "accelerator") == 0) configPtr->sensors.isAccelerator = true;
+		else if (strcmp(actSensor, "gyroscope") == 0) configPtr->sensors.isGyro = true;
+		else if (strcmp(actSensor, "magnetometer") == 0) configPtr->sensors.isMagneto = true;
+		else if (strcmp(actSensor, "humidity") == 0) configPtr->sensors.isHumidity = true;
+		else if (strcmp(actSensor, "temperature") == 0) configPtr->sensors.isTemperature = true;
 		actSensor = NULL;
 	}
-	configPtr->received.numberOfEventsPerSecond = numberOfEventsPerSecondJsonHandle->valueint;
-	configPtr->received.numberOfSamplesPerEvent = numberOfSamplesPerEventJsonHandle->valueint;
-	configPtr->received.qos = qos;
-	configPtr->received.payloadFormat = payloadFormat;
+	configPtr->numberOfEventsPerSecond = numberOfEventsPerSecondJsonHandle->valueint;
+	configPtr->numberOfSamplesPerEvent = numberOfSamplesPerEventJsonHandle->valueint;
+	configPtr->qos = qos;
+	configPtr->payloadFormat = payloadFormat;
 
-	AppRuntimeConfigStatus_T * calcStatusPtr = appRuntimeConfig_CalculateAndValidateTelemetryRTParams(configPtr->received.numberOfSamplesPerEvent, configPtr->received.numberOfEventsPerSecond, rtParamsPtr);
+	AppRuntimeConfigStatus_T * calcStatusPtr = appRuntimeConfig_CalculateAndValidateTelemetryRTParams(configPtr->numberOfSamplesPerEvent, configPtr->numberOfEventsPerSecond, rtParamsPtr);
 	if(!calcStatusPtr->success) return calcStatusPtr;
 	AppRuntimeConfig_DeleteStatus(calcStatusPtr);
 
 	if(appRuntimeConfig_isEnabled) {
-		appRuntimeConfig_ValidateTelemetryQueueSize(rtParamsPtr->numberOfSamplesPerEvent, &(configPtr->received.sensors), configPtr->received.payloadFormat, statusPtr);
+		appRuntimeConfig_ValidateTelemetryQueueSize(rtParamsPtr->numberOfSamplesPerEvent, &(configPtr->sensors), configPtr->payloadFormat, statusPtr);
 		if(!statusPtr->success) return statusPtr;
 	}
 
@@ -1691,29 +1670,21 @@ static AppRuntimeConfigStatus_T * appRuntimeConfig_CreateValidatedAppRuntimeConf
 
 	currentJsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "targetTelemetryConfig");
 	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "targetTelemetryConfig");
-	currentJsonHandle = cJSON_GetObjectItem(currentJsonHandle, "received");
-	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "targetTelemetryConfig.received");
 	status = appRuntimeConfig_PopulateAndValidateTelemetryConfigFromJSON(currentJsonHandle, newConfigPtr->targetTelemetryConfigPtr, newConfigPtr->activeTelemetryRTParamsPtr);
 	if(!status->success) return status;
 
 	currentJsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "statusConfig");
 	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "statusConfig");
-	currentJsonHandle = cJSON_GetObjectItem(currentJsonHandle, "received");
-	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "statusConfig.received");
 	status = appRuntimeConfig_PopulateAndValidateStatusConfigFromJSON(currentJsonHandle, newConfigPtr->statusConfigPtr);
 	if(!status->success) return status;
 
 	currentJsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "mqttBrokerConnectionConfig");
 	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "mqttBrokerConnectionConfig");
-	currentJsonHandle = cJSON_GetObjectItem(currentJsonHandle, "received");
-	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "mqttBrokerConnectionConfig.received");
 	status = appRuntimeConfig_PopulateAndValidateMqttBrokerConnectionConfigFromJSON(currentJsonHandle, newConfigPtr->mqttBrokerConnectionConfigPtr);
 	if(!status->success) return status;
 
 	currentJsonHandle = cJSON_GetObjectItem((cJSON*)jsonHandle, "topicConfig");
 	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "topicConfig");
-	currentJsonHandle = cJSON_GetObjectItem(currentJsonHandle, "received");
-	if(NULL == currentJsonHandle) return AppRuntimeConfig_CreateStatus(false, AppStatusMessage_Descr_MissingMandatoryElement_RuntimeConfig, "topicConfig.received");
 	status = appRuntimeConfig_PopulateAndValidateTopicConfigFromJSON(currentJsonHandle, newConfigPtr->topicConfigPtr);
 	if(!status->success) return status;
 
@@ -1832,22 +1803,22 @@ Retcode_T AppRuntimeConfig_Setup(void) {
 
 		// calculate rt telemetry params
 		AppRuntimeConfigStatus_T * statusPtr  = appRuntimeConfig_CalculateAndValidateTelemetryRTParams(
-				newConfigPtr->targetTelemetryConfigPtr->received.numberOfSamplesPerEvent,
-				newConfigPtr->targetTelemetryConfigPtr->received.numberOfEventsPerSecond,
+				newConfigPtr->targetTelemetryConfigPtr->numberOfSamplesPerEvent,
+				newConfigPtr->targetTelemetryConfigPtr->numberOfEventsPerSecond,
 				newConfigPtr->activeTelemetryRTParamsPtr);
 
 		if(statusPtr->success) {
 			// copy broker config from bootstrap config
 			const AppXDK_MQTT_Connect_T * mqttBoostrapConnectInfoPtr = AppConfig_GetMqttConnectInfoPtr();
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.brokerUrl = copyString(mqttBoostrapConnectInfoPtr->brokerUrl);
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.brokerPort = mqttBoostrapConnectInfoPtr->brokerPort;
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.brokerUsername = copyString(mqttBoostrapConnectInfoPtr->username);
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.brokerPassword = copyString(mqttBoostrapConnectInfoPtr->password);
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.isCleanSession = mqttBoostrapConnectInfoPtr->isCleanSession;
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.keepAliveIntervalSecs = mqttBoostrapConnectInfoPtr->keepAliveIntervalSecs;
-			newConfigPtr->mqttBrokerConnectionConfigPtr->received.isSecureConnection = AppConfig_GetIsMqttBrokerConnectionSecure();
+			newConfigPtr->mqttBrokerConnectionConfigPtr->brokerUrl = copyString(mqttBoostrapConnectInfoPtr->brokerUrl);
+			newConfigPtr->mqttBrokerConnectionConfigPtr->brokerPort = mqttBoostrapConnectInfoPtr->brokerPort;
+			newConfigPtr->mqttBrokerConnectionConfigPtr->brokerUsername = copyString(mqttBoostrapConnectInfoPtr->username);
+			newConfigPtr->mqttBrokerConnectionConfigPtr->brokerPassword = copyString(mqttBoostrapConnectInfoPtr->password);
+			newConfigPtr->mqttBrokerConnectionConfigPtr->isCleanSession = mqttBoostrapConnectInfoPtr->isCleanSession;
+			newConfigPtr->mqttBrokerConnectionConfigPtr->keepAliveIntervalSecs = mqttBoostrapConnectInfoPtr->keepAliveIntervalSecs;
+			newConfigPtr->mqttBrokerConnectionConfigPtr->isSecureConnection = AppConfig_GetIsMqttBrokerConnectionSecure();
 			// copy topic config
-			newConfigPtr->topicConfigPtr->received.baseTopic = copyString(AppConfig_GetBaseTopicStr());
+			newConfigPtr->topicConfigPtr->baseTopic = copyString(AppConfig_GetBaseTopicStr());
 
 		} else {
 
@@ -1904,19 +1875,19 @@ Retcode_T AppRuntimeConfig_ApplyNewRuntimeConfig(const AppRuntimeConfig_ConfigEl
 	case AppRuntimeConfig_Element_topicConfig: {
 		appRuntimeConfig_DeleteTopicConfig(appRuntimeConfigPtr->topicConfigPtr);
 		appRuntimeConfigPtr->topicConfigPtr = (AppRuntimeConfig_TopicConfig_T *) newConfigPtr;
-		applyFlag = appRuntimeConfigPtr->topicConfigPtr->received.applyFlag;
+		applyFlag = appRuntimeConfigPtr->topicConfigPtr->applyFlag;
 	}
 		break;
 	case AppRuntimeConfig_Element_mqttBrokerConnectionConfig: {
 		appRuntimeConfig_DeleteMqttBrokerConnectionConfig(appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr);
 		appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr = (AppRuntimeConfig_MqttBrokerConnectionConfig_T *) newConfigPtr;
-		applyFlag = appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr->received.applyFlag;
+		applyFlag = appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr->applyFlag;
 	}
 		break;
 	case AppRuntimeConfig_Element_statusConfig: {
 		appRuntimeConfig_DeleteStatusConfig(appRuntimeConfigPtr->statusConfigPtr);
 		appRuntimeConfigPtr->statusConfigPtr = (AppRuntimeConfig_StatusConfig_T *) newConfigPtr;
-		applyFlag = appRuntimeConfigPtr->statusConfigPtr->received.applyFlag;
+		applyFlag = appRuntimeConfigPtr->statusConfigPtr->applyFlag;
 	}
 		break;
 	case AppRuntimeConfig_Element_activeTelemetryRTParams: {
@@ -1937,8 +1908,8 @@ Retcode_T AppRuntimeConfig_ApplyNewRuntimeConfig(const AppRuntimeConfig_ConfigEl
 		appRuntimeConfigPtr->activeTelemetryRTParamsPtr = appRuntimeConfig_CreateTelemetryRTParams();
 
 		AppRuntimeConfigStatus_T * statusPtr  = appRuntimeConfig_CalculateAndValidateTelemetryRTParams(
-														appRuntimeConfigPtr->targetTelemetryConfigPtr->received.numberOfSamplesPerEvent,
-														appRuntimeConfigPtr->targetTelemetryConfigPtr->received.numberOfEventsPerSecond,
+														appRuntimeConfigPtr->targetTelemetryConfigPtr->numberOfSamplesPerEvent,
+														appRuntimeConfigPtr->targetTelemetryConfigPtr->numberOfEventsPerSecond,
 														appRuntimeConfigPtr->activeTelemetryRTParamsPtr);
 		if(!statusPtr->success) {
 			// if this happens then the RT telemetry has not be validated beforehand
@@ -1948,7 +1919,7 @@ Retcode_T AppRuntimeConfig_ApplyNewRuntimeConfig(const AppRuntimeConfig_ConfigEl
 
 		AppRuntimeConfig_DeleteStatus(statusPtr);
 
-		applyFlag = appRuntimeConfigPtr->targetTelemetryConfigPtr->received.applyFlag;
+		applyFlag = appRuntimeConfigPtr->targetTelemetryConfigPtr->applyFlag;
 	}
 		break;
 	case AppRuntimeConfig_Element_AppRuntimeConfig: {
@@ -1988,8 +1959,8 @@ Retcode_T AppRuntimeConfig_Enable(void) {
 
 	appRuntimeConfig_ValidateTelemetryQueueSize(
 			appRuntimeConfigPtr->activeTelemetryRTParamsPtr->numberOfSamplesPerEvent,
-			&(appRuntimeConfigPtr->targetTelemetryConfigPtr->received.sensors),
-			appRuntimeConfigPtr->targetTelemetryConfigPtr->received.payloadFormat,
+			&(appRuntimeConfigPtr->targetTelemetryConfigPtr->sensors),
+			appRuntimeConfigPtr->targetTelemetryConfigPtr->payloadFormat,
 			statusPtr);
 	if(!statusPtr->success) {
 		return RETCODE(RETCODE_SEVERITY_FATAL, RETCODE_SOLAPP_RT_CONFIG_PUBLISH_DATA_LENGTH_EXCEEDS_MAX_LENGTH);
@@ -2001,10 +1972,10 @@ Retcode_T AppRuntimeConfig_Enable(void) {
 
 		AppTimestamp_T ts = AppTimestamp_GetTimestamp(xTaskGetTickCount());
 
-		appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr->received.timestampStr = AppTimestamp_CreateTimestampStr(ts);
-		appRuntimeConfigPtr->topicConfigPtr->received.timestampStr = AppTimestamp_CreateTimestampStr(ts);
-		appRuntimeConfigPtr->statusConfigPtr->received.timestampStr = AppTimestamp_CreateTimestampStr(ts);
-		appRuntimeConfigPtr->targetTelemetryConfigPtr->received.timestampStr = AppTimestamp_CreateTimestampStr(ts);
+		appRuntimeConfigPtr->mqttBrokerConnectionConfigPtr->timestampStr = AppTimestamp_CreateTimestampStr(ts);
+		appRuntimeConfigPtr->topicConfigPtr->timestampStr = AppTimestamp_CreateTimestampStr(ts);
+		appRuntimeConfigPtr->statusConfigPtr->timestampStr = AppTimestamp_CreateTimestampStr(ts);
+		appRuntimeConfigPtr->targetTelemetryConfigPtr->timestampStr = AppTimestamp_CreateTimestampStr(ts);
 	}
 
 	AppRuntimeConfig_DeleteStatus(statusPtr);
@@ -2022,34 +1993,50 @@ Retcode_T AppRuntimeConfig_Enable(void) {
 /**
  * @brief Sends the runtime configuration as multiple parts (each element as one part) using @ref AppStatus_SendStatusMessagePart() adding the exchangeId.
  * Use to send the configuration as response to a command.
+ * @param[in] configType: the persisted or active configuration
  * @param[in] jsonHandle: the configuration json. Is deleted here.
  * @param[in] exchangeId: added to the message
  *
  */
-void appRuntimeConfig_SendConfig(cJSON * jsonHandle, const char * exchangeId) {
+void appRuntimeConfig_SendConfig(appStatusMessage_ConfigType_T configType, cJSON * jsonHandle, const char * exchangeId) {
 
 	assert(jsonHandle);
 	assert(exchangeId);
 
 	uint8_t totalNumParts = 5;
 
-	AppStatus_SendStatusMessagePart(AppStatusMessage_Descr_PersistedRuntimeConfig_Header, NULL, exchangeId, totalNumParts, 0, NULL, NULL);
+	AppStatusMessage_DescrCode_T descrCode;
+
+	descrCode = configType==ConfigType_Active?AppStatusMessage_Descr_ActiveRuntimeConfig_Header:AppStatusMessage_Descr_PersistedRuntimeConfig_Header;
+	AppStatus_SendStatusMessagePart(descrCode, NULL, exchangeId, totalNumParts, 0, NULL, NULL);
 
 	cJSON * topicConfigJsonHandle =cJSON_GetObjectItem(jsonHandle, "topicConfig");
 	if(topicConfigJsonHandle==NULL) AppStatus_SendStatusMessage(AppStatus_CreateMessageWithExchangeId(AppStatusMessage_Status_Error, AppStatusMessage_Descr_PersistedRuntimeConfigIsCorrupt_NoTopicConfigFound, NULL, exchangeId));
-	else AppStatus_SendStatusMessagePart(AppStatusMessage_Descr_PersistedRuntimeConfig_TopicConfig, NULL, exchangeId, totalNumParts, 1, "persistedRuntimeConfig.topicConfig", cJSON_Duplicate(topicConfigJsonHandle, true));
+	else {
+		descrCode = configType==ConfigType_Active?AppStatusMessage_Descr_ActiveRuntimeConfig_TopicConfig:AppStatusMessage_Descr_PersistedRuntimeConfig_TopicConfig;
+		AppStatus_SendStatusMessagePart(descrCode, NULL, exchangeId, totalNumParts, 1, "topicConfig", cJSON_Duplicate(topicConfigJsonHandle, true));
+	}
 
 	cJSON * mqttBrokerConnectionConfigJsonHandle =cJSON_GetObjectItem(jsonHandle, "mqttBrokerConnectionConfig");
 	if(mqttBrokerConnectionConfigJsonHandle==NULL) AppStatus_SendStatusMessage(AppStatus_CreateMessageWithExchangeId(AppStatusMessage_Status_Error, AppStatusMessage_Descr_PersistedRuntimeConfigIsCorrupt_NoMqttBrokerConnectionConfigFound, NULL, exchangeId));
-	else AppStatus_SendStatusMessagePart(AppStatusMessage_Descr_PersistedRuntimeConfig_MqttBrokerConnectionConfig, NULL, exchangeId, totalNumParts, 2, "persistedRuntimeConfig.mqttBrokerConnectionConfig", cJSON_Duplicate(mqttBrokerConnectionConfigJsonHandle, true));
+	else {
+		descrCode = configType==ConfigType_Active?AppStatusMessage_Descr_ActiveRuntimeConfig_MqttBrokerConnectionConfig:AppStatusMessage_Descr_PersistedRuntimeConfig_MqttBrokerConnectionConfig;
+		AppStatus_SendStatusMessagePart(descrCode, NULL, exchangeId, totalNumParts, 2, "mqttBrokerConnectionConfig", cJSON_Duplicate(mqttBrokerConnectionConfigJsonHandle, true));
+	}
 
 	cJSON * statusConfigJsonHandle =cJSON_GetObjectItem(jsonHandle, "statusConfig");
 	if(statusConfigJsonHandle==NULL) AppStatus_SendStatusMessage(AppStatus_CreateMessageWithExchangeId(AppStatusMessage_Status_Error, AppStatusMessage_Descr_PersistedRuntimeConfigIsCorrupt_NoStatusConfigFound,NULL, exchangeId));
-	else AppStatus_SendStatusMessagePart(AppStatusMessage_Descr_PersistedRuntimeConfig_StatusConfig, NULL, exchangeId, totalNumParts, 3, "persistedRuntimeConfig.statusConfig", cJSON_Duplicate(statusConfigJsonHandle, true));
+	else {
+		descrCode = configType==ConfigType_Active?AppStatusMessage_Descr_ActiveRuntimeConfig_StatusConfig:AppStatusMessage_Descr_PersistedRuntimeConfig_StatusConfig;
+		AppStatus_SendStatusMessagePart(descrCode, NULL, exchangeId, totalNumParts, 3, "statusConfig", cJSON_Duplicate(statusConfigJsonHandle, true));
+	}
 
 	cJSON * targetTelemetryConfigJsonHandle =cJSON_GetObjectItem(jsonHandle, "targetTelemetryConfig");
 	if(targetTelemetryConfigJsonHandle==NULL) AppStatus_SendStatusMessage(AppStatus_CreateMessageWithExchangeId(AppStatusMessage_Status_Error, AppStatusMessage_Descr_PersistedRuntimeConfigIsCorrupt_NoTargetTelemetryConfigFound, NULL, exchangeId));
-	else AppStatus_SendStatusMessagePart(AppStatusMessage_Descr_PersistedRuntimeConfig_TargetTelemetryConfig, NULL, exchangeId, totalNumParts, 4, "persistedRuntimeConfig.targetTelemetryConfig", cJSON_Duplicate(targetTelemetryConfigJsonHandle, true));
+	else {
+		descrCode = configType==ConfigType_Active?AppStatusMessage_Descr_ActiveRuntimeConfig_TargetTelemetryConfig:AppStatusMessage_Descr_PersistedRuntimeConfig_TargetTelemetryConfig;
+		AppStatus_SendStatusMessagePart(descrCode, NULL, exchangeId, totalNumParts, 4, "targetTelemetryConfig", cJSON_Duplicate(targetTelemetryConfigJsonHandle, true));
+	}
 
 	cJSON_Delete(jsonHandle);
 
@@ -2063,7 +2050,7 @@ void AppRuntimeConfig_SendActiveConfig(const char * exchangeId) {
 
 	assert(exchangeId);
 
-	appRuntimeConfig_SendConfig(AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_AppRuntimeConfig), exchangeId);
+	appRuntimeConfig_SendConfig(ConfigType_Active, AppRuntimeConfig_GetAsJsonObject(AppRuntimeConfig_Element_AppRuntimeConfig), exchangeId);
 
 }
 /**
@@ -2084,7 +2071,7 @@ void AppRuntimeConfig_SendFile(const char * exchangeId) {
 	#endif
 
 	if(NULL != jsonHandle) {
-		appRuntimeConfig_SendConfig(jsonHandle, exchangeId);
+		appRuntimeConfig_SendConfig(ConfigType_Persisted, jsonHandle, exchangeId);
 	} else {
 		AppStatus_SendStatusMessage(AppStatus_CreateMessageWithExchangeId(AppStatusMessage_Status_Info, AppStatusMessage_Descr_PersistedRuntimeConfig_NotFound, NULL, exchangeId));
 	}

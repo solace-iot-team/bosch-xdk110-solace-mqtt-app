@@ -88,11 +88,11 @@ var NAVTREEINDEX =
 "_app_buttons_8c.html",
 "group___app_cmd_ctrl.html#ga4dd240122adf7bf66bbc1dedc94792de",
 "group___app_misc.html#gafecc34cc814ed4b65319e87108a7f726",
-"group___app_runtime_config.html#gafc0e41ecaa1df89b3f6f7966e18e628a",
-"group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a3c4d535587bf0d71076d56a4d3c657e8",
-"group___app_telemetry_sampling.html#ga57abc2c18f02aca688b3792e01a49017",
-"group___solace___app___module_i_d___e.html#ggacb40f15c067e5dc2d20f467e884138f1af8610f3bb31a4dba7bcdc937df18457f",
-"struct_app_runtime_config___mqtt_broker_connection_config___t.html#a5ae2f9608251109b4ae5d1951f995052"
+"group___app_runtime_config.html#gaf933fbd3476f1d9b621d844cabfff825",
+"group___app_status_message___descr_code___t.html#ggaefe40e9950780d5c87e9405dac52ef86a1e95d43a625a8eddbf50615ffade4ccd",
+"group___app_telemetry_sampling.html#ga09172068262a168884b86e26a8122080",
+"group___solace___app___module_i_d___e.html#ggacb40f15c067e5dc2d20f467e884138f1a97fce7321c2aa76451056769617e3838",
+"struct_app_button_event_data___t.html#a59d2e32c374ebed5f2ac4fb9ecdef84f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

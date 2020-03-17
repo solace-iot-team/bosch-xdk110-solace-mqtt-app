@@ -1,0 +1,8 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "lodash.merge": "^4.6.2",
+    "node-red-contrib-solace-mqtt-app-mgr": "file:node-red-contrib-solace-mqtt-app-mgr"
+  }
+}

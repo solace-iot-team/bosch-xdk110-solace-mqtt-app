@@ -346,6 +346,11 @@ typedef enum {
 	AppStatusMessage_Descr_TelemetryConfig_QoS_1_Unsupported_Using_QoS_0,							/**< 50 */
 	AppStatusMessage_Descr_WlanWasDisconnected, 													/**< 51 */
 	AppStatusMessage_Descr_VersionInfo,																/**< 52 */
+	AppStatusMessage_Descr_ActiveRuntimeConfig_Header,												/**< 53 */
+	AppStatusMessage_Descr_ActiveRuntimeConfig_TopicConfig, 										/**< 54 */
+	AppStatusMessage_Descr_ActiveRuntimeConfig_MqttBrokerConnectionConfig, 							/**< 55 */
+	AppStatusMessage_Descr_ActiveRuntimeConfig_StatusConfig, 										/**< 56 */
+	AppStatusMessage_Descr_ActiveRuntimeConfig_TargetTelemetryConfig, 								/**< 57 */
 
 } AppStatusMessage_DescrCode_T;
 /**@} */

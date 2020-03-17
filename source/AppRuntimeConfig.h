@@ -77,35 +77,31 @@ typedef struct {
  * @brief Typedef for topic config.
  */
 typedef struct {
-	struct {
-		char * timestampStr; /**< the timestamp when config was received */
-		char * exchangeIdStr; /**< the exchangeId from the original command */
-		cJSON * tagsJsonHandle; /**< the tags object */
-        uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
-        AppRuntimeConfig_Apply_T applyFlag; /**< how to apply it */
-        char * baseTopic; /**< the base topic string */
-        char * methodCreate; /**< the create method topic element */
-        char * methodUpdate; /**< the update method topic element */
-	} received; /**< the received config */
+	char * timestampStr; /**< the timestamp when config was received */
+	char * exchangeIdStr; /**< the exchangeId from the original command */
+	cJSON * tagsJsonHandle; /**< the tags object */
+	uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
+	AppRuntimeConfig_Apply_T applyFlag; /**< how to apply it */
+	char * baseTopic; /**< the base topic string */
+	char * methodCreate; /**< the create method topic element */
+	char * methodUpdate; /**< the update method topic element */
 } AppRuntimeConfig_TopicConfig_T;
 /**
  * @brief Typedef for mqtt broker config.
  */
 typedef struct {
-	struct {
-		char * timestampStr; /**< the timestamp when config was received */
-		char * exchangeIdStr; /**< the exchangeId from the original command */
-		cJSON * tagsJsonHandle; /**< the tags object */
-        uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
-        AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
-        char * brokerUrl; /**< the broker URL */
-        uint16_t brokerPort; /**< broker port */
-        char * brokerUsername; /**< user name */
-        char * brokerPassword; /**< password */
-        bool isCleanSession; /**< clean session flag */
-        bool isSecureConnection; /**< secure connection flag */
-        uint32_t keepAliveIntervalSecs; /**< connection keep alive in seconds */
-	} received;  /**< the received config */
+	char * timestampStr; /**< the timestamp when config was received */
+	char * exchangeIdStr; /**< the exchangeId from the original command */
+	cJSON * tagsJsonHandle; /**< the tags object */
+	uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
+	AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
+	char * brokerUrl; /**< the broker URL */
+	uint16_t brokerPort; /**< broker port */
+	char * brokerUsername; /**< user name */
+	char * brokerPassword; /**< password */
+	bool isCleanSession; /**< clean session flag */
+	bool isSecureConnection; /**< secure connection flag */
+	uint32_t keepAliveIntervalSecs; /**< connection keep alive in seconds */
 } AppRuntimeConfig_MqttBrokerConnectionConfig_T;
 /**
  * @brief Typedef for defining which periodic status message to send.
@@ -122,17 +118,15 @@ typedef enum {
  * @brief Typedef for status config.
  */
 typedef struct {
-	struct {
-		char * timestampStr; /**< the timestamp when config was received */
-		char * exchangeIdStr; /**< the exchangeId from the original command */
-		cJSON * tagsJsonHandle; /**< the tags object */
-        uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
-        AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
-		bool isSendPeriodicStatus; /**< flag to send periodic status events or not */
-		AppRuntimeConfig_PeriodicStatusType_T periodicStatusType; /**< type of periodic status events */
-	    uint32_t periodicStatusIntervalSecs; /**< interval of periodic status events in seconds */
-	    uint32_t qos; /**< qos of status messages */
-	} received; /**< the received config */
+	char * timestampStr; /**< the timestamp when config was received */
+	char * exchangeIdStr; /**< the exchangeId from the original command */
+	cJSON * tagsJsonHandle; /**< the tags object */
+	uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
+	AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
+	bool isSendPeriodicStatus; /**< flag to send periodic status events or not */
+	AppRuntimeConfig_PeriodicStatusType_T periodicStatusType; /**< type of periodic status events */
+	uint32_t periodicStatusIntervalSecs; /**< interval of periodic status events in seconds */
+	uint32_t qos; /**< qos of status messages */
 } AppRuntimeConfig_StatusConfig_T;
 
 #define APP_RT_CFG_DEFAULT_STATUS_SEND_PERIODIC_FLAG			false /**< default for sending periodic status events */
@@ -177,20 +171,18 @@ typedef enum {
  * @brief Typedef telemetry config.
  */
 typedef struct {
-	struct {
-		char * timestampStr; /**< the timestamp when config was received */
-		char * exchangeIdStr; /**< the exchangeId from the original command */
-		cJSON * tagsJsonHandle; /**< the tags object */
-        uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
-        AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
-        bool activateAtBootTime; /**< flag if telemetry sampling/publishing should be activated at boot time or not */
-        AppRuntimeConfig_SensorEnable_T sensorEnableFlag; /**< unused */
-		uint8_t numberOfEventsPerSecond; /**< number of events per second to publish */
-	    uint8_t numberOfSamplesPerEvent; /**< number of sensor samples per event */
-	    AppRuntimeConfig_Sensors_T sensors; /**< which sensor values to send */
-	    uint32_t qos; /**< the qos for telemetry events */
-	    AppRuntimeConfig_Telemetry_PayloadFormat_T payloadFormat; /**< the payload format */
-	} received;  /**< the received config */
+	char * timestampStr; /**< the timestamp when config was received */
+	char * exchangeIdStr; /**< the exchangeId from the original command */
+	cJSON * tagsJsonHandle; /**< the tags object */
+	uint8_t delay2ApplyConfigSeconds; /**< delay in seconds */
+	AppRuntimeConfig_Apply_T applyFlag;  /**< how to apply it */
+	bool activateAtBootTime; /**< flag if telemetry sampling/publishing should be activated at boot time or not */
+	AppRuntimeConfig_SensorEnable_T sensorEnableFlag; /**< unused */
+	uint8_t numberOfEventsPerSecond; /**< number of events per second to publish */
+	uint8_t numberOfSamplesPerEvent; /**< number of sensor samples per event */
+	AppRuntimeConfig_Sensors_T sensors; /**< which sensor values to send */
+	uint32_t qos; /**< the qos for telemetry events */
+	AppRuntimeConfig_Telemetry_PayloadFormat_T payloadFormat; /**< the payload format */
 } AppRuntimeConfig_TelemetryConfig_T;
 /**
  * @brief Typedef for the runtime configuration.

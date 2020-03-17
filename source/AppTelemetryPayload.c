@@ -78,11 +78,11 @@ Retcode_T AppTelemetryPayload_ApplyNewRuntimeConfig(AppRuntimeConfig_ConfigEleme
 
 	AppRuntimeConfig_TelemetryConfig_T * configPtr = (AppRuntimeConfig_TelemetryConfig_T *) newConfigPtr;
 
-	appTelemetryPayload_PayloadFormat = configPtr->received.payloadFormat;
+	appTelemetryPayload_PayloadFormat = configPtr->payloadFormat;
 
 	if(appTelemetryPayload_TargetTelemetrySensorsPtr) AppRuntimeConfig_DeleteSensors(appTelemetryPayload_TargetTelemetrySensorsPtr);
 
-	appTelemetryPayload_TargetTelemetrySensorsPtr = AppRuntimeConfig_DuplicateSensors(&configPtr->received.sensors);
+	appTelemetryPayload_TargetTelemetrySensorsPtr = AppRuntimeConfig_DuplicateSensors(&configPtr->sensors);
 
 	return retcode;
 }

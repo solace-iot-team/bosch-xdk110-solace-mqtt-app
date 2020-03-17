@@ -1,0 +1,19 @@
+{
+  "name": "node-red-contrib-solace-mqtt-app-mgr",
+  "version": "1.0.0",
+  "description": "solace utils for managing the xdk mqtt app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git-repo"
+  },
+  "keywords": [
+    "solace",
+    "xdk-app-mgr"
+  ],
+  "author": "Solace-IoT-Team",
+  "license": "Apache-2.0"
+}

@@ -193,7 +193,7 @@ static void appButtons_SetPubTopic(const AppRuntimeConfig_TopicConfig_T * const 
 
 	if(appButtons_MqttPublishTopicStr) free(appButtons_MqttPublishTopicStr);
 
-	appButtons_MqttPublishTopicStr = AppMisc_FormatTopic("%s/iot-event/%s/device/%s/button", topicConfigPtr->received.methodCreate, topicConfigPtr->received.baseTopic, appButtons_DeviceId);
+	appButtons_MqttPublishTopicStr = AppMisc_FormatTopic("%s/iot-event/%s/device/%s/button", topicConfigPtr->methodCreate, topicConfigPtr->baseTopic, appButtons_DeviceId);
 
 	appButton_MqttPublishInfo.topic = appButtons_MqttPublishTopicStr;
 }
